@@ -609,10 +609,10 @@ ul#nav li.current a {
 }
 
 .portfolio-item .item-wrap {
-   background: #fff;
+   background: none;
    overflow: hidden;
    position: relative;
-
+   text-align: center;
    -webkit-transition: all 0.3s ease-in-out;
    -moz-transition: all 0.3s ease-in-out;
    -o-transition: all 0.3s ease-in-out;
