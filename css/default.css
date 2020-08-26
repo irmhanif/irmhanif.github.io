@@ -805,3 +805,17 @@ properly.
 
 
 
+.whatsapp_floater {
+    position: fixed;
+    bottom: 24px;
+    width: 60px;
+    overflow: hidden;
+    float: left;
+    z-index: 999;
+    left: 25px;
+}
+
+.whatsapp_floater img {
+    float: left;
+    width: 100%;
+}
