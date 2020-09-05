@@ -606,13 +606,14 @@ ul#nav li.current a {
 /* Portfolio Content */
 #portfolio-wrapper .columns {
    margin-bottom: 36px;
+   padding: 0 0;
 }
 
 .portfolio-item .item-wrap {
-   background: none;
+   background: #fff;
    overflow: hidden;
    position: relative;
-   text-align: center;
+
    -webkit-transition: all 0.3s ease-in-out;
    -moz-transition: all 0.3s ease-in-out;
    -o-transition: all 0.3s ease-in-out;
@@ -1335,7 +1336,7 @@ footer .social-links li:first-child {
 }
 
 .javascript {
-   width: 80%;
+   width: 78%;
    animation: javascript 2s ease;
 }
 
@@ -1345,6 +1346,29 @@ footer .social-links li:first-child {
 }
 
 .reactjs {
-   width: 60%;
+   width: 81%;
    animation: reactjs 2s ease;
+}
+.joomla {
+   width: 81%;
+   animation: reactjs 2s ease;
+}
+.owl-item {
+    float: left;
+}
+.owl-stage-outer {
+    overflow: hidden;
+}
+
+.place_center {
+    text-align: center;
+}
+
+.place_center button {
+    margin: 0 12px;
+    padding: 5px 15px;
+}
+.portfolio-item .portfolio-item-meta > p {
+    text-align: justify;
+    color: #fff;
 }

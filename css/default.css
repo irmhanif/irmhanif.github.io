@@ -805,9 +805,9 @@ properly.
 
 
 
-.whatsapp_floater {
+.apps__float {
     position: fixed;
-    bottom: 24px;
+    bottom: 0;
     width: 60px;
     overflow: hidden;
     float: left;
@@ -815,7 +815,11 @@ properly.
     left: 25px;
 }
 
-.whatsapp_floater img {
+.apps__float img {
     float: left;
     width: 100%;
+}
+a.whatsapp_floater {
+    margin: 22px 0px;
+    float: left;
 }
