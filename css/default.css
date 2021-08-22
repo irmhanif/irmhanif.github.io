@@ -87,8 +87,6 @@ pre {
    word-wrap: break-word;
 }
 
-blockquote, q { quotes: &#8220 &#8220; }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
    content: '';
@@ -169,7 +167,6 @@ h3 { font-size: 22px; line-height: 30px; margin-bottom: 12px; }
 h4 { font-size: 20px; line-height: 30px; margin-bottom: 6px; }
 h5 { font-size: 18px; line-height: 30px; }
 h6 { font-size: 14px; line-height: 30px; }
-.subheader { }
 
 p { margin: 0 0 30px 0; }
 p img { margin: 0; }
@@ -442,7 +439,6 @@ dd { margin: 0 0 0 20px; }
    background-color: #E6E8EB;
 	color: #A9ADB2;
 }
-.pagination .prev, .pagination .next {}
 
 /*  5. Images  --------------------------------------------------------- */
 
@@ -455,35 +451,6 @@ img.pull-left { margin: 12px 18px 0px 0px; }
 
 /*  6. Buttons  --------------------------------------------------------- */
 
-.button,
-.button:visited,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-   font: 16px/30px 'opensans-bold', sans-serif;
-   background: #11ABB0;
-   display: inline-block;
-	text-decoration: none;
-   letter-spacing: 0;
-   color: #fff;
-	padding: 12px 20px;
-	margin-bottom: 18px;
-   border: none;
-   cursor: pointer;
-   height: auto;
-
-   -webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	-ms-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
-
-   -moz-border-radius: 3px;
-   -webkit-border-radius: 3px;
-   -khtml-border-radius: 3px;
-   border-radius: 3px;
-}
 
 .button:hover,
 button:hover,
@@ -537,7 +504,6 @@ select {
    margin: 0 0 24px 0;
    border: 0;
    outline: none;
-   vertical-align: middle;
    min-width: 225px;
 	max-width: 100%;
    font-size: 15px;
