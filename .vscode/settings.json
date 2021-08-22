@@ -1,3 +1,10 @@
+
 {
-    "workbench.list.smoothScrolling": true
+    "workbench.list.smoothScrolling": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "php.validate.executablePath": ""
 }
