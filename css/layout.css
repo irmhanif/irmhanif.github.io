@@ -21,7 +21,10 @@
 /* ------------------------------------------------------------------ */
 /* a. General Styles
 /* ------------------------------------------------------------------ */
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Klee+One:wght@400;600&family=Rampart+One&display=swap');
+html {
+   scroll-behavior: smooth;
+}
 body {
    background: #0f0f0f;
 }
@@ -401,37 +404,37 @@ ul#nav li.current a {
 .photoshop {
    width: 60%;
    -moz-animation: photoshop 2s ease;
-   -webkit-animation: photoshop 2s ease;
+   animation: photoshop 2s ease;
 }
 
 .illustrator {
    width: 55%;
    -moz-animation: illustrator 2s ease;
-   -webkit-animation: illustrator 2s ease;
+   animation: illustrator 2s ease;
 }
 
 .wordpress {
    width: 50%;
    -moz-animation: wordpress 2s ease;
-   -webkit-animation: wordpress 2s ease;
+   animation: wordpress 2s ease;
 }
 
 .css {
    width: 85%;
    -moz-animation: css 2s ease;
-   -webkit-animation: css 2s ease;
+   animation: css 2s ease;
 }
 
 .html5 {
    width: 90%;
    -moz-animation: html5 2s ease;
-   -webkit-animation: html5 2s ease;
+   animation: html5 2s ease;
 }
 
 .jquery {
    width: 50%;
    -moz-animation: jquery 2s ease;
-   -webkit-animation: jquery 2s ease;
+   animation: jquery 2s ease;
 }
 
 @-moz-keyframes photoshop {
@@ -494,7 +497,7 @@ ul#nav li.current a {
    }
 }
 
-@-webkit-keyframes photoshop {
+@keyframes photoshop {
    0% {
       width: 0px;
    }
@@ -504,7 +507,7 @@ ul#nav li.current a {
    }
 }
 
-@-webkit-keyframes illustrator {
+@keyframes illustrator {
    0% {
       width: 0px;
    }
@@ -514,7 +517,7 @@ ul#nav li.current a {
    }
 }
 
-@-webkit-keyframes wordpress {
+@keyframes wordpress {
    0% {
       width: 0px;
    }
@@ -524,7 +527,7 @@ ul#nav li.current a {
    }
 }
 
-@-webkit-keyframes css {
+@keyframes css {
    0% {
       width: 0px;
    }
@@ -534,7 +537,7 @@ ul#nav li.current a {
    }
 }
 
-@-webkit-keyframes html5 {
+@keyframes html5 {
    0% {
       width: 0px;
    }
@@ -544,7 +547,7 @@ ul#nav li.current a {
    }
 }
 
-@-webkit-keyframes reactjs {
+@keyframes reactjs {
    0% {
       width: 0px;
    }
@@ -554,7 +557,7 @@ ul#nav li.current a {
    }
 }
 
-@-webkit-keyframes php {
+@keyframes php {
    0% {
       width: 0px;
    }
@@ -564,7 +567,7 @@ ul#nav li.current a {
    }
 }
 
-@-webkit-keyframes javascript {
+@keyframes javascript {
    0% {
       width: 0px;
    }
@@ -574,7 +577,7 @@ ul#nav li.current a {
    }
 }
 
-@-webkit-keyframes jquery {
+@keyframes jquery {
    0% {
       width: 0px;
    }
@@ -605,12 +608,11 @@ ul#nav li.current a {
 
 /* Portfolio Content */
 #portfolio-wrapper .columns {
-   margin-bottom: 36px;
    padding: 0 0;
+   cursor: pointer;
 }
 
 .portfolio-item .item-wrap {
-   background: #fff;
    overflow: hidden;
    position: relative;
 
@@ -676,11 +678,17 @@ ul#nav li.current a {
 }
 
 .portfolio-item .portfolio-item-meta {
-   padding: 18px
+   padding: 18px;
+   display: flex;
+   align-items: center;
+   height: 100%;
+   text-align: center;
+   width: 100%;
+   justify-content: center;
 }
 
 .portfolio-item .portfolio-item-meta h5 {
-   font: 14px/21px 'opensans-bold', sans-serif;
+   font: 30px/34px 'Klee One', sans-serif;
    color: #fff;
 }
 
@@ -1371,4 +1379,44 @@ footer .social-links li:first-child {
 .portfolio-item .portfolio-item-meta > p {
     text-align: justify;
     color: #fff;
+}
+
+.ant-carousel .slick-prev {
+   background: url('./../images/down-left.png') !important;
+   font-size: 0;
+   width: 30px !important;
+   height: 30px !important;
+   background-repeat: no-repeat;
+   background-size: cover !important;
+   transform: rotate(45deg);
+   z-index: 9;
+   transition: 0.5s;
+   outline: none !important;
+   left: -5rem !important;
+}
+.ant-carousel .slick-next {
+   background: url('./../images/down-left.png') !important;
+   font-size: 0;
+   width: 30px !important;
+   height: 30px !important;
+   z-index: 9;
+   background-repeat: no-repeat;
+   background-size: cover !important;
+   transition: 0.5s;
+   outline: none !important;
+   transform: rotate(225deg);
+   right: -5rem !important;
+}
+ .owl-prev:hover {
+   transform: scale(1.4) rotate(45deg);
+}
+ .owl-next:hover {
+   transform: scale(1.4) rotate(225deg);
+}
+
+.columns {
+   margin-left: 0 !important;
+   margin-right: 0 !important;
+   margin-top: 0 !important;
+   display: block !important;
 }
