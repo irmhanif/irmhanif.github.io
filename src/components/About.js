@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import LapIcon from './../images/appleIcons/laptop.png'
-import CallWhiteIcon from './../images/appleIcons/callWhite.png'
 export default class About extends Component {
   render() {
     let resumeData = this.props.resumeData;
@@ -11,12 +9,12 @@ export default class About extends Component {
           </div>
 
           <div className="nine columns main-col">
-            <div className='aboutBox'><h2>About Me</h2><img src={LapIcon} alt='lap' width={70} /></div>
+            <h2>About Me</h2>
             <p>{resumeData.aboutme}</p>
 
             <div className="row">
               <div className="columns contact-details">
-                <div className='aboutBox'><h2>Contact Details</h2><img src={CallWhiteIcon} alt='lap' width={70} /></div>
+                <h2>Contact Details</h2>
                 <p className="address">
                   <span>{resumeData.name}</span>
                   <br />
