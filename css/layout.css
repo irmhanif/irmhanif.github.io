@@ -66,6 +66,10 @@ header .banner-text {
    width: 100%;
 }
 
+header .nameAndPic {
+   display: flex;
+}
+
 header .banner-text h1 {
    font: 90px/1.1em 'Quicksand', sans-serif;
    color: #fff;
@@ -239,14 +243,22 @@ ul#nav li.current a {
 }
 
 #about h2 {
-   font: 22px/30px 'opensans-bold', sans-serif;
+   font: 28px/40px 'opensans-bold', sans-serif;
    color: #fff;
-   margin-bottom: 12px;
+   margin-bottom: 0px;
 }
 
 #about p {
    line-height: 30px;
-   color: #7A7A7A;
+   color: #dadada;
+   font-size: 17px;
+}
+
+#about .aboutBox {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 50%;
 }
 
 #about .profile-pic {
@@ -257,7 +269,7 @@ ul#nav li.current a {
 }
 
 #about .contact-details {
-   width: 41.66667%;
+   width: 100%;
 }
 
 #about .download {
@@ -351,6 +363,11 @@ ul#nav li.current a {
 #resume .date {
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
+}
+
+.skillHeading {
+   display: flex;
+   align-items: center;
 }
 
 /*----------------------------------------------*/
@@ -553,7 +570,17 @@ ul#nav li.current a {
    }
 
    100% {
-      width: 60%;
+      width: 82%;
+   }
+}
+
+@keyframes redux {
+   0% {
+      width: 0px;
+   }
+
+   100% {
+      width: 75%;
    }
 }
 
@@ -1354,9 +1381,16 @@ footer .social-links li:first-child {
 }
 
 .reactjs {
-   width: 81%;
+   width: 82%;
    animation: reactjs 2s ease;
 }
+
+.redux {
+   width: 75%;
+   -moz-animation: redux 2s ease;
+   animation: redux 2s ease;
+}
+
 .joomla {
    width: 81%;
    animation: reactjs 2s ease;
