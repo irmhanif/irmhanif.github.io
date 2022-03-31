@@ -7,7 +7,7 @@ let resumeData = {
     "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=idrishan1996@gmail.com&tf=1",
   skypeid: "Your skypeid",
   roleDescription:
-    "Experienced Web Developer in the information technology and services industry. Strong professional skilled in JavaScript, React Js, Redux, Hooks, GraphQlm PHP, SQL, jQuery and Responsive Web Development with Bootstrap 4.",
+    "Experienced Front End Web Developer in the information technology and services based industry. Strong professional skilled in JavaScript, React Js, Redux, Hooks, GraphQl, PHP, SQL, jQuery and Responsive Web Development with Bootstrap 4.",
   socialLinks: [
     {
       name: "linkedin",
@@ -21,8 +21,8 @@ let resumeData = {
     },
   ],
   aboutme:
-    "I am currently working in CodeCraft Bangalore as Engineer, Web Development. I am a self-taught Web Developer and having skills in JavaScript, React Js, Redux, GraphQL, HTML5, SASS. I can develop Responsive Web Apps with Bootstrap 4 and Media Queries.",
-  address: "India",
+    "I am currently working in Cognizant Technology, Chennai as Associate, (Front End Developer). I am a self-taught Web Developer and having skills in JavaScript, React Js, Redux, GraphQL, HTML5, SASS. I can develop Responsive Web Apps with Bootstrap 4 and Media Queries.",
+  address: "Tamil Nadu, India",
   website: "http://irmhanif.github.io/",
   contact: "idrishan1996@gmail.com",
   contactTell: "mailto:idrishan1996@gmail.com",
@@ -36,11 +36,18 @@ let resumeData = {
   ],
   work: [
     {
-      CompanyName: "CodeCraft Technologies",
-      specialization: "React Js, JavaScript, Redux & GraphQL",
-      experience: "8 Months",
+      CompanyName: "Cognizant Technologies",
+      specialization: "JavaScript, React Js, Redux",
+      experience: "From Dec 2021",
       // "MonthOfLeaving":"Sep",
       // "YearOfLeaving":"2020"
+    },
+    {
+      CompanyName: "CodeCraft Technologies",
+      specialization: "React Js, JavaScript, Redux & GraphQL",
+      experience: "11 Months",
+      MonthOfLeaving: "Dec",
+      YearOfLeaving: "2021",
     },
     {
       CompanyName: "Zinavo",
@@ -57,6 +64,9 @@ let resumeData = {
       skillname: "Reactjs",
     },
     {
+      skillname: "Redux",
+    },
+    {
       skillname: "HTML5",
     },
     {
@@ -67,9 +77,6 @@ let resumeData = {
     },
     {
       skillname: "PHP",
-    },
-    {
-      skillname: "Joomla",
     },
   ],
   resumeFile: "document/Web Developer.pdf",
@@ -83,23 +90,16 @@ let resumeData = {
         safety program. This tool provides the real time data for safety management and
         maximizes the impact of limited safety resources`,
       responsiblities: [
-        `Developed web pages using HTML5, CSS, Bootstrap,
-      JavaScript ,TypeScript ,React.js and Redux`,
-        `Customized the components using CSS and Typescript to fit
-      into the requirements `,
-        `Developed various reusable components that can be used
-      across the application.`,
+        `Developed web pages using HTML5, CSS, Bootstrap, JavaScript ,TypeScript ,React.js and Redux`,
+        `Customized the components using Typescript to fit into the requirements `,
+        `Developed various reusable components that can be used across the application.`,
         `Developed web pages to fit into different screen resolutions. `,
         `Worked on developing form field validation`,
-        `Interacted with clients to understand their requirements and
-    developed the site accordingly`,
-        `Worked on writing queries using GraphQL to access or
-    update data into the database`,
-        `Used Media Queries for the design to be compatible in all
-    devices`,
+        `Interacted with clients to understand their requirements and developed the site accordingly`,
+        `Worked on writing queries using GraphQL to access or update data into the database`,
+        `Used Media Queries for the design to be compatible in all devices`,
       ],
       imgurl: "images/portfolio/dummy.png",
-      //web: "https://www.francebyfrench.com/",
     },
     {
       name: "France by French",
@@ -107,9 +107,26 @@ let resumeData = {
         "Tourism web application with different kind of trips with admin panel to manage bookings & also having different kind of payment methods like single payment & share pay.",
       imgurl: "images/portfolio/fbf.png",
       demoVideo: "videos/fbf.mp4",
+      folder: "fbf",
       //web: "https://www.francebyfrench.com/",
     },
-
+    {
+      name: "Wed on Set",
+      description:
+        "Web application for booking wedding service's in limited Cities, in catering service you can choose food items. Under working",
+      imgurl: "images/portfolio/wod.png",
+      demoVideo: "videos/wos.mp4",
+      folder: "wos",
+      //web: "http://zinavo-clientupdates.in/idris/wedonset/",
+    },
+    {
+      name: "Bio Resilience",
+      description:
+        "Web application for a Hospital, Purpose: Selling courses for mental health related and also doing Health talks similiar to blog but here only videos based on category. Under development",
+      imgurl: "images/portfolio/bior.png",
+      folder: "bio",
+      //web: "http://zinavo-demo.in/demo/dr/index.php/course?id=1",
+    },
     {
       name: "Joy Of Giving",
       description:
@@ -124,13 +141,7 @@ let resumeData = {
       imgurl: "images/portfolio/xtra.png",
       web: "http://www.xtra-mile.in/",
     },
-    {
-      name: "Wed on Set",
-      description:
-        "Web application for booking wedding service's in limited Cities, in catering service you can choose food items. Under working",
-      imgurl: "images/portfolio/wod.png",
-      //web: "http://zinavo-clientupdates.in/idris/wedonset/",
-    },
+
     {
       name: "TravoTales",
       description:
@@ -147,14 +158,15 @@ let resumeData = {
     {
       name: "Vibhive",
       description:
-        "Web application for interior designing with 360° video's and Having pie chart user dashboard for quotations based on your request",
+        "Web application for interior designing with 360° video's and Having pie chart in user dashboard for quotations based on user's request",
+      note: "Domain might not be renewed by client",
       imgurl: "images/portfolio/vs.png",
       web: "https://www.vstudioz.in/",
     },
     {
       name: "VHomeShare",
       description:
-        "In this WebApp, I have worked only on API functions for Background verification (Auth Bridge) using SQL, PHP and JSON. And also I wrote Cron Jobs to check the response.",
+        "In this WebApp, I have worked only on API functions for Background verification (Auth Bridge) using SQL, PHP and JSON. And also I worked on Cron Jobs to check the API response.",
       imgurl: "images/portfolio/vhs.png",
       web: "https://www.vhomeshare.com/",
     },
@@ -213,13 +225,6 @@ let resumeData = {
     //   imgurl: "images/portfolio/kd.png",
     //   web: "http://www.keraladestinationfinder.com/",
     // },
-    {
-      name: "Bio Resilience",
-      description:
-        "Web application for a Hospital, Purpose: Selling courses for mental health related and also doing Health talks similiar to blog but here only videos based on category. Under development",
-      imgurl: "images/portfolio/bior.png",
-      //web: "http://zinavo-demo.in/demo/dr/index.php/course?id=1",
-    },
   ],
   testimonials: [
     {

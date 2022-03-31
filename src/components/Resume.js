@@ -3,6 +3,7 @@ import resume from "./../documents/Mohamed Idris.pdf";
 import { Button, Modal } from "antd";
 import { DownloadOutlined, EyeOutlined } from "@ant-design/icons";
 import PDFViewer from "pdf-viewer-reactjs";
+import hereIcon from './../images/appleIcons/here.png'
 
 export default function Resume(props) {
   let resumeData = props.resumeData;
@@ -88,10 +89,11 @@ export default function Resume(props) {
         </div>
 
         <div className='row skill'>
-          <div className='three columns header-col'>
-            <h1>
+          <div className='three columns header-col '>
+            <div className="skillHeading"><h1>
               <span>Skills</span>
             </h1>
+            <img src={hereIcon} alt='here' width={100} /></div>
           </div>
 
           <div className='nine columns main-col'>
