@@ -5340,14 +5340,7 @@ input::-moz-focus-inner {
     width: 400px;
   }
 }
-@media only screen and (max-width: 600px) {
-  .section-header.has-bottom-sep {
-    padding-bottom: 0;
-  }
-  .section-header.has-bottom-sep::before {
-    width: 250px;
-  }
-}
+
 .slick-slider .slick-slide {
   outline: none;
 }
@@ -6195,7 +6188,7 @@ html.cl-loaded .home-content__main {
 .s-services {
   padding-top: 16.2rem;
   padding-bottom: 13.2rem;
-  background-color: #fff;
+  background-color: #f6f6f6;
   color: #757575;
   position: relative;
 }
@@ -6490,7 +6483,7 @@ html.cl-loaded .home-content__main {
 .s-clients {
   padding-top: 16.2rem;
   padding-bottom: 16.8rem;
-  background-color: #e6e6e6;
+  background-color: #fff;
   color: #757575;
   position: relative;
 }
@@ -7570,3 +7563,51 @@ ul.timeLine li .descr::before {
     color: #fff;
   }
   
+  .hsg-featured-snippet {
+    width: 100%;
+    position: relative;
+    padding: 2.75rem 1rem;
+    right: 1rem;
+    margin: 2.75rem 0;
+}
+.hsg-rich-text ol>li {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.61111em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  counter-increment: item;
+  position: relative;
+}
+.listOfTrends {margin: 0 auto;width: 30%;}
+
+.hsg-featured-snippet__wrapper--content li {font-size: 18px;}
+
+.trBoxes {margin: 0 10%;display: grid;grid-template-columns: auto auto;column-gap: 50px;}
+
+.trBox {box-shadow: 1px 0px 13px -6px;padding: 0 22px;margin-bottom: 8%;}
+
+@media only screen and (max-width: 600px) {
+  .section-header.has-bottom-sep {
+    padding-bottom: 0;
+  }
+  .section-header.has-bottom-sep::before {
+    width: 250px;
+  }
+  .listOfTrends {
+    width: 70%;
+  }
+  .trBoxes {
+    grid-template-columns: auto;
+  }
+  .popupBox {
+    position: fixed;
+    top: 9%;
+    left: 0%;
+    height: 70vh;
+    overflow: auto;
+  }
+  .card {
+    border-radius: 0;
+  }
+}
