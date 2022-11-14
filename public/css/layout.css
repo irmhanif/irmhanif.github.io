@@ -564,6 +564,16 @@ ul#nav li.current a {
    }
 }
 
+@keyframes java {
+   0% {
+      width: 0px;
+   }
+
+   100% {
+      width: 72%;
+   }
+}
+
 @keyframes reactjs {
    0% {
       width: 0px;
@@ -1378,6 +1388,11 @@ footer .social-links li:first-child {
 .php {
    width: 75%;
    animation: php 2s ease;
+}
+
+.spring.boot {
+   width: 72%;
+   animation: java 2s ease;
 }
 
 .reactjs {

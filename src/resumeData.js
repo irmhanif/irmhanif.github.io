@@ -7,7 +7,7 @@ let resumeData = {
     "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=idrishan1996@gmail.com&tf=1",
   skypeid: "Your skypeid",
   roleDescription:
-    "Experienced Front End Web Developer in the information technology and services based industry. Strong professional skilled in JavaScript, React Js, Redux, Hooks, GraphQl, PHP, SQL, jQuery and Responsive Web Development with Bootstrap 4.",
+    "Experienced Web Developer in the information technology and services based industry. Strong professional skilled in JavaScript, React Js, Redux, Hooks, Java, Spring Boot, PHP, SQL, jQuery and Responsive Web Development with Bootstrap 4.",
   socialLinks: [
     {
       name: "linkedin",
@@ -21,9 +21,9 @@ let resumeData = {
     },
   ],
   aboutme:
-    "I am currently working in Cognizant Technology, Chennai as Associate, (Front End Developer). I am a self-taught Web Developer and having skills in JavaScript, React Js, Redux, GraphQL, HTML5, SASS. I can develop Responsive Web Apps with Bootstrap 4 and Media Queries.",
+    "I am currently working in Cognizant Technology, Chennai as Associate, (Front End Developer). I am a self-taught Web Developer and having skills in JavaScript, React Js, Redux,  Java, Spring Boot, HTML5, SASS. I can develop Responsive Web Apps with Bootstrap 4 and Media Queries.",
   address: "Tamil Nadu, India",
-  website: "http://irmhanif.github.io/",
+  website: "http://idrism.com/",
   contact: "idrishan1996@gmail.com",
   contactTell: "mailto:idrishan1996@gmail.com",
   education: [
@@ -58,7 +58,7 @@ let resumeData = {
     },
   ],
   skillsDescription:
-    "Strong professional skilled in JavaScript, React JS, Redux, GraphQL, PHP, SQL, jQuery and Responsive Web Development with Bootstrap.",
+    "Strong professional skilled in JavaScript, React JS, Redux, Java, Spring Boot, PHP, SQL, jQuery and Responsive Web Development with Bootstrap.",
   skills: [
     {
       skillname: "Reactjs",
@@ -76,31 +76,14 @@ let resumeData = {
       skillname: "Javascript",
     },
     {
+      skillname: "Spring Boot - Java",
+    },
+    {
       skillname: "PHP",
     },
   ],
   resumeFile: "document/Web Developer.pdf",
   portfolio: [
-    {
-      name: "iGoalZero",
-      detailName: "PennPetChem - iGoalZero",
-      description: `iGoalZero solution captures Job Safety Analysis(JSA), Work Permit
-        image and data for work performed by contractors and employees without changing
-        the current work process. This tool enhances the engagement of workers in the
-        safety program. This tool provides the real time data for safety management and
-        maximizes the impact of limited safety resources`,
-      responsiblities: [
-        `Developed web pages using HTML5, CSS, Bootstrap, JavaScript ,TypeScript ,React.js and Redux`,
-        `Customized the components using Typescript to fit into the requirements `,
-        `Developed various reusable components that can be used across the application.`,
-        `Developed web pages to fit into different screen resolutions. `,
-        `Worked on developing form field validation`,
-        `Interacted with clients to understand their requirements and developed the site accordingly`,
-        `Worked on writing queries using GraphQL to access or update data into the database`,
-        `Used Media Queries for the design to be compatible in all devices`,
-      ],
-      imgurl: "images/portfolio/dummy.png",
-    },
     {
       name: "France by French",
       description:
@@ -169,6 +152,42 @@ let resumeData = {
         "In this WebApp, I have worked only on API functions for Background verification (Auth Bridge) using SQL, PHP and JSON. And also I worked on Cron Jobs to check the API response.",
       imgurl: "images/portfolio/vhs.png",
       web: "https://www.vhomeshare.com/",
+    },
+    {
+      name: "Walgreens",
+      detailName: "Walgreens Boots Alliance",
+      description: `Walgreens Boots Alliance, Inc. is an American-British-Swiss holding company headquartered in Deerfield, Illinois that owns the retail pharmacy chains Walgreens and Boots, as well as several pharmaceutical manufacturing and distribution companies.`,
+      responsiblities: [
+        `Developed web based components using HTML5, CSS,  JavaScript ,React.js, Redux and created API’s using Java Spring Boot.`,
+      	`Participate in the entire application lifecycle, focusing on coding and debugging.`,
+        `Analyze user requirements to define business objectives`,
+        `Identify and resolve any technical issues arising`,
+        `Write well designed, testable code`,
+        `Build reusable code and libraries for future use`,
+        `Worked in CMS framework (Drupal)`,
+        `Provide training and support to internal teams`
+      ],
+      imgurl: "images/portfolio/walgreens.png",
+    },
+    {
+      name: "iGoalZero",
+      detailName: "PennPetChem - iGoalZero",
+      description: `iGoalZero solution captures Job Safety Analysis(JSA), Work Permit
+        image and data for work performed by contractors and employees without changing
+        the current work process. This tool enhances the engagement of workers in the
+        safety program. This tool provides the real time data for safety management and
+        maximizes the impact of limited safety resources`,
+      responsiblities: [
+        `Developed web pages using HTML5, CSS, Bootstrap, JavaScript ,TypeScript ,React.js and Redux`,
+        `Customized the components using Typescript to fit into the requirements `,
+        `Developed various reusable components that can be used across the application.`,
+        `Developed web pages to fit into different screen resolutions. `,
+        `Worked on developing form field validation`,
+        `Interacted with clients to understand their requirements and developed the site accordingly`,
+        `Worked on writing queries using GraphQL to access or update data into the database`,
+        `Used Media Queries for the design to be compatible in all devices`,
+      ],
+      imgurl: "images/portfolio/dummy.png",
     },
     // {
     //   name: "GME",
