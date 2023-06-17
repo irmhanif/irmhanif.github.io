@@ -159,13 +159,13 @@ let resumeData = {
       description: `Walgreens Boots Alliance, Inc. is an American-British-Swiss holding company headquartered in Deerfield, Illinois that owns the retail pharmacy chains Walgreens and Boots, as well as several pharmaceutical manufacturing and distribution companies.`,
       responsiblities: [
         `Developed web based components using HTML5, CSS,  JavaScript ,React.js, Redux and created API’s using Java Spring Boot.`,
-      	`Participate in the entire application lifecycle, focusing on coding and debugging.`,
+        `Participate in the entire application lifecycle, focusing on coding and debugging.`,
         `Analyze user requirements to define business objectives`,
         `Identify and resolve any technical issues arising`,
         `Write well designed, testable code`,
         `Build reusable code and libraries for future use`,
         `Worked in CMS framework (Drupal)`,
-        `Provide training and support to internal teams`
+        `Provide training and support to internal teams`,
       ],
       imgurl: "images/portfolio/walgreens.png",
     },
