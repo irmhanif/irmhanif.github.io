@@ -1,35 +1,25 @@
-import React, { Component } from 'react';
-import LapIcon from './../images/appleIcons/laptop.png'
-import CallWhiteIcon from './../images/appleIcons/callWhite.png'
-export default class About extends Component {
-  render() {
-    let resumeData = this.props.resumeData;
-    return <section id="about">
-        <div className="row">
-          <div className="three columns">
-            <img className="profile-pic" src="images/profilepic.jpg" alt="" />
-          </div>
+import React from "react";
+import LapIcon from "./../images/appleIcons/laptop.png";
 
-          <div className="nine columns main-col">
-            <div className='aboutBox'><h2>About Me</h2><img src={LapIcon} alt='lap' width={70} /></div>
-            <p>{resumeData.aboutme}</p>
-
-            <div className="row">
-              <div className="columns contact-details">
-                <div className='aboutBox'><h2>Contact Details</h2><img src={CallWhiteIcon} alt='lap' width={70} /></div>
-                <p className="address">
-                  <span>{resumeData.name}</span>
-                  <br />
-                  <span>{resumeData.address}</span>
-                  <br />
-                  <span>
-                    <a href={resumeData.contactTell}>{resumeData.contact}</a>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
+function About(props) {
+  let { resumeData } = props;
+  return (
+    <section id="about">
+      <div className="row">
+        <div className="three columns">
+          <img className="profile-pic" src="images/profilepic.jpg" alt="" />
         </div>
-      </section>;
-  }
+
+        <div className="nine columns main-col">
+          <div className="aboutBox">
+            <h2>About Me</h2>
+            <img src={LapIcon} alt="lap" width={70} />
+          </div>
+          <p>{resumeData.aboutme}</p>
+        </div>
+      </div>
+    </section>
+  );
 }
+
+export default About;

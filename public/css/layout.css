@@ -1074,7 +1074,6 @@ call-to-action .button {
    margin: 0 6px;
    display: inline-block;
    zoom: 1;
-   *display: inline;
 }
 
 .flex-control-paging li a {
