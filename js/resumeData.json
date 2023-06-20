@@ -18,6 +18,8 @@
             "className": "fa fa-github"
         }
     ],
+    "resumeView": false,
+    "resumeDownload": true,
     "aboutme": "I am currently working in Cognizant Technology, Chennai as Associate, (Front End Developer). I am a self-taught Web Developer and having skills in JavaScript, React Js, Redux, HTML5, SASS. I can develop Responsive Web Apps with Bootstrap 4 and Media Queries.",
     "address": "Tamil Nadu, India",
     "website": "http://idrism.com/",
@@ -79,7 +81,7 @@
             "percentage": "65%"
         }
     ],
-    "resumeFile": "document/Idris.pdf",
+    "resumeFile": "documents/Idris.pdf",
     "bgVideo": true,
     "categoryBased": true,
     "portfolioCategories": {
