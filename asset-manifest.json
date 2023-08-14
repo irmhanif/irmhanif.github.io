@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.a7b7c902.css",
-    "main.js": "./static/js/main.64304407.js",
+    "main.css": "./static/css/main.08bd14d2.css",
+    "main.js": "./static/js/main.61932170.js",
     "static/media/web.mp4": "./static/media/web.8aa28d9cc54d6720730a.mp4",
     "static/media/14.png": "./static/media/14.7cd4f8d5c2359b1a9baf.png",
     "static/media/1.png": "./static/media/1.d9af2b0419455785d573.png",
@@ -24,8 +24,6 @@
     "static/media/librebaskerville-italic-webfont.svg": "./static/media/librebaskerville-italic-webfont.0b422488a719e23639bd.svg",
     "static/media/librebaskerville-bold-webfont.svg": "./static/media/librebaskerville-bold-webfont.0baa8f8874829b8190f4.svg",
     "static/media/librebaskerville-regular-webfont.svg": "./static/media/librebaskerville-regular-webfont.7415f2783bbf425acb01.svg",
-    "static/media/MaterialIcons-Regular.eot": "./static/media/MaterialIcons-Regular.4674f8ded773cb03e824.eot",
-    "static/media/MaterialIcons-Regular.ttf": "./static/media/MaterialIcons-Regular.5e7382c63da0098d634a.ttf",
     "static/media/OpenSans-LightItalic-webfont.svg": "./static/media/OpenSans-LightItalic-webfont.edecb50680e47b511c4c.svg",
     "static/media/librebaskerville-italic-webfont.ttf": "./static/media/librebaskerville-italic-webfont.6740780958d5878a70b3.ttf",
     "static/media/OpenSans-Italic-webfont.svg": "./static/media/OpenSans-Italic-webfont.2c2a4c8efd04b5595ace.svg",
@@ -40,10 +38,8 @@
     "static/media/librebaskerville-regular-webfont.ttf": "./static/media/librebaskerville-regular-webfont.c5950393dc615b821fa2.ttf",
     "static/media/librebaskerville-bold-webfont.ttf": "./static/media/librebaskerville-bold-webfont.68c08acc05aa00185759.ttf",
     "static/media/laptop.png": "./static/media/laptop.7f97652ff1c007cbd98f.png",
-    "static/media/MaterialIcons-Regular.woff": "./static/media/MaterialIcons-Regular.83bebaf37c09c7e1c3ee.woff",
     "static/media/librebaskerville-italic-webfont.woff": "./static/media/librebaskerville-italic-webfont.759baa8b5216a3446062.woff",
     "static/media/librebaskerville-italic-webfont.eot": "./static/media/librebaskerville-italic-webfont.7d07c72e96a5c989ffb8.eot",
-    "static/media/MaterialIcons-Regular.woff2": "./static/media/MaterialIcons-Regular.cff684e59ffb052d72cb.woff2",
     "static/media/OpenSans-ExtraBoldItalic-webfont.ttf": "./static/media/OpenSans-ExtraBoldItalic-webfont.f152ca42006a642528e5.ttf",
     "static/media/OpenSans-ExtraBold-webfont.ttf": "./static/media/OpenSans-ExtraBold-webfont.9d77dfc4dcac347f976a.ttf",
     "static/media/OpenSans-SemiboldItalic-webfont.ttf": "./static/media/OpenSans-SemiboldItalic-webfont.b731ffb17eb9151fb940.ttf",
@@ -79,11 +75,11 @@
     "static/media/OpenSans-Bold-webfont.eot": "./static/media/OpenSans-Bold-webfont.4f6aec473f52a4a0b948.eot",
     "static/media/OpenSans-Light-webfont.eot": "./static/media/OpenSans-Light-webfont.ce265cea503c9d9bfe10.eot",
     "index.html": "./index.html",
-    "main.a7b7c902.css.map": "./static/css/main.a7b7c902.css.map",
-    "main.64304407.js.map": "./static/js/main.64304407.js.map"
+    "main.08bd14d2.css.map": "./static/css/main.08bd14d2.css.map",
+    "main.61932170.js.map": "./static/js/main.61932170.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7b7c902.css",
-    "static/js/main.64304407.js"
+    "static/css/main.08bd14d2.css",
+    "static/js/main.61932170.js"
   ]
 }

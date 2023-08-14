@@ -187,17 +187,6 @@
             "show": true
         },
         {
-            "name": "Todo App",
-            "description": "Basic todo app build with React Js and Used Sass  ",
-            "imgurl": "images/portfolio/td.png",
-            "web": "http://idrism.com/projects/todo/",
-            "category": [
-                "react",
-                "own"
-            ],
-            "show": true
-        },
-        {
             "name": "Wed on Set",
             "description": "Web application for booking wedding service's in limited Cities, in catering service you can choose food items. Under working",
             "imgurl": "images/portfolio/wod.png",
@@ -332,6 +321,17 @@
             "description": "Chat room build using React Js, Firebase, React Hooks and Google Login authentication. UI based on Whatsapp",
             "imgurl": "images/portfolio/gc.png",
             "web": "https://whats-app-cloneapp.web.app/",
+            "category": [
+                "react",
+                "own"
+            ],
+            "show": true
+        },
+        {
+            "name": "Todo App",
+            "description": "Basic todo app build with React Js and Used Sass  ",
+            "imgurl": "images/portfolio/td.png",
+            "web": "https://irmhanif.github.io/todo.html",
             "category": [
                 "react",
                 "own"
