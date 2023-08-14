@@ -1,6 +1,6 @@
 {
     "imagebaseurl": "https://avatars2.githubusercontent.com/u/19489199?s=460&v=4",
-    "name": "Mohamed Idris",
+    "name": "Mohamed Idris M",
     "role": "Front End Developer",
     "mailId": " idrishan1996@gmail.com",
     "mailIdurl": "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=idrishan1996@gmail.com&tf=1",
@@ -82,7 +82,7 @@
         }
     ],
     "resumeFile": "documents/Idris.pdf",
-    "bgVideo": false,
+    "bgVideo": true,
     "categoryBased": true,
     "portfolioCategories": {
         "react": {
