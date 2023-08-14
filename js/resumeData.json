@@ -82,7 +82,7 @@
         }
     ],
     "resumeFile": "documents/Idris.pdf",
-    "bgVideo": true,
+    "bgVideo": false,
     "categoryBased": true,
     "portfolioCategories": {
         "react": {
