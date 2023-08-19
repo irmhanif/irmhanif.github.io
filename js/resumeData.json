@@ -178,11 +178,21 @@
             "description": "Tourism web application with different kind of trips with admin panel to manage bookings & also having different kind of payment methods like single payment & share pay.",
             "imgurl": "images/portfolio/fbf.png",
             "demoVideo": "videos/fbf.mp4",
-            "web": "http://idrism.com/fbf",
             "folder": "fbf",
             "category": [
                 "travels",
                 "php"
+            ],
+            "show": true
+        },
+        {
+            "name": "Todo App",
+            "description": "Basic todo app build with React Js and Used Sass  ",
+            "imgurl": "images/portfolio/td.png",
+            "web": "http://idrism.com/projects/todo/",
+            "category": [
+                "react",
+                "own"
             ],
             "show": true
         },
@@ -321,17 +331,6 @@
             "description": "Chat room build using React Js, Firebase, React Hooks and Google Login authentication. UI based on Whatsapp",
             "imgurl": "images/portfolio/gc.png",
             "web": "https://whats-app-cloneapp.web.app/",
-            "category": [
-                "react",
-                "own"
-            ],
-            "show": true
-        },
-        {
-            "name": "Todo App",
-            "description": "Basic todo app build with React Js and Used Sass  ",
-            "imgurl": "images/portfolio/td.png",
-            "web": "https://irmhanif.github.io/todo.html",
             "category": [
                 "react",
                 "own"
