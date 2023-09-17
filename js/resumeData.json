@@ -1,6 +1,6 @@
 {
     "imagebaseurl": "https://avatars2.githubusercontent.com/u/19489199?s=460&v=4",
-    "name": "Mohamed Idris M",
+    "name": "Mohamed Idris",
     "role": "Front End Developer",
     "mailId": " idrishan1996@gmail.com",
     "mailIdurl": "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=idrishan1996@gmail.com&tf=1",
@@ -36,7 +36,7 @@
     "work": [
         {
             "CompanyName": "Cognizant Technologies",
-            "specialization": "JavaScript, React Js, Redux",
+            "specialization": "JavaScript, React Js & Redux",
             "experience": "From Dec 2021"
         },
         {
@@ -82,7 +82,7 @@
         }
     ],
     "resumeFile": "documents/Idris.pdf",
-    "bgVideo": false,
+    "bgVideo": true,
     "categoryBased": true,
     "portfolioCategories": {
         "react": {
