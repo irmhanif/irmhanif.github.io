@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="gst" filter="safehtml" type="text" label="COM_COMMON_PRICE_MANAGEMENT_FORM_LBL_PRICEMANAGEMENT_GST" description="COM_COMMON_PRICE_MANAGEMENT_FORM_DESC_PRICEMANAGEMENT_GST" hint="COM_COMMON_PRICE_MANAGEMENT_FORM_LBL_PRICEMANAGEMENT_GST"/>
+    <field name="f_firt_installment" label="COM_COMMON_PRICE_MANAGEMENT_FORM_LBL_PRICEMANAGEMENT_F_FIRT_INSTALLMENT" description="COM_COMMON_PRICE_MANAGEMENT_FORM_DESC_PRICEMANAGEMENT_F_FIRT_INSTALLMENT" hint="COM_COMMON_PRICE_MANAGEMENT_FORM_LBL_PRICEMANAGEMENT_F_FIRT_INSTALLMENT"/>
+    <field name="f_first_inst_date" label="COM_COMMON_PRICE_MANAGEMENT_FORM_LBL_PRICEMANAGEMENT_F_FIRST_INST_DATE" description="COM_COMMON_PRICE_MANAGEMENT_FORM_DESC_PRICEMANAGEMENT_F_FIRST_INST_DATE" hint="COM_COMMON_PRICE_MANAGEMENT_FORM_LBL_PRICEMANAGEMENT_F_FIRST_INST_DATE"/>
+    <field name="f_final_installment" label="COM_COMMON_PRICE_MANAGEMENT_FORM_LBL_PRICEMANAGEMENT_F_FINAL_INSTALLMENT" description="COM_COMMON_PRICE_MANAGEMENT_FORM_DESC_PRICEMANAGEMENT_F_FINAL_INSTALLMENT" hint="COM_COMMON_PRICE_MANAGEMENT_FORM_LBL_PRICEMANAGEMENT_F_FINAL_INSTALLMENT"/>
+    <field name="f_final_inst_date" label="COM_COMMON_PRICE_MANAGEMENT_FORM_LBL_PRICEMANAGEMENT_F_FINAL_INST_DATE" description="COM_COMMON_PRICE_MANAGEMENT_FORM_DESC_PRICEMANAGEMENT_F_FINAL_INST_DATE" hint="COM_COMMON_PRICE_MANAGEMENT_FORM_LBL_PRICEMANAGEMENT_F_FINAL_INST_DATE"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

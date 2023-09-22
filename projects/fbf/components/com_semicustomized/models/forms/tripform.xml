@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="title" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_TITLE" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_TITLE" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_TITLE"/>
+    <field name="image" type="FileMultiple" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_IMAGE" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_IMAGE" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_IMAGE"/>
+    <field name="peoplecapacity" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_PEOPLECAPACITY" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_PEOPLECAPACITY" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_PEOPLECAPACITY"/>
+    <field name="carrousselselection" type="list" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_CARROUSSELSELECTION" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_CARROUSSELSELECTION" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_CARROUSSELSELECTION">
+      <option value="">COM_SEMICUSTOMIZED_TRIPS_CARROUSSELSELECTION_OPTION_SELCETANYONE</option>
+    </field>
+    <field name="shortdescription" filter="safehtml" type="textarea" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_SHORTDESCRIPTION" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_SHORTDESCRIPTION" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_SHORTDESCRIPTION"/>
+    <field name="longdescription" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_LONGDESCRIPTION" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_LONGDESCRIPTION" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_LONGDESCRIPTION"/>
+    <field name="keeperconsumer" type="list" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_KEEPERCONSUMER" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_KEEPERCONSUMER" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_KEEPERCONSUMER">
+      <option value="">COM_SEMICUSTOMIZED_TRIPS_KEEPERCONSUMER_OPTION_SELECTANYONE</option>
+    </field>
+    <field name="nokeeperconsumer" type="list" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_NOKEEPERCONSUMER" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_NOKEEPERCONSUMER" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_NOKEEPERCONSUMER">
+      <option value="">COM_SEMICUSTOMIZED_TRIPS_NOKEEPERCONSUMER_OPTION_SELECTANYONE</option>
+    </field>
+    <field name="transportconsumer" type="list" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_TRANSPORTCONSUMER" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_TRANSPORTCONSUMER" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_TRANSPORTCONSUMER">
+      <option value="selectanyone">COM_SEMICUSTOMIZED_TRIPS_TRANSPORTCONSUMER_OPTION_SELECTANYONE</option>
+      <option value="yes">COM_SEMICUSTOMIZED_TRIPS_TRANSPORTCONSUMER_OPTION_YES</option>
+      <option value="no">COM_SEMICUSTOMIZED_TRIPS_TRANSPORTCONSUMER_OPTION_NO</option>
+    </field>
+    <field name="notransportconsumer" type="list" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_NOTRANSPORTCONSUMER" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_NOTRANSPORTCONSUMER" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_NOTRANSPORTCONSUMER">
+      <option value="">COM_SEMICUSTOMIZED_TRIPS_NOTRANSPORTCONSUMER_OPTION_SELECTANYONE</option>
+
+    </field>
+    <field name="hotelconsumer" type="list" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_HOTELCONSUMER" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_HOTELCONSUMER" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_HOTELCONSUMER">
+      <option value="">COM_SEMICUSTOMIZED_TRIPS_HOTELCONSUMER_OPTION_SELECTANYONE</option>
+      <option value="yes">COM_SEMICUSTOMIZED_TRIPS_HOTELCONSUMER_OPTION_YES</option>
+      <option value="no">COM_SEMICUSTOMIZED_TRIPS_HOTELCONSUMER_OPTION_NO</option>
+    </field>
+    <field name="nohotelconsumer" type="list" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_NOHOTELCONSUMER" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_NOHOTELCONSUMER" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_NOHOTELCONSUMER">
+      <option value="">COM_SEMICUSTOMIZED_TRIPS_NOHOTELCONSUMER_OPTION_SELECTANYONE</option>
+    </field>
+    <field name="planning1" type="list" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_PLANNING1" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_PLANNING1" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_PLANNING1">
+      <option value="">COM_SEMICUSTOMIZED_TRIPS_PLANNING1_OPTION_SELECTANYONE</option>
+
+    </field>
+    <field name="dayplanning1" filter="safehtml" type="list" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_DAYPLANNING1" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_DAYPLANNING1" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_DAYPLANNING1"/>
+
+    <field name="planning2" type="list" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_PLANNING2" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_PLANNING2" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_PLANNING2">
+      <option value="">COM_SEMICUSTOMIZED_TRIPS_PLANNING2_OPTION_SELECTANYONE</option>
+    </field>
+    <field name="dayplanning2" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_DAYPLANNING2" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_DAYPLANNING2" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_DAYPLANNING2"/>
+
+    <field name="planning3" type="list" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_PLANNING3" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_PLANNING3" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_PLANNING3">
+      <option value="selectanyone">COM_SEMICUSTOMIZED_TRIPS_PLANNING3_OPTION_SELECTANYONE</option>
+
+    </field>
+    <field name="dayplanning3" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_DAYPLANNING3" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_DAYPLANNING3" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_DAYPLANNING3"/>
+    <field name="planning4" type="list" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_PLANNING4" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_PLANNING4" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_PLANNING4">
+      <option value="">COM_SEMICUSTOMIZED_TRIPS_PLANNING4_OPTION_SELECTANYONE</option>
+    </field>
+    <field name="dayplanning4" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_DAYPLANNING4" description="COM_SEMICUSTOMIZED_FORM_DESC_TRIP_DAYPLANNING4" hint="COM_SEMICUSTOMIZED_FORM_LBL_TRIP_DAYPLANNING4"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

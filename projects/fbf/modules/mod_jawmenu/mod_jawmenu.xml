@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="module" client="site" method="upgrade">
+	<name>JoomlArtWork Menu</name> 
+    <version>1.0</version>
+    <creationDate>August, 2015</creationDate>
+    <author>JoomlArtWork</author>
+    <authorEmail>support@joomlartwork.com</authorEmail>
+    <authorUrl>http://joomlartwork.com/</authorUrl>
+    <copyright>Copyright 2015 - http://joomlartwork.com/</copyright>
+    <license>GNU/GPL</license>
+	<description><![CDATA[
+	<div id="jawstyle" class="alert alert-success">
+	<h1 class="alert-heading">[Responsive Menu] by JoomlArtWork.com</h1>	
+	<div class="alert-message">Developed by <a href="http://joomlartwork.com/" target="_blank">JoomlArtWork</a>, licensed under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU/GPL2</a></div>
+	<p>Resource: [<a href="http://joomlartwork.com/responsive-joomla-menu/" target="_blank"><strong>documentation</strong></a>]</p>
+	<p>FontAwesome: [<a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank"><strong>view all icon names</strong></a>]</p>
+	</div>
+		]]>
+	</description>
+	
+	<files>
+		<filename module="mod_jawmenu">mod_jawmenu.php</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>php</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_jawmenu/php">						
+			<fieldset name="basic">
+		
+				<field name="menutype" type="menu" label="Choose Menu" description="Choose a menu to display." />
+				
+				<field name="jQuery" type="list" default="0" label="jQuery" description="Enable or Disable the latest jQuery version. Make sure that jQuery is loaded only once on your website.">
+					<option value="0">Disable</option>
+					<option	value="1">Enable</option>
+				</field>
+
+				<field name="FontAwesome" type="list" default="1" label="Font Awesome" description="Enable or Disable the latest FontAwesome library.">
+					<option value="0">Disable</option>
+					<option	value="1">Enable</option>
+				</field>
+
+				<field name="menuStyle" type="list" default="light" label="Menu Style" description="Choose menu style.">
+					<option value="light">Light</option>
+					<option	value="dark">Dark</option>
+				</field>
+				
+				<field name="startLevel" type="list" default="1" label="Start Level" description="Menu start level.">
+					<option value="1">J1</option>
+				</field>
+				<field name="endLevel" type="list" default="0" label="End Level" description="Menu end level.">
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field name="linkColorA" type="color" default="#009ae1" label="Active Link Color" description="Choose active/hover/focus link color." />	
+				
+				<field name="fontStyle" type="text" default="Open+Sans" label="Google Font Style" description="" />	
+				
+			<field type="asset" />
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="tag_id" type="text" label="Menu Tag ID" description="An ID attribute to assign to the root UL tag of the menu (optional)" />
+				<field name="class_sfx" type="text" label="Menu Class Suffix" description="A suffix to be applied to the CSS class of the menu items" />
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option	value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode"	type="hidden" default="itemid">
+					<option	value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

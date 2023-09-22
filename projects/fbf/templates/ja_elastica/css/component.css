@@ -1,0 +1,43 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Elastica Template for J25 & J3x
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2018 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+ */
+
+ 
+/* Normal links ---*/
+a {
+  color: #ec534d;
+  text-decoration: none;
+}
+
+body.contentpane .contentheading a {
+  color: #000;
+  text-decoration: none;
+}
+
+body.com_media .thumbnail {
+	background: none;
+}
+
+body.contentpane fieldset.filter button {
+	padding: 2px 10px;
+}
+
+body.contentpane fieldset.filter input#filter_search {
+	margin: 0 5px 0 0;
+}
+
+body.contentpane .list-footer ul li {
+	background: none;
+}
+
+.filters .chzn-container { margin: 5px 0; }
+
+.chzn-container-single .chzn-search {height: 25px;}
+

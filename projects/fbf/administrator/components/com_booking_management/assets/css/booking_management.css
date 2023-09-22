@@ -1,0 +1,18 @@
+.icon-48-booking_managements {
+      background-image: url(../images/l_booking_managements.png);
+      padding-left:60px!important;
+}
+
+.icon-48-booking_management {
+      background-image: url(../images/l_booking_managements.png);
+      padding-left:60px!important;
+}
+
+.color-box-booking_managements { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+
+
+.other-filters{
+    padding: 0 14px;
+}

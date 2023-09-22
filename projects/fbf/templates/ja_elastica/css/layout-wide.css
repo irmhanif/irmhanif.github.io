@@ -1,0 +1,17 @@
+body.fs1 #ja-wrapper{font-size:1.1em !important;}
+body.fs2 #ja-wrapper{font-size:1.2em !important;}
+body.fs3 #ja-wrapper{font-size:1.3em !important;}
+body.fs4 #ja-wrapper{font-size:1.4em !important;}
+body.fs5 #ja-wrapper{font-size:1.5em !important;}
+body.fs6 #ja-wrapper{font-size:1.6em !important;}
+.main{width:1200px;}
+.item{float:none;width:100% !important;}
+.cols-1 .item,
+.cols-2 .item,
+.cols-3 .item,
+.cols-4 .item,
+.cols-5 .item{width:100% !important;}
+#ja-header{}
+#ja-footer{}
+#ja-mainnav{max-width:754px;}
+#ja-menu-button{display:none;}

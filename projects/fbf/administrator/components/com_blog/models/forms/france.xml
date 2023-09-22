@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_BLOG_FORM_LBL_FRANCE_CREATED_BY" description="COM_BLOG_FORM_DESC_FRANCE_CREATED_BY" hidden="true" hint="COM_BLOG_FORM_LBL_FRANCE_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_BLOG_FORM_LBL_FRANCE_MODIFIED_BY" description="COM_BLOG_FORM_DESC_FRANCE_MODIFIED_BY" hidden="true" hint="COM_BLOG_FORM_LBL_FRANCE_MODIFIED_BY"/>
+    <field name="tittle" filter="safehtml" type="text" label="COM_BLOG_FORM_LBL_FRANCE_TITTLE" description="COM_BLOG_FORM_DESC_FRANCE_TITTLE" hint="COM_BLOG_FORM_LBL_FRANCE_TITTLE"/>
+    <field name="category" type="list" label="COM_BLOG_FORM_LBL_FRANCE_CATEGORY" description="COM_BLOG_FORM_DESC_FRANCE_CATEGORY" hint="COM_BLOG_FORM_LBL_FRANCE_CATEGORY">
+      <option value="plan1">COM_BLOG_FRANCES_CATEGORY_OPTION_PLAN1</option>
+      <option value="plan2">COM_BLOG_FRANCES_CATEGORY_OPTION_PLAN2</option>
+      <option value="plan3">COM_BLOG_FRANCES_CATEGORY_OPTION_PLAN3</option>
+    </field>
+    <field name="short_description" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_BLOG_FORM_LBL_FRANCE_SHORT_DESCRIPTION" description="COM_BLOG_FORM_DESC_FRANCE_SHORT_DESCRIPTION" hint="COM_BLOG_FORM_LBL_FRANCE_SHORT_DESCRIPTION"/>
+    <field name="description" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_BLOG_FORM_LBL_FRANCE_DESCRIPTION" description="COM_BLOG_FORM_DESC_FRANCE_DESCRIPTION" hint="COM_BLOG_FORM_LBL_FRANCE_DESCRIPTION"/>
+    <field name="blog_image" type="FileMultiple" label="COM_BLOG_FORM_LBL_FRANCE_BLOG_IMAGE" description="COM_BLOG_FORM_DESC_FRANCE_BLOG_IMAGE" hint="COM_BLOG_FORM_LBL_FRANCE_BLOG_IMAGE"/>
+    <field name="adding_date" default="0000-00-00" type="calendar" class="inputbox" filter="safehtml" label="COM_BLOG_FORM_LBL_FRANCE_ADDING_DATE" description="COM_BLOG_FORM_DESC_FRANCE_ADDING_DATE" hint="COM_BLOG_FORM_LBL_FRANCE_ADDING_DATE"/>
+    <field name="banner" type="FileMultiple" label="COM_BLOG_FORM_LBL_FRANCE_BANNER" description="COM_BLOG_FORM_DESC_FRANCE_BANNER" hint="COM_BLOG_FORM_LBL_FRANCE_BANNER"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>no_of_days
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_CREATED_BY" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_CREATED_BY" hidden="true" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_MODIFIED_BY" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_MODIFIED_BY" hidden="true" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_MODIFIED_BY"/>
+    <field name="reference" filter="safehtml" type="text" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_REFERENCE" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_REFERENCE" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_REFERENCE"/>
+    <field name="title" filter="safehtml" type="text" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_TITLE" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_TITLE" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_TITLE"/>
+    <field name="no_of_days" filter="safehtml" type="text" label="Number of days" description="no_of_days" hint="no_of_days"/>
+    <field name="days1" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS1"/>
+    <field name="days2" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS2" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS2" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS2"/>
+    <field name="days3" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS3" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS3" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS3"/>
+    <field name="days4" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS4" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS4" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS4"/>
+    <field name="days5" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS5" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS5" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS5"/>
+    <field name="days6" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS6" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS6" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS6"/>
+    <field name="days7" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS7" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS7" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS7"/>
+    <field name="days8" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS8" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS8" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS8"/>
+    <field name="days9" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS9" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS9" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS9"/>
+    <field name="days10" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS10" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS10" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS10"/>
+    <field name="days11" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS11" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS11" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS11"/>
+    <field name="days12" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS12" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS12" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS12"/>
+    <field name="days13" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS13" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS13" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS13"/>
+    <field name="days14" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS14" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS14" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS14"/>
+    <field name="days15" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS15" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS15" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS15"/>
+    <field name="days16" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS16" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS16" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS16"/>
+    <field name="days17" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS17" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS17" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS17"/>
+    <field name="days18" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS18" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS18" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS18"/>
+    <field name="days19" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS19" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS19" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS19"/>
+    <field name="days20" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS20" description="COM_FIXED_TRIP_FORM_DESC_CREATE_PLANNING_DAYS20" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_PLANNING_DAYS20"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

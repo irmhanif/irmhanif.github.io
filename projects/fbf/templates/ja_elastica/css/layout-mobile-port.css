@@ -1,0 +1,292 @@
+.ja-masonry,
+.grid-double,
+.grid-tripple,
+#ja-header .main,
+#ja-content,
+.item{float:none !important;width:100% !important;}
+#contact-form dl dd input.required,
+#contact-form dl dd textarea.required{width:90% !important;}
+.video-parent-class{width:100% !important;float:left;height:auto !important;}
+.travel_leftimg,.travel_rightimg{display:none;}
+.home_pagetravel{width:100%;float:left;padding:0 1em;}
+.home_pagetravel p{font-size:13px;font-family:'Lato', sans-serif;text-align:justify !important;line-height:2;padding:0.5% 2%;}
+.image-top{top:45;position:absolute;text-align:right;left:35px;}
+.cd-text{font-size:13px !important;width:98%;float:left;font-family:'Lato', sans-serif;text-align:justify;padding:2% 5%;}
+.text1{background:url(../images/rupee.png) no-repeat,url(../images/rupee.png) no-repeat,url(../images/rupee.png) no-repeat;background-position:86% 50%,90% 50%,94% 50%;background-size:11px;}
+.text2{background:url(../images/rupee.png) no-repeat,url(../images/rupee.png) no-repeat;background-position:90% 50%,94% 50%;background-size:11px;}
+.text3{background:url(../images/rupee.png) no-repeat;background-position:94% 50%;background-size:11px;}
+h1.logo{height:auto;padding-left:0;width:25% !important;}
+.popup_right #lp-popup .tab{width:66%;height:6em;padding-top:0;opacity:1;transition:all .5s ease;}
+.loginin input.lp-input-text{-moz-border-bottom-colors:none;-moz-border-left-colors:none;-moz-border-right-colors:none;-moz-border-top-colors:none;background:#ffffff none repeat scroll 0 0;border-color:currentcolor currentcolor #cccccc;border-image:none;border-radius:1px;border-style:none none solid;border-width:medium medium 1px;font-family:"NeutraText-Book";font-size:13px;height:35px;margin-bottom:20px;padding-left:15px;width:98%;}
+.lp-left{float:left;width:60%;text-align:center;}
+.lp-left button.lp-button{background:#ffffff none repeat scroll 0 0;border:1px solid #f04d33;border-radius:4px;color:#f04d33;float:none;font-family:NeutraText-Book;font-size:13px;text-align:center;width:100%;}
+#lp-popup{top:100px !important;}
+#bd #lp-popup{background:#ffffff none repeat scroll 0 0;border-radius:5px;border-top:unset;box-shadow:0 2px 7px rgba(0, 0, 0, 0.2);height:auto;margin-left:auto;margin-right:auto;overflow:hidden;padding:0;transition:all 0.5s ease 0s;width:80%;}
+.regfield input{-moz-border-bottom-colors:none;-moz-border-left-colors:none;-moz-border-right-colors:none;-moz-border-top-colors:none;background:#ffffff none repeat scroll 0 0;border-color:currentcolor currentcolor #cccccc;border-image:none;border-radius:2px;border-style:none none solid;border-width:medium medium 1px;float:left;font-family:"NeutraText-Book";font-size:13px;height:35px;margin:0 2% 15px 0;padding-left:2px;width:100%;}
+.moduletable_traveltrip{width:98%;margin:0 auto;}
+.travel_left img{min-height:282px;width:100%;height:300px;}
+.hovereffect img{display:block;position:relative;-webkit-transition:all 0.2s ease-in;transition:all 0.2s ease-in;height:auto;min-height:auto;}
+.cust_travel{width:100%;float:left;position:absolute;top:20%;left:0%;}
+.cust_travel h1{color:#FFF;font-family:"NeutraText-Book";font-size:14px !important;font-weight:normal;padding-bottom:1%;background:url(../images/q1.png)no-repeat 0 bottom;}
+.all_travel img{height:140px;}
+.travelpage_exp h1, .travelpage_exp1 h1{font-family:"NeutraText-Book";font-size:14px !important;text-align:left;color:#000;background:url(../images/q2.png)no-repeat 0 bottom;padding-bottom:2%;background-size:13px;}
+.travelpage_exp p, .travelpage_exp1 p{font-size:13px;font-family:'Lato', sans-serif;text-align:justify;padding-top:3%;}
+.cust_travel h1{color:#FFF;font-family:"NeutraText-Book";font-size:14px !important;font-weight:normal;padding-bottom:1%;background:url(../images/q1.png)no-repeat 0 bottom;background-size:20px;}
+.conversation p{text-align:justify;border-radius:4px;font-size:13px;font-family:'Lato', sans-serif;width:auto;float:left;padding-bottom:4%;}
+.conversation p{text-align:justify;border-radius:4px;font-size:13px;font-family:'Lato', sans-serif;width:auto;float:left;padding-bottom:4%;}
+#user_name, #emailid, #mobileno, #message1{width:100%;float:left;border:1px solid #1313bc;padding:3.4% 1%;border-radius:4px;font-size:13px;font-family:'Lato', sans-serif;text-align:justify;}
+#contact_submit{width:auto;float:left;padding:2% 5%;border:none;background:#ff0303;text-align:center;border-radius:4px;font-size:13px;font-family:'Lato', sans-serif;color:#fff;font-weight:bold;}
+.visa_img, .visa_img1{width:12%;float:left;display:none;}
+.visa_cont{width:100%;float:left;padding:0% 3%;}
+.img_sec1 img{width:100%;margin:0 auto;}
+.home_slide ul li{width:25%;float:left;background:none;padding-left:2%;}
+.author{width:88%;float:right;padding-top:3%;font-family:'Lato', sans-serif;font-size:13px;}
+.ab_cont p{font-family:"Lato",sans-serif;font-size:13px;line-height:2;padding:0 1em;text-align:justify;}
+.ab_content p{font-size:13px;font-family:'Lato', sans-serif;text-align:justify;padding:2% 2%;line-height:2;}
+#social-icon p{font-size:13px;font-family:'NeutraText-Book';}
+.travelpage_right1 p{font-size:13px;font-family:'Lato', sans-serif;text-align:justify;}
+.blog_img{width:100%;float:left;}
+.blog4{width:42.3%;float:left;padding-left:2%;}
+.left_blog{width:50%;float:left;}
+.bg_sec1{width:100%;float:left;padding-top:8em;}
+.menu_blog{width:100%;float:left;}
+.overlay{bottom:0;left:0;right:0;height:100%;width:100%;opacity:1;transition:.5s ease;text-align:center;}
+#bd .footer a{border:0 !important;text-shadow:none !important;color:#fff;text-align:left !important;font-size:13px;line-height:2;font-family:'NeutraText-Book';}
+.img-top{width:100%;float:left;min-height:350px;height:350px;}
+#bd .c-button{background:rgba(0, 0, 0, 0) none repeat scroll 0 0;border:medium none !important;cursor:pointer;display:inline-block;left:40%;margin:10px 0 0;padding:20px 0 0;position:relative;top:-73px;}
+.closeimg{margin:0.3em 0;width:70%;}
+.text1, .text2, .text3{color:white;position:absolute !important;text-align:left;font-family:'NeutraText-Book';font-size:13px;top:328px !important;width:100%;float:left;background-color:rgba(0, 0, 0, 0.6) !important;padding-left:4%;margin-right:2% !important;}
+#bd #ja-header .main-inner1{background:none !important;width:100%;float:left;margin:0 !important;overflow:hidden;}
+.bookingform .booking_left{float:left;width:23%;display:none;}.bookingform form{box-shadow:6px -3px 29px 1px #E0E0E0;float:left;padding:0.5% 0.5% 0.7% 2.5%;width:100%;}
+.bookingform form{box-shadow:6px -3px 29px 1px #E0E0E0;float:left;padding:0.5% 0.5% 0.7% 2.5%;width:100%;}
+#no_days, #no_people, #dateofdeparture, #no_room{width:98%;float:left;border:1px solid #1313bc;-moz-appearance:none;-webkit-appearance:none;padding:5% 0%;text-align:center;border-radius:4px;font-size:13px;font-family:"Lato",sans-serif;}
+#placeofdeparture, #budget, #transport, #stay, #keeper, .bookform_middle #flight{width:98%;float:left;border:1px solid #1313bc;-moz-appearance:none;-webkit-appearance:none;padding:5% 0% 5% 4em;text-align:left;border-radius:4px;font-size:13px;font-family:"Lato",sans-serif;}
+.bookform_middle #flight{color:#777;}
+#no_days, #no_people, #no_room{padding-left:3em;width:98%;float:left;}
+.booking_div{float:left;margin:0 2%;width:96%;}
+.home_pagetravel h1, .home_what h1{font-family:"NeutraText-Book";font-size:14px !important;font-weight:normal;text-align:center;color:#ff0303;padding-top:6%;padding-bottom:4%;}
+span.eventtittle.eventtittle1 p{display:block;background:none;font-size:14px;text-align:justify;}
+span.eventtittle.eventtittle1.evenblack span{margin-left:0;font-size:13px;width:100%;font-weight:400;padding:0 0 10px;font-family:Neutratext-book;}
+.left_img{width:14%;float:left;display:none;}
+.right_img{width:14%;float:left;text-align:right;display:none;}
+.about_trip{float:left;width:100%;}
+.owl-carousel .owl-item{margin-top:0;padding:0 0px;}
+.bookingformrow p{position:relative;width:100%;float:left;}
+.about_trip p{float:left;font-family:"Lato",sans-serif;font-size:13px;text-align:justify;width:100%;padding:0em 1em;}
+.bookingformrow label, .bookingform_right label{font-size:13px;font-family:"Lato",sans-serif;margin-left:0;}
+.semminus{position:absolute;left:1.2em;top:33%;font-size:60px;border:none;background:url(../images/minus.png) no-repeat center;color:#fff;height:75px;background-size:11px;}
+.trip_form{margin:0 auto;width:85%;}
+.stayinfix div p span img, .stayinfix div span img{float:none;width:45px;}
+.address h3{font-size:14px;font-family:'Lato', sans-serif;font-weight:bolder;}
+.visa_cont h1{font-family:"NeutraText-Book";font-size:14px;font-weight:normal;text-align:center;color:#ff0303;padding:6% 0% 0% 4%;}
+.bookingformrow p #inc{background:url(../images/add.png) no-repeat 7px;background-size:auto;border:none;font-size:1px;position:absolute;top:40%;color:#000;height:39px;width:29px;background-size:10px;left:70%;}
+.bookingformrow p #dec{background:url(../images/minus.png) no-repeat 7px;background-size:auto;background-size:auto;border:none;font-size:1px;position:absolute;top:40%;color:#000;height:39px;width:29px;background-size:10px;left:34%;}
+input#dateofdeparture{padding:4% 0 4% 2em;}
+select#transport{padding:4% 20px 4% 3.5em;}
+.splitup{float:left;width:100%;height:100%;padding:5% 5%;}
+.home_pagetravel ul li:first-child{font-size:13px;font-family:'Lato', sans-serif;text-align:justify;background:none !important;padding-left:0;}
+#menumain-section{width:100%;float:left;position:relative;top:34px;right:1em;}
+.travelpage_right p{font-size:13px;font-family:'Lato', sans-serif;text-align:justify;width:100%;float:left;padding:0em 1em;}
+.travel_right p{font-size:13px;font-family:'Lato', sans-serif;text-align:justify;padding:0em 1em;}
+.pay_sol{width:90%;margin:0 auto;}
+.visa_cont p{font-size:13px;font-family:'Lato', sans-serif;text-align:justify;padding-top:1%;padding:10px 5px;}
+.blues li{font-size:13px;color:#0000F6;background:url(../images/tick1.png)no-repeat;background-size:16px;background-position:0 center;}
+.insperation{text-align:center;width:100%;color:#fc0000;font-family:"NeutraText-Book";font-size:14px;font-weight:normal;padding:2% 0%;float:left;}
+.home_pagetravel h1 a, .home_what h1 a{font-family:"NeutraText-Book";font-size:14px;font-weight:normal;text-align:center;color:#ff0303;}
+.blue{color:#0000F6;font-weight:bold;font-size:13px;}
+.first_img{margin:10px 0 0;width:73px !important;}
+.link_img ul li a img{width:60px;}
+#bd .last_img{height:60px;}
+.link_tittle{color:#666;float:left;font-family:"NeutraText-Book";font-size:13px;margin:0.9em 0;text-align:center;width:100%;}
+.footer_table{width:88%;margin:0 auto;}
+.link_tittle.link_tittle1{margin:0.4em 0 0;}
+.link_img ul li:last-child{width:45%;padding-top:2%;float:left;}
+.link_img ul li:nth-child(4){padding-top:2%;float:left;width:50%;}
+.lg_section1{width:90%;margin:0 auto;}
+.login-fields #username{background:url(../images/profile.png) no-repeat;background-position:5px center;background-size:14px;text-transform:capitalize;}
+.login-fields #password{background:url(../images/lock.png) no-repeat;background-position:5px center;background-size:14px;}
+#username-lbl, #password-lbl{font-size:15px;font-family:'Lato', sans-serif;text-align:left;padding:1% 0%;margin-left:0;}
+.log_form h1{text-align:center;font-size:14px;width:100%;padding:2% 2%;float:left;font-weight:900;color:#000;font-family:"NeutraText-Book";}
+.log_btns .button:hover{margin:0 auto;width:50%;background:#ff0303;border:none;}
+.sig_section2 h1{color:#000;font-size:14px;font-family:"NeutraText-Book";text-align:center;padding-bottom:3.3%;padding-top:2%;font-weight:900;}
+#bd #iagree2{position:absolute;top:14%;left:0%;}
+.travel_page{padding-top:0%;}
+.whytravel-us{padding-bottom:2em;}
+.ab_content h1{font-family:"NeutraText-Book";font-size:14px;font-weight:normal;line-height:3;padding-top:0em;text-align:center;color:#ff0303;}
+.review_page img{height:100px;}
+.rbox2{width:100%;float:left;padding-top:0em;}
+.rbox3{width:100%;float:left;}
+.rbox3 img{min-height:auto;height:350px;width:100%;float:left;}
+.reviewbox2{width:100%;float:left;background:#ffffff none repeat scroll 0 0;box-shadow:0 0 30px -5px;min-height:200px;height:auto;}
+.inner_page.terms img{height:100px;}
+.terms_accept h3{font-size:14px;font-family:NeutraText-Book;text-transform:capitalize;color:#f00303;text-align:center;text-transform:uppercase;padding-top:3%;width:100%;float:left;margin:0 !important;}
+.eventtittle1{margin:0;position:absolute;width:100%;left:0;background:#0000009c;right:0;top:50%;transform:translateY(-50%);text-align:left;transition:0.5s;}
+span.eventtittle.eventtittle1 p{display:block;background:none;font-size:13px;text-align:justify;}
+.num_days{width:100%;float:left;}
+.sub_trip{font-size:13px;font-family:"Lato",sans-serif;color:#FFF;margin-left:0;padding-left:1em;}
+#semi_trip, #trip_price, .cartinput{width:90%;float:left;padding:3% 3%;border:none;border-radius:6px;font-size:13px;color:#999;margin:0 5%;}
+#trip_submit{border:none;font-size:16px;padding:4% 0%;background:#FF0303;color:#FFF;border-radius:5px;width:96%;margin:2.8% 0% 0% 0%;}
+.semitriplisz{float:left;margin:0 2%;width:96%;}
+.semiprice{color:#333333;float:left;font-size:13px;margin:0.3% 1.3% 0 0.1%;width:90%;font-weight:bold;text-align:center;}
+.inner_page_layout .about_trip_fixed h1{color:#ef3833;font-size:13px;font-family:"NeutraText-Book";font-weight:400;margin:1em 0 0;padding-top:1.7em;}
+.about_trip_fixed p{float:left;font-family:"Lato",sans-serif;font-size:13px;text-align:center;width:100%;}
+.inclusions .inc{float:left;width:100%;text-align:left;margin-left:0%;}
+.stayinfix div p span img, .stayinfix div span img{float:none;height:auto;width:40px;}
+.fixed_plannning{float:left;width:100%;margin:0em 0 0;}
+form .row.priceform{margin:0 0 3em 0;}
+#agree_chk{width:4%;float:left;margin-top:2.7%;}
+.right_text{float:left;width:100%;}
+.leftlabel{float:left;width:100%;}
+.fpayment_amount1{width:100%;float:left;padding:0% 2%;}
+.fpayment_amount{width:100%;float:left;margin:5px 0px;}
+.fbfpayment_amount{width:100%;float:left;padding-top:0em;padding-left:3%;}
+#payment_img img{height:auto;width:90%;}
+#payment_img1 img{height:auto;width:100%;}
+.keeper_name{font-size:14px;width:100%;float:left;text-align:center;font-weight:400;padding:0 0 10px;font-family:Neutratext-book;}
+.semplus{background:url(../images/add.png) no-repeat 7px;border:none;font-size:1px;position:absolute;right:26%;top:50%;color:#000;height:39px;width:29px;background-size:10px;}
+.depature{font-size:13px;margin-left:0;}
+.pro_img{width:98%;float:left;margin:3em 0em 1em 1.5em;display:none;}
+.profile_main_fixed .headings p b:nth-child(1){float:left;text-align:left;padding:0;width:50%;font-size:13px;}
+.profile_main_fixed .headings p span:nth-child(2){float:left;text-align:left;padding:0;width:13%;display:none;}
+.profile_main_fixed .headings p span:nth-child(3){float:left;text-align:left;padding:0;width:50%;}
+.profile_main_fixed h1{color:#2d3dda;font-family:NeutraText-Book;font-size:13px;padding:0.2em 0 0;text-align:left;}
+.profile_main_fixed .headings p{float:left;width:100%;margin:15px 0 0 0px !important;font-family:Lato;color:#000;font-size:13px;}
+.dp_page .profile_right{float:left;width:60%;}
+.profile_main_fixed .headings{background:#ffffff none repeat scroll 0 0;box-shadow:0 0 30px -5px;float:left;margin:0em 2%;padding:1em 2em;width:94%;}
+.dp_page .profile{margin:0 auto;width:100%;float:left;background:#fff;border-right:1px solid #79797970;}
+.dp_page .profile_right .ng-scope{float:left;margin:0em 0 0 3px;width:100%;}
+.profile1{float:left;width:50%;margin:0em 0 0 5px;}
+.dropdown_meu{display:block !important;}
+.dropdown-menu.show{margin-top:1em;}
+.drop_list ul li h1{font-size:14px;font-weight:bold;font-family:"NeutraText-Book";text-align:left;padding-left:0%;}
+.pro_title{font-size:13px;font-weight:bold;font-family:"NeutraText-Book";text-align:left;padding-left:6%;}
+.drop_list ul li{background:none;}
+.drop_list ul li a{font-size:13px;font-family:'Lato', sans-serif;}
+.drop_list button{font-size:10px;font-family:"NeutraText-Book";font-weight:bold;width:40%;float:left;margin:2% 2%;}
+.drop_list ul li button{padding:0em 2em;width:auto;float:left;}
+.data_div{width:100%;float:left;border-top:1px solid #E0E0E0;margin-bottom:2% !important;}
+.tour_booking{display:none;}
+.drop_list button{display:block;}
+.dp_page .profile_right{float:left;width:100%;}
+.account{padding:0% 0%;width:100%;float:left;}
+.account ul{margin:10px 0px;}
+.account h1{display:none;}
+.display_quote p{float:left;width:100%;margin:15px 0 0 0px !important;font-family:Lato;color:#000;font-size:13px;}
+.tabs.protabs span{color:#7e7e7e;width:34.3%;margin:1% 0%;}
+.tabs.protabs{text-align:center;width:100%;float:left;margin:1em 0%;}
+.tabs.protabs{text-align:center;width:100%;float:left;margin:1em 0%;padding:1% 2%;}
+.dropdown-menu.show{margin-top:11.5em;width:80%;float:left;}
+.account ul li:last-child{background:url(../images/3.png) no-repeat;background-position:35px 50%;text-align:center;}
+.drop_list{padding-left:1em;}
+.tabs.protabs span b{font-weight:600;padding:0 0 0 0px;font-size:13px;cursor:pointer;margin:0 2px;font-family:'Lato', sans-serif;}
+.form_profile1{width:90%;margin:0 auto;}
+.form_profile2 form input{border:1px solid #1313BC;padding:3% 2%;color:#666;font-size:13px;font-family:'Lato', sans-serif;margin:4px 0px;}
+.edit_btn a{text-align:center;font-size:13px;font-family:'Lato', sans-serif;font-weight:bold;}
+#request_quote{background:#ef3833 none repeat scroll 0 0;border:0 none;color:#ffffff;font-size:13px;font-weight:600;padding:5px 24px;position:absolute;right:2em;top:38.3em;}
+.semice .stayinfix select#keeper, .semice .stayinfix select#transport, .semice .stayinfix select#hotel_booking{padding:3% 7% 3% 5%;width:70%;margin:2em 0 0 3.2em;font-size:13px;background:url(../images/dropr.png) no-repeat right center;outline:none;background-size:13px;background-position:94% 50%;}
+.ab_cont{width:100%;float:left;padding-top:6.5%;}
+.why_travel:last-child{width:100%;float:left;padding-top:3%;display:flex;flex-direction:column-reverse;}
+#pymnt{color:#000000;float:left;width:48%;margin:2% 0%;}
+.popupcnt #place{width:100%;float:left;border:1px solid #1313bc;padding:4% 1% 4% 5%;text-align:left;text-transform:capitalize;color:#000;font-family:'Lato', sans-serif;font-weight:600;font-size:11px;border-radius:4px;}
+.popupcnt #flight{width:100%;float:left;border:1px solid #1313bc;padding:4% 1% 4% 5%;text-align:left;text-transform:capitalize;color:#000;font-family:'Lato', sans-serif;font-weight:600;font-size:11px;border-radius:4px;}
+.paymentflight{color:#000000;float:left;font-family:NeutraText-Book;font-size:13px;font-weight:400;margin:0% 2%;width:48%;}
+#flightdept{width:48%;float:left;margin:2% 2%;}
+.popupcnt{background:#ffffff none repeat scroll 0 0;float:left;height:560px;width:100%;border-top:1px solid #000;border-bottom:1px solid #000;border-right:2px solid #000;}
+.fdir{width:100%;float:left;display:flex;flex-direction:column-reverse;}
+.h1class{width:auto;color:#fc0017;padding:6% 0% 2% 0%;text-align:center;font-family:"NeutraText-Book";font-size:14px;font-weight:normal;}
+#flight, #paymethod, #place{width:98%;float:left;border:1px solid #1313bc;padding:4% 1%;text-align:left;text-transform:capitalize;color:#000;font-family:'Lato', sans-serif;font-weight:600;font-size:11px;border-radius:4px;}
+#lp-popup label{float:left;font-family:Neutratext-book;font-size:14px;margin-left:0;text-align:start;width:auto;}
+.payment_description ol li{padding:1% 0% 5% 0%;padding-left:4.5em;width:100%;float:left;}
+.sel_opt{width:60%;float:left;position:relative;top:12%;left:10%;font-family:NeutraText-Book;font-size:14px;color:#000;font-weight:bold;}
+.sel_opt1{width:60%;float:left;position:relative;top:-17%;left:10%;font-family:NeutraText-Book;font-size:14px;color:#000;font-weight:bold;}
+.ab_content h1{font-family:"NeutraText-Book";font-size:14px;font-weight:normal;line-height:3;padding-top:0em;text-align:center;color:#ff0303;}
+.terms_accept h3{font-size:14px;font-family:NeutraText-Book;text-transform:capitalize;color:#f00303;text-align:center;text-transform:uppercase;padding-top:3%;width:100%;float:left;margin:0 !important;}
+.blog_img1{width:100%;float:left;}
+.review_page p{font-size:17px;font-family:'Lato', sans-serif;background:none !important;text-align:center;width:90%;margin:2% auto !important;line-height:normal;}
+.top_ab{padding-top:6em !important;}
+.hovereffect a.info{text-transform:uppercase;color:#fff;line-height:13;}
+label.pricelabel{font-size:14px;}
+#banner-section{margin:0em 0 0 0;}
+#bd .logo img{width:50%;}
+.provide li, .dept_inst li, .provide1 li{font-size:13px;}
+.cust_travel p{color:#FFF;font-size:13px;font-family:'Lato', sans-serif;text-align:justify;padding-top:1%;line-height:normal;transform:none;transition:none;width:90%;float:left;}
+#bd .exact_services{width:100%;float:left;background-color:none;transition:none;z-index:200;background:none;}
+.innerpage_banner .owl-dot{border:medium none;border-radius:50%;height:14px;margin:3px;width:14px;padding:0;background:#fff;}
+.owl-dot.active{background:#ed3626 none repeat scroll 0 0 !important;}
+#bd .resetpage1 button{border:none;font-size:14px;padding:3.5% 0%;background:#ff0303;color:#FFF;border-radius:5px;width:80%;font-weight:bold;font-family:'Lato',sans-serif;}
+.pass_dep1{padding-left:0em;}
+.pass_dep1 input{text-align:left;width:80%;float:left;font-size:13px;}
+.pass_dep2{padding-left:0em;}
+#bd .pass_dep2 button{font-size:13px;padding:2.8% 0%;width:40%;}
+.reset-confirm p{font-family:'Lato', sans-serif;font-size:13px;text-align:justify;width:100%;float:left;padding:0em 1em;}
+.pass_dep1 label{font-family:'Lato', sans-serif;font-size:13px;}
+.cent_txt{display:none;}
+.cent_txt.test{display:block;}
+.payment_pagemerchant{margin:0% .5em;}
+.sharepaydetails{margin:0 0 0 .5em;}
+.sharepaydetails h4{text-align:center;border-bottom:1px solid #f0f0f0;border-radius:2px 2px 0 0;color:#1313dc;display:block;font-family:NeutraText-Book;font-size:14px;font-weight:500;padding:0 0 13px;text-transform:uppercase;}
+#bd .share_pay h5{border-bottom:1px solid #f0f0f0;color:#1313dc;font-family:NeutraText-Book;font-size:14px;margin:0;padding-bottom:1%;}
+.share2 h5{color:#1313dc;font-family:"NeutraText-Book";font-size:14px;font-weight:unset;margin:0 !important;padding-top:1em;text-align:center;}
+.share2 p{align-items:flex-start;display:flex;font-family:"Lato";font-size:14px;padding:10px 24px;}
+.pay_tc1{font-size:14px;font-family:'Lato', sans-serif;}
+.display_quote{background:#ffffff none repeat scroll 0 0;box-shadow:0 0 30px -5px;float:left;margin:1.7em 2%;padding:1em;width:94%;}
+.price_update1 p label{font-size:12px;}
+.price_update1 textarea{border:1px solid #1313bc;padding:1.5% 1%;border-radius:4px;color:#000;font-size:15px;font-family:'Lato', sans-serif;width:100%;float:left;}
+.paynow_center{margin:0 auto;width:96%;}
+.share_pay p{color:#333333;float:left;font-family:"Lato",sans-serif;font-size:14px;text-align:center;width:100%;}
+.payment_nowpage2{width:100%;float:left;background:#fff;box-shadow:0px 0px 30px -5px;padding:3em 1em;}
+.inclusions h1{font-family:'NeutraText-Book';font-size:14px;color:#ef3833;font-weight:unset;}
+input.pricelabels#addtocart{font-size:14px;text-align:center;}
+.row.rowsemi{float:left;width:100%;margin:2em 0 4em;}
+.log_form1 form input{font-size:14px;}
+.log_btns .button{font-size:14px;color:#fff;line-height:1.2;text-transform:uppercase;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;justify-content:center;align-items:center;padding:0 20px;width:50%;height:30px;margin:0 auto;}
+.tripboxes input#dates{font-size:14px;}
+.tripboxes input{font-size:14px;}
+.trip_leave{font-size:14px;}
+.final_inst{font-size:14px;}
+.bank1{font-size:14px;}
+.ab_content{width:100%;float:left;padding:3em 0em 2em 0em;}
+.con_des{width:90%;margin:0 auto;}
+.social img {
+	height: 31px;
+	width: auto;
+}
+.address {
+	width: 100%;
+	float: left;
+}
+.address img {
+	height: 30px;
+	width: auto !important;
+}
+#mute {
+	cursor: pointer;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top: 84%;
+	border: none;
+	background-size: cover;
+	left: 2%;
+}
+span.re_ti {
+    float: left;
+    width: 100%;
+    margin: 0em 0 0;
+}
+span.rev_img {
+    float: left;
+    width: 27%;
+    position: relative;
+}
+span.rev_img img {
+    border-radius: 50%;
+    margin: 45px 0 0 14px;
+}
+.bl_bo_re {
+    float: left;
+    width: 73%;
+    padding: 4% 3% 4% 8%;
+    height: auto;
+    border-radius: 05px;
+}

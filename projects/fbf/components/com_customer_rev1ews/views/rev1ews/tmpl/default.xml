@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_CUSTOMER_REV1EWS_TITLE_LIST_VIEW_REV1EWS" option="View">
+        <message>
+                        <![CDATA[COM_CUSTOMER_REV1EWS_TITLE_LIST_VIEW_REV1EWS_DESC]]>
+        </message>
+	</layout>
+</metadata>

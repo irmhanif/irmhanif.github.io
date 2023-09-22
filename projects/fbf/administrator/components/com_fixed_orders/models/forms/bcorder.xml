@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_FIXED_ORDERS_FORM_LBL_BCORDER_CREATED_BY" description="COM_FIXED_ORDERS_FORM_DESC_BCORDER_CREATED_BY" hidden="true" hint="COM_FIXED_ORDERS_FORM_LBL_BCORDER_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_FIXED_ORDERS_FORM_LBL_BCORDER_MODIFIED_BY" description="COM_FIXED_ORDERS_FORM_DESC_BCORDER_MODIFIED_BY" hidden="true" hint="COM_FIXED_ORDERS_FORM_LBL_BCORDER_MODIFIED_BY"/>
+    <field name="trip" type="list" label="COM_FIXED_ORDERS_FORM_LBL_BCORDER_TRIP" description="COM_FIXED_ORDERS_FORM_DESC_BCORDER_TRIP" hint="COM_FIXED_ORDERS_FORM_LBL_BCORDER_TRIP">
+      <option value="0">COM_FIXED_ORDERS_BCORDERS_TRIP_OPTION_0</option>
+    </field>
+    <field name="date" type="list" label="COM_FIXED_ORDERS_FORM_LBL_BCORDER_DATE" description="COM_FIXED_ORDERS_FORM_DESC_BCORDER_DATE" hint="COM_FIXED_ORDERS_FORM_LBL_BCORDER_DATE">
+      <option value="2">COM_FIXED_ORDERS_BCORDERS_DATE_OPTION_2</option>
+    </field>
+    <field name="seat" filter="safehtml" type="text" label="COM_FIXED_ORDERS_FORM_LBL_BCORDER_SEAT" description="COM_FIXED_ORDERS_FORM_DESC_BCORDER_SEAT" hint="COM_FIXED_ORDERS_FORM_LBL_BCORDER_SEAT"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

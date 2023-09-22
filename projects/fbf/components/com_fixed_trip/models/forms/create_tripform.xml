@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="title" filter="safehtml" type="text" required="true" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_TITLE" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_TITLE" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_TITLE"/>
+    <field name="description" filter="safehtml" type="textarea" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_DESCRIPTION" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_DESCRIPTION" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_DESCRIPTION"/>
+    <field name="type" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_TYPE" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_TYPE" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_TYPE">
+      <option value="">COM_FIXED_TRIP_CREATE_TRIPS_TYPE_OPTION_</option>
+    </field>
+    <field name="date_of_departure1" default="0000-00-00" type="calendar" class="inputbox" filter="safehtml" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_DATE_OF_DEPARTURE1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_DATE_OF_DEPARTURE1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_DATE_OF_DEPARTURE1"/>
+    <field name="price_person1" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PRICE_PERSON1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PRICE_PERSON1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PRICE_PERSON1"/>
+    <field name="price_single_room_extra1" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PRICE_SINGLE_ROOM_EXTRA1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PRICE_SINGLE_ROOM_EXTRA1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PRICE_SINGLE_ROOM_EXTRA1"/>
+    <field name="cost_hotel1" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_COST_HOTEL1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_COST_HOTEL1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_COST_HOTEL1"/>
+    <field name="cost_activites1" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_COST_ACTIVITES1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_COST_ACTIVITES1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_COST_ACTIVITES1"/>
+    <field name="cost_transport1" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_COST_TRANSPORT1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_COST_TRANSPORT1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_COST_TRANSPORT1"/>
+    <field name="pdfplanning1" type="FileMultiple" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PDFPLANNING1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING1"/>
+    <field name="seat_available1" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_SEAT_AVAILABLE1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_SEAT_AVAILABLE1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_SEAT_AVAILABLE1"/>
+    <field name="keeper1" filter="safehtml" type="text" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_KEEPER1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_KEEPER1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_KEEPER1"/>
+    <field name="transport1" filter="safehtml" type="text" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_TRANSPORT1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_TRANSPORT1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_TRANSPORT1"/>
+    <field name="hotel1" filter="safehtml" type="text" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_HOTEL1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_HOTEL1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_HOTEL1"/>
+    <field name="inclusion1" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_INCLUSION1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_INCLUSION1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_INCLUSION1"/>
+    <field name="noinclusion1" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_NOINCLUSION1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_NOINCLUSION1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_NOINCLUSION1"/>
+    <field name="planning1" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PLANNING1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PLANNING1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PLANNING1">
+      <option value="">COM_FIXED_TRIP_CREATE_TRIPS_PLANNING1_OPTION_</option>
+    </field>
+    <field name="number_of_day1" type="text" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_NUMBER_OF_DAY1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_NUMBER_OF_DAY1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_NUMBER_OF_DAY1"/>
+    <field name="pdfplanning2" type="FileMultiple" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING2" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PDFPLANNING2" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING2"/>
+    <field name="pdfplanning3" type="FileMultiple" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING3" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PDFPLANNING3" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING3"/>
+    <field name="pdfplanning4" type="FileMultiple" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING4" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PDFPLANNING4" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING4"/>
+    <field name="pdfplanning5" type="FileMultiple" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING5" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PDFPLANNING5" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING5"/>
+    <field name="pdfplanning6" type="FileMultiple" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING6" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PDFPLANNING6" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING6"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

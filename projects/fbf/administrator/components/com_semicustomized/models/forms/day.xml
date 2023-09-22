@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_SEMICUSTOMIZED_FORM_LBL_DAY_CREATED_BY" description="COM_SEMICUSTOMIZED_FORM_DESC_DAY_CREATED_BY" hidden="true" hint="COM_SEMICUSTOMIZED_FORM_LBL_DAY_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_SEMICUSTOMIZED_FORM_LBL_DAY_MODIFIED_BY" description="COM_SEMICUSTOMIZED_FORM_DESC_DAY_MODIFIED_BY" hidden="true" hint="COM_SEMICUSTOMIZED_FORM_LBL_DAY_MODIFIED_BY"/>
+    <field name="reference" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_DAY_REFERENCE" description="COM_SEMICUSTOMIZED_FORM_DESC_DAY_REFERENCE" hint="COM_SEMICUSTOMIZED_FORM_LBL_DAY_REFERENCE"/>
+    <field name="title" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_DAY_TITLE" description="COM_SEMICUSTOMIZED_FORM_DESC_DAY_TITLE" hint="COM_SEMICUSTOMIZED_FORM_LBL_DAY_TITLE"/>
+    <field name="picture" type="FileMultiple" label="COM_SEMICUSTOMIZED_FORM_LBL_DAY_PICTURE" description="COM_SEMICUSTOMIZED_FORM_DESC_DAY_PICTURE" hint="COM_SEMICUSTOMIZED_FORM_LBL_DAY_PICTURE"/>
+    <field name="desciptiion" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_SEMICUSTOMIZED_FORM_LBL_DAY_DESCIPTIION" description="COM_SEMICUSTOMIZED_FORM_DESC_DAY_DESCIPTIION" hint="COM_SEMICUSTOMIZED_FORM_LBL_DAY_DESCIPTIION"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

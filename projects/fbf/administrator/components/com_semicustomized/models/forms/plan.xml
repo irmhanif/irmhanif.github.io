@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_CREATED_BY" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_CREATED_BY" hidden="true" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_MODIFIED_BY" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_MODIFIED_BY" hidden="true" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_MODIFIED_BY"/>
+    <field name="reference" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_REFERENCE" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_REFERENCE" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_REFERENCE"/>
+    <field name="title" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TITLE" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_TITLE" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TITLE"/>
+	<field name="no_of_days_in_plan" filter="safehtml" type="text" label="No of days in this plan" description="No of days in this plan" hint="No of days in this plan"/>
+	<field name="days1" type="list"  label="Day 1" description="Day 1" hint="Day 1">
+     <option value="">selecct any one</option>
+    </field>
+
+	<field name="days2" type="list"  label="Days 2" description="Days 2" hint="Days 2">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days3" type="list"  label="Days 3" description="Days 3" hint="Days 3">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days4" type="list"  label="Days 4" description="Days 4" hint="Days 4">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days5" type="list"  label="Days 5" description="Days 5" hint="Days 5">
+     <option value="0">selecct any one</option>n>
+    </field>
+
+	<field name="days6" type="list"  label="Days 6" description="Days 6" hint="Days 6">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days7" type="list"  label="Days 7" description="Days 7" hint="Days 7">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days8" type="list"  label="Days 8" description="Days 8" hint="Days 8">
+     <option value="0">selecct any One</option>
+    </field>
+
+	<field name="days9" type="list"  label="Days 9" description="Days 9" hint="Days 9">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days10" type="list"  label="Days 10" description="Days 10" hint="Days 10">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days11" type="list"  label="Days 11" description="Days 11" hint="Days 11">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days12" type="list"  label="Days 12" description="Days 12" hint="Days 12">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days13" type="list"  label="Days 13" description="Days 13" hint="Days 13">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days14" type="list"  label="Days 14" description="Days 14" hint="Days 14">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days15" type="list"  label="Days 15" description="Days 15" hint="Days 15">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days16" type="list"  label="Days 16" description="Days 16'" hint="Days 16">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days17" type="list"  label="Days 17" description="Days 17" hint="Days 17">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days18" type="list"  label="Days 18" description="Days 18" hint="Days 18">
+     <option value="0">selecct any one</option>
+    </field>
+
+	<field name="days19" type="list"  label="Days 19" description="Days 19" hint="Days 19">
+     <option value="0">selecct any one</option>
+    </field>
+	<field name="days20" type="list"  label="Days 20" description="Days 20" hint="Days 20">
+     <option value="0">selecct any one</option>
+    </field>
+    <field name="hoteltitle1" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_HOTELTITLE1" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_HOTELTITLE1" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_HOTELTITLE1"/>
+    <field name="hotelprice1" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_HOTELPRICE1" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_HOTELPRICE1" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_HOTELPRICE1"/>
+    <field name="extraroom1" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_EXTRAROOM1" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_EXTRAROOM1" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_EXTRAROOM1"/>
+    <field name="maxroomcapacity" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_MAXROOMCAPACITY" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_MAXROOMCAPACITY" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_MAXROOMCAPACITY"/>
+    <field name="hoteltitle2" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_HOTELTITLE2" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_HOTELTITLE2" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_HOTELTITLE2"/>
+    <field name="priceperroom2" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_PRICEPERROOM2" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_PRICEPERROOM2" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_PRICEPERROOM2"/>
+    <field name="extraroom2" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_EXTRAROOM2" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_EXTRAROOM2" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_EXTRAROOM2"/>
+    <field name="maxroomcapacity2" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_MAXROOMCAPACITY2" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_MAXROOMCAPACITY2" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_MAXROOMCAPACITY2"/>
+
+    <field name="hoteltitle3" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_HOTELTITLE3" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_HOTELTITLE3" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_HOTELTITLE3"/>
+    <field name="priceperroom3" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_PRICEPERROOM3" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_PRICEPERROOM3" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_PRICEPERROOM3"/>
+    <field name="extraroom3" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_EXTRAROOM3" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_EXTRAROOM3" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_EXTRAROOM3"/>
+    <field name="maxroomcapacity3" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_MAXROOMCAPACITY3" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_MAXROOMCAPACITY3" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_MAXROOMCAPACITY3"/>
+
+	<field name="hoteltitle4" filter="safehtml" type="text" label="hotel Title 4" description="hotel Title 4" hint="hotel Title 4"/>
+    <field name="priceperroom4" filter="safehtml" type="text" label="Hotel Price per room 4" description="Hotel Price per room 4" hint="Hotel Price per room 4"/>
+    <field name="extraroom4" type="text" label="Hotel Extra single room 4" description="Hotel Extra single room 4" hint="Hotel Extra single room 4"/>
+    <field name="maxroomcapacity4" filter="safehtml" type="text" label="Hotel maximum number of room capacity" description="Hotel maximum number of room capacity" hint="Hotel maximum number of room capacity"/>
+
+    <field name="transportpricel1" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTPRICEL1" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_TRANSPORTPRICEL1" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTPRICEL1"/>
+    <field name="transportcapacity1" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTCAPACITY1" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_TRANSPORTCAPACITY1" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTCAPACITY1"/>
+    <field name="transportprice2" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTPRICE2" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_TRANSPORTPRICE2" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTPRICE2"/>
+    <field name="transportcapacity2" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTCAPACITY2" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_TRANSPORTCAPACITY2" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTCAPACITY2"/>
+    <field name="transportprice3" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTPRICE3" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_TRANSPORTPRICE3" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTPRICE3"/>
+    <field name="transportcapacity3" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTCAPACITY3" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_TRANSPORTCAPACITY3" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTCAPACITY3"/>
+    <field name="transportprice4" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTPRICE4" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_TRANSPORTPRICE4" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTPRICE4"/>
+    <field name="transportcapacity4" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTCAPACITY4" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_TRANSPORTCAPACITY4" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_TRANSPORTCAPACITY4"/>
+    <field name="keeperprice1" filter="safehtml" type="text" label="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_KEEPERPRICE1" description="COM_SEMICUSTOMIZED_FORM_DESC_PLAN_KEEPERPRICE1" hint="COM_SEMICUSTOMIZED_FORM_LBL_PLAN_KEEPERPRICE1"/>
+	<field name="keepercapacity1" filter="safehtml" type="text" label="Keeper Capacity 1" description="Keeper Capacity 1" hint="Keeper Capacity 1"/>
+
+	<field name="Keeperprice2" filter="safehtml" type="text" label="Keeper Price per day 2" description="Keeper Price per day 2" hint="Keeper Price per day 2"/>
+	<field name="keepercapacity2" filter="safehtml" type="text" label="Keeper Capacity 2" description="Keeper Capacity 2" hint="Keeper Capacity 2"/>
+
+	<field name="Keeperpriceday3" filter="safehtml" type="text" label="Keeper Price per day 3" description="Keeper Price per day 3" hint="Keeper Price per day 3"/>
+	<field name="keepercapacity3" filter="safehtml" type="text" label="Keeper Capacity 3" description="Keeper Capacity 3" hint="Keeper Capacity 3"/>
+
+	<field name="Keeperpriceday4" filter="safehtml" type="text" label="Keeper Price per day 4" description="Keeper Price per day 4" hint="Keeper Price per day 4"/>
+
+	<field name="keepercapacity4" filter="safehtml" type="text" label="Keeper Capacity 4" description="Keeper Capacity 4" hint="Keeper Capacity 4"/>
+
+	<field name="pricetransfer" filter="safehtml" type="text" label="Price of transfer per person" description="Price of transfer per person" hint="Price of transfer per person"/>
+
+	<field name="price_of_leaving" filter="safehtml" type="text" label="Price of leaving" description="Price of transfer per person" hint="Price of transfer per person"/>
+
+	<field name="publictransport" filter="safehtml" type="text" label="Price of public transport" description="Priceof public transport" hint="Priceof public transport"/>
+
+	<field name="bookingtotal" filter="safehtml" type="text" label="Booking fee total" description="Booking fee total" hint="Booking fee total"/>
+
+	<field name="insurance" filter="safehtml" type="text" label="Insurance fee per person" description="Insurance fee per person" hint="Insurance fee per person"/>
+
+	<field name="priceofact" filter="safehtml" type="text" label="Price of activites per person" description="Price of activites per person" hint="Price of activites per person"/>
+
+	<field name="inclusion" editor="|" filter="safehtml" type="editor"  label="Inclusion" description="Inclusion" hint="Inclusion"/>
+	<field name="noinclusion" editor="|" filter="safehtml" type="editor"  label="No inclusion" description="No inclusion" hint="No inclusion"/>
+
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

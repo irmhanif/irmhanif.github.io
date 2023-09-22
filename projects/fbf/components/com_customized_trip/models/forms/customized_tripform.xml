@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="trip_tittle" filter="safehtml" type="text" required="true" message="Enter Event name" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_TRIP_TITTLE" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_TRIP_TITTLE" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_TRIP_TITTLE"/>
+    <field name="picture" type="FileMultiple" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_PICTURE" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_PICTURE" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_PICTURE"/>
+    <field name="description" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" required="true" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_DESCRIPTION" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_DESCRIPTION" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_DESCRIPTION"/>
+    <field name="tittle_link1" filter="safehtml" type="text" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_TITTLE_LINK1" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_TITTLE_LINK1" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_TITTLE_LINK1"/>
+    <field name="link_to_blog1" filter="safehtml" type="text" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_LINK_TO_BLOG1" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_LINK_TO_BLOG1" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_LINK_TO_BLOG1"/>
+    <field name="tittle_link2" filter="safehtml" type="text" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_TITTLE_LINK2" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_TITTLE_LINK2" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_TITTLE_LINK2"/>
+    <field name="link_to_blog2" filter="safehtml" type="text" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_LINK_TO_BLOG2" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_LINK_TO_BLOG2" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_LINK_TO_BLOG2"/>
+    <field name="tittle_link3" filter="safehtml" type="text" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_TITTLE_LINK3" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_TITTLE_LINK3" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_TITTLE_LINK3"/>
+    <field name="link_to_blog3" filter="safehtml" type="text" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_LINK_TO_BLOG3" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_LINK_TO_BLOG3" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_LINK_TO_BLOG3"/>
+    <field name="tittle_link4" filter="safehtml" type="text" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_TITTLE_LINK4" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_TITTLE_LINK4" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_TITTLE_LINK4"/>
+    <field name="link_to_blog4" filter="safehtml" type="text" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_LINK_TO_BLOG4" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_LINK_TO_BLOG4" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_LINK_TO_BLOG4"/>
+    <field name="flight" type="list" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_FLIGHT" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_FLIGHT" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_FLIGHT">
+      <option value="">COM_CUSTOMIZED_TRIP_CUSTOMIZED_TRIPS_FLIGHT_OPTION_</option>
+    </field>
+    <field name="keeper" type="list" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_KEEPER" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_KEEPER" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_KEEPER">
+      <option value="">COM_CUSTOMIZED_TRIP_CUSTOMIZED_TRIPS_KEEPER_OPTION_</option>
+    </field>
+    <field name="trnasport" type="list" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_TRNASPORT" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_TRNASPORT" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_TRNASPORT">
+      <option value="">COM_CUSTOMIZED_TRIP_CUSTOMIZED_TRIPS_TRNASPORT_OPTION_</option>
+    </field>
+    <field name="placeofdeparture" type="list" label="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_PLACEOFDEPARTURE" description="COM_CUSTOMIZED_TRIP_FORM_DESC_CUSTOMIZED_TRIP_PLACEOFDEPARTURE" hint="COM_CUSTOMIZED_TRIP_FORM_LBL_CUSTOMIZED_TRIP_PLACEOFDEPARTURE">
+      <option value="">COM_CUSTOMIZED_TRIP_CUSTOMIZED_TRIPS_PLACEOFDEPARTURE_OPTION_</option>
+    </field>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

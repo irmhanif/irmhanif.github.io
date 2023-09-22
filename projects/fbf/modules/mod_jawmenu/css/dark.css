@@ -1,0 +1,38 @@
+
+/*
+	Copyright: (c) 2015 JoomlArtWork.com, http://joomlartwork.com/
+*/
+
+/* JAW Menu Light Style*/
+
+#jawnav {background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #505664 0%, #363A45 100%) repeat scroll 0 0;  border: 1px solid #171e26;  color: #c1c8d8; }
+#jawnav > ul > li > a {color: #c1c8d8; border-right: 1px solid #171e28; font-size: 15px; }
+#jawnav > ul > li:hover > a,
+#jawnav > ul > li.active > a{ background-color: #171e28;}
+#jawnav > ul > li.has-sub > a::after { border-bottom: 1px solid #ced4e4;  border-right: 1px solid #ced4e4;}
+#jawnav > ul > li.has-sub:hover > a::after { }
+#jawnav span.inner {  background: #212830; border: 1px solid #171e28; color: #c1c8d8; }
+#jawnav ul ul li a { font-size: 13px; color: #ced4e4;}
+#jawnav ul ul li:hover > a,
+#jawnav ul ul li a:hover,
+#jawnav ul ul li.current > a {}
+#jawnav ul ul li.has-sub > a::after { border-bottom: 1px solid #ced4e4;  border-right: 1px solid #ced4e4;}
+#jawnav.align-right ul ul li.has-sub > a::after { }
+#jawnav ul ul li.has-sub:hover > a::after { }
+
+@media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+#jawnav ul li,
+#jawnav ul ul li,
+#jawnav ul li:hover > ul > li {  border-top: 1px solid rgba(120, 120, 120, 0.15); }
+#jawnav ul > li > a { font-size: 12px;  }
+#jawnav ul ul li a { font-size: 12px; background: none; color: #ced4e4;}
+#jawnav ul ul li:hover > a,
+#jawnav ul ul li a:hover {color: #ced4e4;}
+#jawnav #menu-button { font-size: 12px;color: #ced4e4;}
+#jawnav #menu-button::after { background: #ced4e4;}
+#jawnav #menu-button::before { border-top: 2px solid #ced4e4; border-bottom: 2px solid #ced4e4;}
+#jawnav .submenu-button {border-left: 1px solid rgba(120, 120, 120, 0.15);}
+#jawnav .submenu-button::after { background: #ced4e4;}
+#jawnav .submenu-button::before { background: #ced4e4;}
+
+}

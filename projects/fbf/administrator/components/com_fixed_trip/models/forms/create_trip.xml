@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_CREATED_BY" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_CREATED_BY" hidden="true" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_MODIFIED_BY" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_MODIFIED_BY" hidden="true" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_MODIFIED_BY"/>
+    <field name="title" filter="safehtml" type="text" required="true" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_TITLE" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_TITLE" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_TITLE"/>
+    <field name="description" filter="safehtml" type="textarea" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_DESCRIPTION" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_DESCRIPTION" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_DESCRIPTION"/>
+    <field name="type" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_TYPE" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_TYPE" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_TYPE">
+      <option value="">COM_FIXED_TRIP_CREATE_TRIPS_TYPE_OPTION_</option>
+    </field>
+
+    <!-- date1-->
+    <field name="date_of_departure1" default="0000-00-00" type="calendar" class="inputbox" filter="safehtml" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_DATE_OF_DEPARTURE1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_DATE_OF_DEPARTURE1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_DATE_OF_DEPARTURE1"/>
+    <field name="price_person1" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PRICE_PERSON1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PRICE_PERSON1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PRICE_PERSON1"/>
+    <field name="price_single_room_extra1" label="Price of room" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PRICE_SINGLE_ROOM_EXTRA1" hint="Price of room"/>
+    <field name="cost_hotel1" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_COST_HOTEL1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_COST_HOTEL1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_COST_HOTEL1"/>
+    <field name="cost_activites1" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_COST_ACTIVITES1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_COST_ACTIVITES1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_COST_ACTIVITES1"/>
+    <field name="cost_transport1" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_COST_TRANSPORT1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_COST_TRANSPORT1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_COST_TRANSPORT1"/>
+    
+    <field name="cost_keeper1" label="Cost of keeper 1" description="Cost of keeper 1" hint="Cost of keeper 1"/>
+
+    <field name="cost_booking_fee1" label="Cost of booking fee 1" description="Cost of booking fee 1" hint="Cost of booking fee 1"/>
+
+    <field name="cost_insurance1" label="Cost of insurance 1" description="Cost of insurance 1" hint="Cost of insurance 1"/>
+
+    <field name="extracosti1" label="Extra cost i 1" description="Extra cost i 1" hint="Extra cost i 1"/>
+
+    <field name="extracostii1" label="Extra cost ii 1" description="Extra cost ii 1" hint="Extra cost ii 1"/>
+
+
+
+    <field name="pdfplanning1" type="FileMultiple" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PDFPLANNING1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING1"/>
+    <field name="seat_available1" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_SEAT_AVAILABLE1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_SEAT_AVAILABLE1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_SEAT_AVAILABLE1"/>
+    <field name="keeper1" filter="safehtml" type="text" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_KEEPER1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_KEEPER1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_KEEPER1"/>
+    <field name="transport1" filter="safehtml" type="text" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_TRANSPORT1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_TRANSPORT1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_TRANSPORT1"/>
+    <field name="hotel1" filter="safehtml" type="text" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_HOTEL1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_HOTEL1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_HOTEL1"/>
+    <field name="inclusion1" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_INCLUSION1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_INCLUSION1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_INCLUSION1"/>
+    <field name="noinclusion1" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_NOINCLUSION1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_NOINCLUSION1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_NOINCLUSION1"/>
+    <field name="planning1" type="list" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PLANNING1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PLANNING1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PLANNING1">
+      <option value="">COM_FIXED_TRIP_CREATE_TRIPS_PLANNING1_OPTION_</option>
+    </field>
+    <field name="number_of_day1" type="text" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_NUMBER_OF_DAY1" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_NUMBER_OF_DAY1" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_NUMBER_OF_DAY1"/>
+    <!-- end of date 1-->
+
+    <!--Date 2-->
+    <field name="date_of_departure2" default="0000-00-00" type="calendar" class="inputbox" filter="safehtml" label="Date of departure 2" description="Date of departure 2" hint="Date of departure 2"/>
+
+    <field name="price_person2" label="Price per person 2" description="Price per person 2" hint="Price per person 2"/>
+
+    <field name="price_single_room_extra2" label="Price of room 2" description="Price of room 2" hint="Price of room 2"/>
+
+    <field name="cost_hotel2" label="Cost of Hotel 2" description="Cost of Hotel 2" hint="Cost of Hotel 2"/>
+
+    <field name="cost_activites2" label="Cost of activities 2" description="Cost of activities 2" hint="Cost of activities 2"/>
+
+    <field name="cost_transport2" label="Cost of transport 2" description="Cost of transport 2" hint="Cost of transport 2"/>
+
+    <field name="cost_keeper2" label="Cost of keeper 2" description="Cost of keeper 2" hint="Cost of keeper 2"/>
+
+    <field name="cost_booking_fee2" label="Cost of booking fee 2" description="Cost of booking fee 2" hint="Cost of booking fee 2"/>
+
+    <field name="cost_insurance2" label="Cost of insurance 2" description="Cost of insurance 2" hint="Cost of insurance 2"/>
+
+    <field name="extracosti2" label="Extra cost i 2" description="Extra cost i 2" hint="Extra cost i 2"/>
+
+    <field name="extracostii2" label="Extra cost ii 2" description="Extra cost ii 2" hint="Extra cost ii 2"/>
+
+    <field name="pdfplanning2" type="FileMultiple" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING2" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PDFPLANNING2" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING2"/>
+
+    <field name="seat_available2" label="seat available 2" description="seat available 2" hint="seat available 2"/>
+
+    <field name="keeper2" filter="safehtml" type="text" label="keeper 2" description="keeper 2" hint="keeper 2"/>
+
+    <field name="transport2" filter="safehtml" type="text" label="transport 2" description="transport 2" hint="transport 2"/>
+
+    <field name="hotel2" filter="safehtml" type="text" label="hotel 2" description="hotel 2" hint="hotel 2"/>
+
+    <field name="inclusion2" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="inclusion 2" description="inclusion 2" hint="inclusion 2"/>
+
+    <field name="noinclusion2" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="no inclusion 2" description="no inclusion 2" hint="no inclusion 2"/>
+
+    <field name="planning2" type="list" label="planning 2" description="planning 2" hint="planning 2">
+      <option value="">Select</option>
+    </field>
+
+    <field name="number_of_day2" type="text" label="number of day 2" description="number of day 2" hint="number of day 2"/>
+    <!--End of date2-->
+
+    <!--Date 3-->
+    <field name="date_of_departure3" default="0000-00-00" type="calendar" class="inputbox" filter="safehtml" label="Date of departure 3" description="Date of departure 3" hint="Date of departure 3"/>
+
+    <field name="price_person3" label="Price per person 3" description="Price per person 3" hint="Price per person 3"/>
+
+    <field name="price_single_room_extra3" label="Price of room 3" description="Price of room 3" hint="Price of room 3"/>
+
+    <field name="cost_hotel3" label="Cost of Hotel 3" description="Cost of Hotel 3" hint="Cost of Hotel 3"/>
+
+    <field name="cost_activites3" label="Cost of activities 3" description="Cost of activities 3" hint="Cost of activities 3"/>
+
+    <field name="cost_transport3" label="Cost of transport 3" description="Cost of transport 3" hint="Cost of transport 3"/>
+
+    <field name="cost_keeper3" label="Cost of keeper 3" description="Cost of keeper 3" hint="Cost of keeper 3"/>
+
+    <field name="cost_booking_fee3" label="Cost of booking fee 3" description="Cost of booking fee 3" hint="Cost of booking fee 3"/>
+
+    <field name="cost_insurance3" label="Cost of insurance 3" description="Cost of insurance 3" hint="Cost of insurance 3"/>
+
+    <field name="extracosti3" label="Extra cost i 3" description="Extra cost i 3" hint="Extra cost i 3"/>
+
+    <field name="extracostii3" label="Extra cost ii 3" description="Extra cost ii 3" hint="Extra cost ii 3"/>
+
+    <field name="pdfplanning3" type="FileMultiple" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING3" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PDFPLANNING3" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING3"/>
+
+    <field name="seat_available3" label="seat available 3" description="seat available 3" hint="seat available 3"/>
+
+    <field name="keeper3" filter="safehtml" type="text" label="keeper 3" description="keeper 3" hint="keeper 3"/>
+
+    <field name="transport3" filter="safehtml" type="text" label="transport 3" description="transport 3" hint="transport 3"/>
+
+    <field name="hotel3" filter="safehtml" type="text" label="hotel 3" description="hotel 3" hint="hotel 3"/>
+
+    <field name="inclusion3" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="inclusion 3" description="inclusion 3" hint="inclusion 3"/>
+
+    <field name="noinclusion3" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="no inclusion 3" description="no inclusion 3" hint="no inclusion 3"/>
+
+    <field name="planning3" type="list" label="planning 3" description="planning 3" hint="planning 3">
+      <option value="">Select</option>
+    </field>
+
+    <field name="number_of_day3" type="text" label="number of day 3" description="number of day 3" hint="number of day 3"/>
+    <!--End of date3-->
+
+    <!--Date 4-->
+    <field name="date_of_departure4" default="0000-00-00" type="calendar" class="inputbox" filter="safehtml" label="Date of departure 4" description="Date of departure 4" hint="Date of departure 4"/>
+
+    <field name="price_person4" label="Price per person 4" description="Price per person 4" hint="Price per person 4"/>
+
+    <field name="price_single_room_extra4" label="Price of room 4" description="Price of room 4" hint="Price of room 4"/>
+
+    <field name="cost_hotel4" label="Cost of Hotel 4" description="Cost of Hotel 4" hint="Cost of Hotel 4"/>
+
+    <field name="cost_activites4" label="Cost of activities 4" description="Cost of activities 4" hint="Cost of activities 4"/>
+
+    <field name="cost_transport4" label="Cost of transport 4" description="Cost of transport 4" hint="Cost of transport 4"/>
+
+    <field name="cost_keeper4" label="Cost of keeper 4" description="Cost of keeper 4" hint="Cost of keeper 4"/>
+
+    <field name="cost_booking_fee4" label="Cost of booking fee 4" description="Cost of booking fee 4" hint="Cost of booking fee 4"/>
+
+    <field name="cost_insurance4" label="Cost of insurance 4" description="Cost of insurance 4" hint="Cost of insurance 4"/>
+
+    <field name="extracosti4" label="Extra cost i 4" description="Extra cost i 4" hint="Extra cost i 4"/>
+
+    <field name="extracostii4" label="Extra cost ii 4" description="Extra cost ii 4" hint="Extra cost ii 4"/>
+
+    <field name="pdfplanning4" type="FileMultiple" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING4" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PDFPLANNING4" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING4"/>
+
+    <field name="seat_available4" label="seat available 4" description="seat available 4" hint="seat available 4"/>
+
+    <field name="keeper4" filter="safehtml" type="text" label="keeper 4" description="keeper 4" hint="keeper 4"/>
+
+    <field name="transport4" filter="safehtml" type="text" label="transport 4" description="transport 4" hint="transport 4"/>
+
+    <field name="hotel4" filter="safehtml" type="text" label="hotel 4" description="hotel 4" hint="hotel 4"/>
+
+    <field name="inclusion4" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="inclusion 4" description="inclusion 4" hint="inclusion 4"/>
+
+    <field name="noinclusion4" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="no inclusion 4" description="no inclusion 4" hint="no inclusion 4"/>
+
+    <field name="planning4" type="list" label="planning 4" description="planning 4" hint="planning 4">
+      <option value="">Select</option>
+    </field>
+
+    <field name="number_of_day4" type="text" label="number of day 4" description="number of day 4" hint="number of day 4"/>
+    <!--End of date4-->
+
+
+    <!--Date 5-->
+    <field name="date_of_departure5" default="0000-00-00" type="calendar" class="inputbox" filter="safehtml" label="Date of departure 5" description="Date of departure 5" hint="Date of departure 5"/>
+
+    <field name="price_person5" label="Price per person 5" description="Price per person 5" hint="Price per person 5"/>
+
+    <field name="price_single_room_extra5" label="Price of room 5" description="Price of room 5" hint="Price of room 5"/>
+
+    <field name="cost_hotel5" label="Cost of Hotel 5" description="Cost of Hotel 5" hint="Cost of Hotel 5"/>
+
+    <field name="cost_activites5" label="Cost of activities 5" description="Cost of activities 5" hint="Cost of activities 5"/>
+
+    <field name="cost_transport5" label="Cost of transport 5" description="Cost of transport 5" hint="Cost of transport 5"/>
+
+    <field name="cost_keeper5" label="Cost of keeper 5" description="Cost of keeper 5" hint="Cost of keeper 5"/>
+
+    <field name="cost_booking_fee5" label="Cost of booking fee 5" description="Cost of booking fee 5" hint="Cost of booking fee 5"/>
+
+    <field name="cost_insurance5" label="Cost of insurance 5" description="Cost of insurance 5" hint="Cost of insurance 5"/>
+
+    <field name="extracosti5" label="Extra cost i 5" description="Extra cost i 5" hint="Extra cost i 5"/>
+
+    <field name="extracostii5" label="Extra cost ii 5" description="Extra cost ii 5" hint="Extra cost ii 5"/>
+
+    <field name="pdfplanning5" type="FileMultiple" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING5" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PDFPLANNING5" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING5"/>
+
+    <field name="seat_available5" label="seat available 5" description="seat available 5" hint="seat available 5"/>
+
+    <field name="keeper5" filter="safehtml" type="text" label="keeper 5" description="keeper 5" hint="keeper 5"/>
+
+    <field name="transport5" filter="safehtml" type="text" label="transport 5" description="transport 5" hint="transport 5"/>
+
+    <field name="hotel5" filter="safehtml" type="text" label="hotel 5" description="hotel 5" hint="hotel 5"/>
+
+    <field name="inclusion5" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="inclusion 5" description="inclusion 5" hint="inclusion 5"/>
+
+    <field name="noinclusion5" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="no inclusion 5" description="no inclusion 5" hint="no inclusion 5"/>
+
+    <field name="planning5" type="list" label="planning 5" description="planning 5" hint="planning 5">
+      <option value="">Select</option>
+    </field>
+
+    <field name="number_of_day5" type="text" label="number of day 5" description="number of day 5" hint="number of day 5"/>
+    <!--End of date5-->
+
+    <!--Date 6-->
+    <field name="date_of_departure6" default="0000-00-00" type="calendar" class="inputbox" filter="safehtml" label="Date of departure 6" description="Date of departure 6" hint="Date of departure 6"/>
+
+    <field name="price_person6" label="Price per person 6" description="Price per person 6" hint="Price per person 6"/>
+
+    <field name="price_single_room_extra6" label="Price of room 6" description="Price of room 6" hint="Price of room 6"/>
+
+    <field name="cost_hotel6" label="Cost of Hotel 6" description="Cost of Hotel 6" hint="Cost of Hotel 6"/>
+
+    <field name="cost_activites6" label="Cost of activities 6" description="Cost of activities 6" hint="Cost of activities 6"/>
+
+    <field name="cost_transport6" label="Cost of transport 6" description="Cost of transport 6" hint="Cost of transport 6"/>
+
+    <field name="cost_keeper6" label="Cost of keeper 6" description="Cost of keeper 6" hint="Cost of keeper 6"/>
+
+    <field name="cost_booking_fee6" label="Cost of booking fee 6" description="Cost of booking fee 6" hint="Cost of booking fee 6"/>
+
+    <field name="cost_insurance6" label="Cost of insurance 6" description="Cost of insurance 6" hint="Cost of insurance 6"/>
+
+    <field name="extracosti6" label="Extra cost i 6" description="Extra cost i 6" hint="Extra cost i 6"/>
+
+    <field name="extracostii6" label="Extra cost ii 6" description="Extra cost ii 6" hint="Extra cost ii 6"/>
+
+    <field name="pdfplanning6" type="FileMultiple" label="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING6" description="COM_FIXED_TRIP_FORM_DESC_CREATE_TRIP_PDFPLANNING6" hint="COM_FIXED_TRIP_FORM_LBL_CREATE_TRIP_PDFPLANNING6"/>
+
+    <field name="seat_available6" label="seat available 6" description="seat available 6" hint="seat available 6"/>
+
+    <field name="keeper6" filter="safehtml" type="text" label="keeper 6" description="keeper 6" hint="keeper 6"/>
+
+    <field name="transport6" filter="safehtml" type="text" label="transport 6" description="transport 6" hint="transport 6"/>
+
+    <field name="hotel6" filter="safehtml" type="text" label="hotel 6" description="hotel 6" hint="hotel 6"/>
+
+    <field name="inclusion6" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="inclusion 6" description="inclusion 6" hint="inclusion 6"/>
+
+    <field name="noinclusion6" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="no inclusion 6" description="no inclusion 6" hint="no inclusion 6"/>
+
+    <field name="planning6" type="list" label="planning 6" description="planning 6" hint="planning 6">
+      <option value="">Select</option>
+    </field>
+
+    <field name="number_of_day6" type="text" label="number of day 6" description="number of day 6" hint="number of day 6"/>
+    <!--End of date6-->
+    
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

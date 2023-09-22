@@ -1,0 +1,8 @@
+[11/23/2018, 9:31:45 AM] layer "     1800-2345-5677     info@gmail.com     610 Broadway New Yor": Expected end of input but "6" found.
+[11/23/2018, 9:31:45 AM] layer "     1800-2345-5677     info@gmail.com     610 Broadway New Yor": Expected end of input but "6" found.
+[11/23/2018, 9:31:45 AM] layer " ": Expected Either a default asset specification or a layer asset specification but " " found.
+[11/23/2018, 9:31:45 AM] layer " ": Expected Either a default asset specification or a layer asset specification but " " found.
+[11/23/2018, 9:31:45 AM] layer "+ copy 3": Expected Either a default asset specification or a layer asset specification but "+" found.
+[11/23/2018, 9:31:45 AM] layer " ": Expected Either a default asset specification or a layer asset specification but " " found.
+[11/23/2018, 9:31:45 AM] layer "+ copy 4": Expected Either a default asset specification or a layer asset specification but "+" found.
+[11/23/2018, 9:31:45 AM] layer " ": Expected Either a default asset specification or a layer asset specification but " " found.
