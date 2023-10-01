@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<metadata>
-	<layout title="COM_KEEPER_PROFILE_TITLE_LIST_VIEW_KEEPER_PROFILES" option="View">
-        <message>
-                        <![CDATA[COM_KEEPER_PROFILE_TITLE_LIST_VIEW_KEEPER_PROFILES_DESC]]>
-        </message>
-	</layout>
-</metadata>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<metadata>
-	<layout title="COM_FIXED_TRIP_TITLE_LIST_VIEW_PLACE_OF_DEPARTURES" option="View">
-        <message>
-                        <![CDATA[COM_FIXED_TRIP_TITLE_LIST_VIEW_PLACE_OF_DEPARTURES_DESC]]>
-        </message>
-	</layout>
-</metadata>

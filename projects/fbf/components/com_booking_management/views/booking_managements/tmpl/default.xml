@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<metadata>
-	<layout title="COM_BOOKING_MANAGEMENT_TITLE_LIST_VIEW_BOOKING_MANAGEMENTS" option="View">
-        <message>
-                        <![CDATA[COM_BOOKING_MANAGEMENT_TITLE_LIST_VIEW_BOOKING_MANAGEMENTS_DESC]]>
-        </message>
-	</layout>
-</metadata>
