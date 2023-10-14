@@ -188,7 +188,7 @@
         {
             "name": "Facebook UI clone",
             "description": "",
-            "imgurl": "images/portfolio/fbclone.png",
+            "imgurl": "images/portfolio/fbClone.png",
             "web": "https://fbclone-nine-beta.vercel.app/",
             "category": [
                 "react",
