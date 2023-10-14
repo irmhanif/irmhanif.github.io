@@ -185,6 +185,19 @@
             ],
             "show": true
         },
+        
+        {
+            "name": "Facebook UI clone",
+            "description": "",
+            "imgurl": "images/portfolio/fbclone.png",
+            "web": "https://fbclone-nine-beta.vercel.app/",
+            "category": [
+                "react",
+                "own",
+                "next"
+            ],
+            "show": true
+        },
         {
             "name": "Todo App",
             "description": "Basic todo app build with React Js and Used Sass  ",
