@@ -12,8 +12,8 @@ export default function Nav({ person }: { person: Person }) {
           <a href="#skills">About</a>
           <a href="#experience">Experience</a>
           <a href="#showcase">Projects</a>
-          <a href="#freelance">Freelance</a>
-          <a href="#abroad">Abroad</a>
+          {/* <a href="#freelance">Freelance</a> */}
+          {/* <a href="#abroad">Abroad</a> */}
           <a href="#contact">Contact</a>
         </div>
         <div className="nav-right">
