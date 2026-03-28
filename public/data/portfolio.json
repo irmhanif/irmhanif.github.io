@@ -1,0 +1,673 @@
+{
+  "meta": {
+    "title": "Mohamed Idris — Senior React Developer",
+    "description": "Senior React Developer · 7.5 years · Open to Freelance & Remote Abroad Opportunities",
+    "siteUrl": "https://idrism.com",
+    "githubPagesUrl": "https://irmhanif.github.io"
+  },
+
+  "person": {
+    "name": "Mohamed Idris",
+    "nameFirst": "Mohamed",
+    "nameLast": "Idris",
+    "role": "Senior React Developer",
+    "yearsExperience": "7.5",
+    "location": "India",
+    "email": "idrishan1996@gmail.com",
+    "phone": "+91 88071 60996",
+    "linkedin": "https://linkedin.com/in/irmh",
+    "github": "https://github.com/irmhanif",
+    "website": "https://idrism.com",
+    "resumePath": "/resume/Mohamed-Idris-Resume.pdf",
+    "availabilityTag": "Available for Freelance & International Roles — March 2026",
+    "award": "🏆 Spotlight Award · Comcast Q2 2025"
+  },
+
+  "hero": {
+    "statusLabel": "Open to Freelance & Remote Abroad",
+    "headline": ["Mohamed", "Idris."],
+    "subHeadline": "Senior React Developer",
+    "clients": "Comcast · Cognizant · Verizon · Walgreens.",
+    "subText": "Available for freelance projects & international / remote opportunities.",
+    "ctaPrimary": { "label": "View My Work ↓", "href": "#showcase" },
+    "ctaSecondary": { "label": "📬 Let's Talk", "href": "#contact" },
+    "stats": [
+      {
+        "value": 7.5,
+        "suffix": "",
+        "isFloat": true,
+        "label": "Yrs Experience"
+      },
+      {
+        "value": 90,
+        "suffix": "%",
+        "isFloat": false,
+        "label": "Test Coverage"
+      },
+      { "value": 60, "suffix": "%", "isFloat": false, "label": "Perf Boost" },
+      { "value": 15, "suffix": "+", "isFloat": false, "label": "Apps Shipped" }
+    ]
+  },
+
+  "about": {
+    "paragraphs": [
+      "I build <strong>scalable, production-grade web applications</strong> that stand up to real enterprise load — architected for performance, tested for confidence, built to last.",
+      "At Comcast I lead React architecture for the <strong>FreeWheel MRM</strong> ad platform. Previously at Cognizant I drove a 60% performance uplift for Verizon and led the <strong>Walgreens vaccine booking app</strong> used by millions — with 100% CDC compliance.",
+      "I mentor engineers, run knowledge-transfer sessions, and champion <strong>clean, well-tested code</strong> as a team culture, not just a personal habit."
+    ],
+    "pullQuote": "\"Recognized with the Spotlight Award at Comcast for technical excellence and delivery impact — Q2 2025.\"",
+    "chips": [
+      "🏆 Spotlight Award 2025",
+      "🧪 90% Test Coverage",
+      "🎓 B.Sc Computer Science",
+      "🌍 Open to Relocation"
+    ],
+    "skills": [
+      {
+        "group": "Core Stack",
+        "star": true,
+        "items": [
+          "React.js",
+          "TypeScript",
+          "Redux",
+          "GraphQL",
+          "React Hooks",
+          "Context API"
+        ]
+      },
+      {
+        "group": "Frontend",
+        "star": false,
+        "items": [
+          "JavaScript ES6+",
+          "HTML5 / CSS3",
+          "Bootstrap",
+          "Axios",
+          "Responsive Design"
+        ]
+      },
+      {
+        "group": "Backend & Data",
+        "star": false,
+        "items": ["Node.js", "Go", "MongoDB", "MySQL", "RESTful APIs", "PHP"]
+      },
+      {
+        "group": "Testing & DevOps",
+        "star": false,
+        "items": [
+          "Playwright",
+          "Jest",
+          "Vitest",
+          "React Testing Library",
+          "CI/CD",
+          "Git"
+        ]
+      }
+    ]
+  },
+
+  "experience": [
+    {
+      "period": "Sep 2024 — Present",
+      "company": "Comcast",
+      "city": "Chennai, India",
+      "isCurrent": true,
+      "title": "Development Engineer 3",
+      "bullets": [
+        "Led development of scalable SPAs using <strong>React.js, Hooks, Redux & TypeScript</strong> for the FreeWheel MRM platform — mission-critical ad tech infrastructure.",
+        "Ran React & domain knowledge-transfer sessions, mentoring engineers on <strong>component architecture, Hooks & state management.</strong>",
+        "Introduced <strong>Playwright-based automation</strong> achieving ~90% test coverage using AI-assisted acceleration.",
+        "Ensured production quality via rigorous peer code reviews and architectural decisions."
+      ],
+      "award": "🏆 Spotlight Award — Q2 2025 · Technical Excellence & Delivery Impact"
+    },
+    {
+      "period": "Dec 2021 — Sep 2024",
+      "company": "Cognizant",
+      "city": "Chennai, India",
+      "isCurrent": false,
+      "title": "Associate",
+      "bullets": [
+        "Built enterprise-scale React SPAs driving a <strong>30% increase in user engagement</strong> through improved UI architecture.",
+        "Integrated RESTful APIs, reducing <strong>data retrieval time by 60%</strong> and hitting PageSpeed scores above 80.",
+        "Led the Walgreens vaccination booking app — <strong>100% CDC compliance, WCAG accessibility,</strong> 30% surge in appointment bookings.",
+        "Engineered 15+ reusable components for Verizon, boosting system performance by 60%."
+      ],
+      "award": null
+    },
+    {
+      "period": "Jan 2021 — Dec 2021",
+      "company": "CodeCraft Technologies",
+      "city": "Bangalore, India",
+      "isCurrent": false,
+      "title": "Web Development Engineer",
+      "bullets": [
+        "Engineered UI components with React, Redux & JavaScript — <strong>25% application speed increase.</strong>",
+        "Implemented GraphQL for a <strong>25% system performance boost</strong> on IGoalZero."
+      ],
+      "award": null
+    },
+    {
+      "period": "Aug 2018 — Dec 2020",
+      "company": "Zinavo Technologies",
+      "city": "Bangalore, India",
+      "isCurrent": false,
+      "title": "Web Developer",
+      "bullets": [
+        "Built <strong>15+ web applications</strong> and 6 e-commerce platforms — 40% increase in online transactions.",
+        "Managed projects end-to-end with <strong>95% client approval</strong> and 100% on-time delivery."
+      ],
+      "award": null
+    }
+  ],
+
+  "projects": {
+    "filters": ["All", "React", "Enterprise", "PHP / CMS", "Personal"],
+    "filterKeys": ["all", "react", "enterprise", "php", "own"],
+    "items": [
+      {
+        "id": "freewheel",
+        "name": "FreeWheel MRM",
+        "client": "Comcast · Ad Tech Platform",
+        "desc": "Built forecasting screens for a mission-critical ad management platform using React, TypeScript & Go backend integrations. Improved data visibility and stakeholder usability across the forecasting repository. Led knowledge-transfer sessions for the engineering team.",
+        "kpi": "~90% test coverage via Playwright + AI",
+        "tags": ["React", "TypeScript", "Go", "Playwright", "Jest"],
+        "cats": ["react", "enterprise"],
+        "size": "lg",
+        "emoji": "📡",
+        "coverGradient": "linear-gradient(135deg,#0d1220 0%,#131a30 100%)",
+        "coverPattern": "repeating-linear-gradient(-55deg,transparent,transparent 18px,rgba(212,168,71,0.04) 18px,rgba(212,168,71,0.04) 19px)",
+        "category": "Enterprise",
+        "categoryType": "enterprise",
+        "link": null,
+        "isNDA": true,
+        "videoSrc": null
+      },
+      {
+        "id": "verizon",
+        "name": "Verizon Platform",
+        "client": "Cognizant · Telecom",
+        "desc": "Revamped legacy enterprise app with React, Redux & Node.js. Engineered 15+ reusable components, complex API orchestration and strategic performance enhancements at scale.",
+        "kpi": "60% system boost · 40% load time cut",
+        "tags": ["React", "Redux", "Node.js", "Testing"],
+        "cats": ["react", "enterprise"],
+        "size": "md",
+        "emoji": "📶",
+        "coverGradient": "linear-gradient(135deg,#0a1020 0%,#0d1428 100%)",
+        "coverPattern": "repeating-linear-gradient(60deg,transparent,transparent 22px,rgba(96,165,250,0.04) 22px,rgba(96,165,250,0.04) 23px)",
+        "category": "Enterprise",
+        "categoryType": "enterprise",
+        "link": null,
+        "isNDA": true,
+        "videoSrc": null
+      },
+      {
+        "id": "walgreens",
+        "name": "Walgreens Vaccine Booking",
+        "client": "Cognizant · Healthcare",
+        "desc": "Led the vaccination booking app used by millions — CDC compliant, WCAG accessible, cross-browser. 30% surge in appointment bookings post-launch.",
+        "kpi": "30% surge in appointment bookings · 100% CDC compliance",
+        "tags": ["React", "WCAG", "CDC Compliance", "Accessibility"],
+        "cats": ["react", "enterprise"],
+        "size": "wide",
+        "emoji": "💉",
+        "coverGradient": "linear-gradient(135deg,#091420 0%,#0c1a2a 100%)",
+        "coverPattern": null,
+        "category": "Healthcare",
+        "categoryType": "enterprise",
+        "link": "https://www.walgreens.com/findcare/schedule-vaccine",
+        "isNDA": false,
+        "videoSrc": null
+      },
+      {
+        "id": "igoalzero",
+        "name": "IGoalZero",
+        "client": "CodeCraft Technologies",
+        "desc": null,
+        "kpi": "30% faster loads",
+        "tags": ["React", "GraphQL", "TypeScript"],
+        "cats": ["react", "enterprise"],
+        "size": "sm",
+        "emoji": "🎯",
+        "coverGradient": "linear-gradient(135deg,#0d1018 0%,#121520 100%)",
+        "coverPattern": null,
+        "category": "React",
+        "categoryType": "react",
+        "link": null,
+        "isNDA": false,
+        "videoSrc": null
+      },
+      {
+        "id": "fbclone",
+        "name": "Facebook UI Clone",
+        "client": "Personal Project · Next.js",
+        "desc": null,
+        "kpi": null,
+        "tags": ["React", "Next.js"],
+        "cats": ["react", "own"],
+        "size": "sm",
+        "emoji": "📘",
+        "coverGradient": "linear-gradient(135deg,#0c1020 0%,#10152a 100%)",
+        "coverPattern": null,
+        "category": "React",
+        "categoryType": "react",
+        "link": "https://fbclone-nine-beta.vercel.app/",
+        "isNDA": false,
+        "videoSrc": null
+      },
+      {
+        "id": "wildfire",
+        "name": "WildFire Tracker",
+        "client": "Personal · NASA API + Google Maps",
+        "desc": null,
+        "kpi": null,
+        "tags": ["React", "Maps API"],
+        "cats": ["react", "own"],
+        "size": "sm",
+        "emoji": "🔥",
+        "coverGradient": "linear-gradient(135deg,#150a08 0%,#1e0e0a 100%)",
+        "coverPattern": null,
+        "category": "React",
+        "categoryType": "react",
+        "link": "https://wildfire-track.netlify.app/",
+        "isNDA": false,
+        "videoSrc": null
+      },
+      {
+        "id": "francebf",
+        "name": "France by French",
+        "client": "Zinavo · Travel Booking",
+        "desc": "Tourism platform with trip listings, admin booking panel, and split-payment support. Built with PHP, MySQL and Joomla CMS.",
+        "kpi": "90 PageSpeed · Split-pay UX",
+        "tags": ["PHP", "MySQL", "Joomla"],
+        "cats": ["php"],
+        "size": "md",
+        "emoji": "🇫🇷",
+        "coverGradient": "linear-gradient(135deg,#0c1118 0%,#101520 100%)",
+        "coverPattern": null,
+        "category": "PHP",
+        "categoryType": "php",
+        "link": null,
+        "isNDA": false,
+        "videoSrc": "videos/fbf.mp4",
+        "videoTitle": "France by French",
+        "videoDesc": "Tourism web application with different kinds of trips, admin panel to manage bookings, and multiple payment methods including split payment."
+      },
+      {
+        "id": "wedonset",
+        "name": "Wed on Set",
+        "client": "Zinavo · E-Commerce",
+        "desc": null,
+        "kpi": null,
+        "tags": ["PHP", "MySQL"],
+        "cats": ["php"],
+        "size": "sm",
+        "emoji": "💍",
+        "coverGradient": "linear-gradient(135deg,#150a0e 0%,#1a0e14 100%)",
+        "coverPattern": null,
+        "category": "PHP",
+        "categoryType": "php",
+        "link": null,
+        "isNDA": false,
+        "videoSrc": "videos/wos.mp4",
+        "videoTitle": "Wed on Set",
+        "videoDesc": "Wedding service booking platform with catering food selection and city-based service areas."
+      },
+      {
+        "id": "moviebrowser",
+        "name": "Movie Browser",
+        "client": "Personal · OMDB API",
+        "desc": null,
+        "kpi": null,
+        "tags": ["React", "PWA"],
+        "cats": ["react", "own"],
+        "size": "sm",
+        "emoji": "🎬",
+        "coverGradient": "linear-gradient(135deg,#080c18 0%,#0c1020 100%)",
+        "coverPattern": null,
+        "category": "React · PWA",
+        "categoryType": "react",
+        "link": "https://pwapp-reactjs.web.app/",
+        "isNDA": false,
+        "videoSrc": null
+      },
+      {
+        "id": "groupchat",
+        "name": "Group Chat App",
+        "client": "Personal · Firebase · Google Auth",
+        "desc": null,
+        "kpi": null,
+        "tags": ["React", "Firebase"],
+        "cats": ["react", "own"],
+        "size": "sm",
+        "emoji": "💬",
+        "coverGradient": "linear-gradient(135deg,#081408 0%,#0c180c 100%)",
+        "coverPattern": null,
+        "category": "React",
+        "categoryType": "react",
+        "link": "https://whats-app-cloneapp.web.app/",
+        "isNDA": false,
+        "videoSrc": null
+      },
+      {
+        "id": "bigcollege",
+        "name": "Bigcollege",
+        "client": "Zinavo · College Directory",
+        "desc": null,
+        "kpi": null,
+        "tags": ["PHP", "MySQL"],
+        "cats": ["php"],
+        "size": "sm",
+        "emoji": "🎓",
+        "coverGradient": "linear-gradient(135deg,#080e18 0%,#0a1220 100%)",
+        "coverPattern": null,
+        "category": "PHP",
+        "categoryType": "php",
+        "link": "https://www.bigcollege.in/",
+        "isNDA": false,
+        "videoSrc": null
+      },
+      {
+        "id": "travotales",
+        "name": "TravoTales",
+        "client": "Zinavo · Hotel Booking",
+        "desc": null,
+        "kpi": null,
+        "tags": ["PHP", "Travel"],
+        "cats": ["php"],
+        "size": "sm",
+        "emoji": "🏨",
+        "coverGradient": "linear-gradient(135deg,#080e14 0%,#0c1220 100%)",
+        "coverPattern": null,
+        "category": "PHP",
+        "categoryType": "php",
+        "link": "http://zinavo-clientupdates.in/idris/travotales/",
+        "isNDA": false,
+        "videoSrc": null
+      },
+      {
+        "id": "todo",
+        "name": "Todo App",
+        "client": "Personal · React + Sass",
+        "desc": null,
+        "kpi": null,
+        "tags": ["React", "Sass"],
+        "cats": ["react", "own"],
+        "size": "sm",
+        "emoji": "✅",
+        "coverGradient": "linear-gradient(135deg,#0c0a18 0%,#100e20 100%)",
+        "coverPattern": null,
+        "category": "React",
+        "categoryType": "react",
+        "link": "http://idrism.com/projects/todo/",
+        "isNDA": false,
+        "videoSrc": null
+      },
+      {
+        "id": "vhomeshare",
+        "name": "VHomeShare",
+        "client": "Zinavo · Background Verification API",
+        "desc": null,
+        "kpi": null,
+        "tags": ["PHP", "Cron Jobs", "API"],
+        "cats": ["php"],
+        "size": "sm",
+        "emoji": "🔍",
+        "coverGradient": "linear-gradient(135deg,#0a1018 0%,#0e1420 100%)",
+        "coverPattern": null,
+        "category": "PHP",
+        "categoryType": "php",
+        "link": "https://www.vhomeshare.com/",
+        "isNDA": false,
+        "videoSrc": null
+      },
+      {
+        "id": "joyofgiving",
+        "name": "Joy of Giving",
+        "client": "NGO Connect · Bangalore",
+        "desc": null,
+        "kpi": null,
+        "tags": ["PHP", "Mail API"],
+        "cats": ["php"],
+        "size": "sm",
+        "emoji": "🎁",
+        "coverGradient": "linear-gradient(135deg,#0a1208 0%,#0e1a0c 100%)",
+        "coverPattern": null,
+        "category": "PHP",
+        "categoryType": "php",
+        "link": null,
+        "isNDA": false,
+        "videoSrc": null
+      },
+      {
+        "id": "xtramile",
+        "name": "Xtra-Mile",
+        "client": "Zinavo · E-Learning Platform",
+        "desc": null,
+        "kpi": null,
+        "tags": ["PHP", "E-Learn"],
+        "cats": ["php"],
+        "size": "sm",
+        "emoji": "🎵",
+        "coverGradient": "linear-gradient(135deg,#10080e 0%,#160c14 100%)",
+        "coverPattern": null,
+        "category": "PHP",
+        "categoryType": "php",
+        "link": "http://www.xtra-mile.in/",
+        "isNDA": false,
+        "videoSrc": null
+      }
+    ]
+  },
+
+  "freelance": {
+    "intro": "With <strong>7.5 years of enterprise React experience</strong> and a Comcast Spotlight Award, I bring the same production quality to freelance. <strong>Fast turnaround, clean code, tested to 90%+.</strong>",
+    "services": [
+      {
+        "icon": "⚛️",
+        "name": "React SPA Development",
+        "desc": "Full single-page application — architecture, components, state, API integration, testing.",
+        "rate": "₹40K–80K",
+        "unit": "per project"
+      },
+      {
+        "icon": "⚡",
+        "name": "Performance Audit & Fix",
+        "desc": "Memoization, lazy loading, bundle analysis, render optimization.",
+        "rate": "₹20K–35K",
+        "unit": "per engagement"
+      },
+      {
+        "icon": "🧩",
+        "name": "Component Library",
+        "desc": "Reusable, typed, tested React component libraries with Storybook documentation.",
+        "rate": "₹15K–30K",
+        "unit": "per library"
+      },
+      {
+        "icon": "🧪",
+        "name": "Test Coverage Setup",
+        "desc": "Playwright E2E, Jest unit tests, React Testing Library — 0% to 80%+ coverage.",
+        "rate": "₹12K–25K",
+        "unit": "per project"
+      },
+      {
+        "icon": "🔌",
+        "name": "API Integration & GraphQL",
+        "desc": "REST and GraphQL integration, data flow optimization, caching strategies.",
+        "rate": "₹10K–20K",
+        "unit": "per project"
+      },
+      {
+        "icon": "🕐",
+        "name": "Hourly Consulting",
+        "desc": "Code review, architecture planning, tech decisions, team mentoring.",
+        "rate": "₹1,500–2,500",
+        "unit": "per hour"
+      }
+    ],
+    "proof": [
+      {
+        "num": "7.5",
+        "label": "Years Enterprise Experience",
+        "sub": "Comcast, Cognizant, Verizon, Walgreens — US enterprise at the highest level."
+      },
+      {
+        "num": "90%",
+        "label": "Test Coverage at Comcast",
+        "sub": "I introduced Playwright and built CI/CD-integrated automation from scratch."
+      },
+      {
+        "num": "15+",
+        "label": "Production Apps Shipped",
+        "sub": "From healthcare to ad tech — real scale, real users, real impact."
+      },
+      {
+        "num": "24h",
+        "label": "Response Time",
+        "sub": "I respond fast, start fast, and deliver with documented, clean code."
+      }
+    ],
+    "platforms": [
+      "💼 LinkedIn",
+      "📧 Email Direct",
+      "🐙 GitHub",
+      "🌐 idrism.com"
+    ]
+  },
+
+  "abroad": {
+    "statement": "Ready to join your global team from day one.",
+    "body": "I'm actively seeking <strong>Senior React Developer roles abroad</strong> — remote-first or visa-sponsored relocation. With US enterprise experience at Comcast & Cognizant, I'm accustomed to cross-timezone collaboration and async-first workflows.",
+    "cards": [
+      {
+        "icon": "🌍",
+        "text": "Open to Relocation",
+        "sub": "UK · Canada · Germany · UAE · Singapore · Australia"
+      },
+      {
+        "icon": "⏰",
+        "text": "Any Timezone",
+        "sub": "Experienced with async, EST, PST, GMT collaboration"
+      },
+      {
+        "icon": "💼",
+        "text": "Visa Sponsorship Welcome",
+        "sub": "Open to contract, full-time or corp-to-corp"
+      },
+      {
+        "icon": "🚀",
+        "text": "Immediate Start",
+        "sub": "Available within 30 days of offer"
+      }
+    ],
+    "roles": [
+      {
+        "flag": "🇬🇧",
+        "country": "United Kingdom",
+        "type": "REMOTE OR HYBRID · VISA SPONSORED",
+        "positions": [
+          "Senior Frontend Engineer",
+          "Senior React Developer",
+          "UI Lead / Tech Lead"
+        ],
+        "tags": ["React", "TypeScript", "FinTech", "SaaS"]
+      },
+      {
+        "flag": "🇨🇦",
+        "country": "Canada",
+        "type": "REMOTE OR HYBRID · LMIA / OPEN WP",
+        "positions": ["Senior Frontend Developer", "React Architect"],
+        "tags": ["React", "TypeScript", "GraphQL"]
+      },
+      {
+        "flag": "🇦🇪",
+        "country": "UAE / Singapore",
+        "type": "ON-SITE OR HYBRID",
+        "positions": ["Senior React Developer", "Frontend Tech Lead"],
+        "tags": ["React", "Enterprise", "FinTech"]
+      },
+      {
+        "flag": "🌐",
+        "country": "Fully Remote (Global)",
+        "type": "REMOTE-FIRST · ANY TIMEZONE",
+        "positions": ["Senior Frontend Engineer", "Contract / Freelance"],
+        "tags": ["Any Timezone", "Immediate Start", "Contract / FT"]
+      }
+    ],
+    "bring": [
+      {
+        "icon": "⚛️",
+        "title": "Enterprise React Expertise",
+        "desc": "7.5 years shipping production SPAs — real scale, not tutorials."
+      },
+      {
+        "icon": "🧪",
+        "title": "Testing Culture",
+        "desc": "Introduced Playwright at Comcast, took coverage to ~90%. I make features bulletproof."
+      },
+      {
+        "icon": "🚀",
+        "title": "Performance Obsessed",
+        "desc": "60% perf improvement at Verizon. PageSpeed 80+ at Walgreens. I know the levers."
+      },
+      {
+        "icon": "🤝",
+        "title": "Mentoring & Leadership",
+        "desc": "Ran knowledge-transfer sessions at Comcast. I elevate teams around me."
+      },
+      {
+        "icon": "🌍",
+        "title": "US Enterprise Experience",
+        "desc": "Comcast, Verizon, Walgreens, CDC compliance — I've worked at the highest level."
+      },
+      {
+        "icon": "📦",
+        "title": "Full Stack Capable",
+        "desc": "Node.js, Go, GraphQL, MongoDB — I can contribute beyond the UI layer."
+      }
+    ],
+    "recruiterCta": {
+      "eyebrow": "👋 Attention Recruiters & Hiring Managers",
+      "title": ["Let's make", "something happen."],
+      "sub": "Senior React Developer · 7.5 years · Comcast Spotlight Award · Enterprise-proven. If you have a role that fits — send it over. I respond within 24 hours.",
+      "skills": "React · TypeScript · Redux · GraphQL · Node.js · Go · Playwright · Open to Visa Sponsorship"
+    }
+  },
+
+  "contact": {
+    "headline": ["Say", "hello."],
+    "sub": "Whether it's a freelance gig, a full-time senior role abroad, or just a quick chat about React architecture — I'm always open. Response within 24 hours.",
+    "links": [
+      {
+        "icon": "✉",
+        "label": "idrishan1996@gmail.com",
+        "href": "mailto:idrishan1996@gmail.com"
+      },
+      { "icon": "📞", "label": "+91 88071 60996", "href": "tel:+918807160996" },
+      {
+        "icon": "💼",
+        "label": "LinkedIn",
+        "href": "https://linkedin.com/in/irmh",
+        "external": true
+      },
+      {
+        "icon": "🐙",
+        "label": "GitHub",
+        "href": "https://github.com/irmhanif",
+        "external": true
+      },
+      {
+        "icon": "🌐",
+        "label": "idrism.com",
+        "href": "https://idrism.com",
+        "external": true
+      }
+    ]
+  },
+
+  "footer": {
+    "copy": "© 2026 · Senior React Developer · India",
+    "tech": "React · TypeScript · Node · Go · Open to Abroad"
+  }
+}
