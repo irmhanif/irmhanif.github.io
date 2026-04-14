@@ -10,7 +10,7 @@
     "deploy": "npm run build && touch out/.nojekyll"
   },
   "dependencies": {
-    "next": "14.2.3",
+    "next": "^16.2.3",
     "react": "^18",
     "react-dom": "^18"
   },
