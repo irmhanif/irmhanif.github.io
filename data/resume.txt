@@ -1,0 +1,51 @@
+Mohamed Idris | Senior React Developer | Chennai, India
+7.5 yrs | idrishan1996@gmail.com | +91 8807160996 | linkedin.com/in/irmh | idrism.com
+
+SKILLS
+Frontend: React.js · TypeScript · Redux · GraphQL · Next.js · Context API · React Hooks · HTML5/CSS3 · Tailwind · Bootstrap
+Backend: Node.js · Go · REST APIs · Axios · PHP · JWT/OAuth
+DB: MongoDB · MySQL · PostgreSQL
+Testing: Playwright (E2E) · Jest · Vitest · React Testing Library — ~90% coverage
+DevOps: Webpack · Vite · Git · GitHub Actions · CI/CD · Docker
+Tools: Figma · Storybook · Jira · Agile/Scrum
+
+EXPERIENCE
+
+Comcast — Senior Frontend Engineer | Sep 2024–Present | Chennai
+Project: FreeWheel MRM (enterprise ad-tech forecasting & release management)
+• Architected forecasting + data viz modules using React, TypeScript, Redux, Go microservices
+• Built Next.js UI Monitor app for release sign-off and deployment tracking
+• Introduced Playwright E2E automation → ~90% test coverage
+• Leads team of 5: code reviews, AI-assisted PR reviews, KT sessions, cross-team PR process
+• Spotlight Award Q2 2025 — technical excellence and delivery impact
+
+Cognizant — Frontend Developer | Dec 2021–Sep 2024 | Chennai
+Led team of 5 (Verizon) and team of 3 (Walgreens): PR reviews, KT sessions, performance assessments
+
+  Verizon: Legacy enterprise migration → React/Redux/Node.js
+  • 60% performance uplift · 40% page load reduction · 15+ reusable components · 85% test coverage
+
+  Walgreens Vaccination Booking (used by millions of users):
+  • Led React.js booking platform · 30% booking increase · WCAG + 100% CDC compliance
+  • 60% data retrieval speedup · PageSpeed >80 · full REST API integration
+
+CodeCraft Technologies — Web Dev Engineer | Jan–Dec 2021 | Bangalore
+IGoalZero (React/Redux SPA): 30% load reduction · 50% engagement increase · GraphQL data fetching
+
+Zinavo Technologies — Web Developer | Aug 2018–Dec 2020 | Bangalore
+• 15+ web apps · 6 e-commerce platforms (auth, cart, booking, payments) · 40% transaction uplift
+• France by French: JS/PHP/Bootstrap/Joomla/MySQL · payment & split-payment · 90% PageSpeed
+
+Internships: Unity Technologies (Chennai, 2017) · Morgenall (Bangalore, 2016) — HTML/CSS/JS/PHP
+
+EDUCATION
+B.Sc Computer Science | Jamal Mohamed College, Trichy | 2015–2018 | CGPA 7.4
+
+CERTIFICATIONS
+React + Redux + Hooks + Auth0 — Udemy 2023
+Node.js Complete Guide — Udemy 2023
+Modern JavaScript ES6 for React — Udemy 2021
+
+AVAILABILITY & GOALS
+Open to UAE, UK, EU, Canada, Singapore, remote; willing to relocate
+Looking for senior / lead frontend engineer roles abroad — strong preference for UAE
