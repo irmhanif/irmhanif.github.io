@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Next.js Portfolio — A to Z Guide</title>
+<style>
+  /* ── Reset & base ─────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg:       #0d0d0f;
+    --bg2:      #141416;
+    --bg3:      #1c1c20;
+    --border:   #2a2a30;
+    --ink:      #e8e8ec;
+    --ink2:     #a0a0b0;
+    --ink3:     #666680;
+    --accent:   #7c6dff;
+    --accent2:  #4fc3f7;
+    --green:    #4ade80;
+    --orange:   #fb923c;
+    --pink:     #f472b6;
+    --yellow:   #fbbf24;
+    --red:      #f87171;
+    --mono:     'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+    --sans:     -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --radius:   10px;
+    --sidebar:  260px;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.65;
+    display: flex;
+  }
+
+  /* ── Sidebar ──────────────────────────────────────────────── */
+  #sidebar {
+    width: var(--sidebar);
+    min-height: 100vh;
+    background: var(--bg2);
+    border-right: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    flex-shrink: 0;
+    padding: 24px 0 40px;
+  }
+  #sidebar .logo {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+  }
+  #sidebar .logo h1 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+  #sidebar .logo p { font-size: 11px; color: var(--ink3); margin-top: 3px; }
+  #sidebar nav a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 20px;
+    font-size: 12.5px;
+    color: var(--ink2);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: all .15s;
+  }
+  #sidebar nav a:hover, #sidebar nav a.active {
+    color: var(--ink);
+    background: rgba(124,109,255,.08);
+    border-left-color: var(--accent);
+  }
+  #sidebar nav .group {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    padding: 18px 20px 6px;
+  }
+  #sidebar nav .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: var(--bg3);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--ink3);
+    flex-shrink: 0;
+  }
+
+  /* ── Main content ─────────────────────────────────────────── */
+  #main {
+    flex: 1;
+    max-width: calc(100vw - var(--sidebar));
+    padding: 48px 56px;
+    overflow-x: hidden;
+  }
+  section { padding-bottom: 72px; border-bottom: 1px solid var(--border); margin-bottom: 72px; }
+  section:last-child { border-bottom: none; }
+
+  h1.page-title {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  h1.page-title span { color: var(--accent); }
+  .page-sub { color: var(--ink2); font-size: 16px; margin-bottom: 48px; }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    scroll-margin-top: 32px;
+  }
+  h2 .tag {
+    font-size: 11px;
+    font-weight: 600;
+    background: rgba(124,109,255,.15);
+    color: var(--accent);
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+  h3 { font-size: 15px; font-weight: 700; margin: 28px 0 10px; color: var(--accent2); }
+  p  { color: var(--ink2); margin-bottom: 14px; }
+  strong { color: var(--ink); }
+  .section-intro { font-size: 15px; color: var(--ink2); margin-bottom: 28px; border-left: 3px solid var(--accent); padding-left: 14px; }
+
+  /* ── Code blocks ─────────────────────────────────────────── */
+  pre {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    overflow-x: auto;
+    margin: 16px 0;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+  code {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 1px 6px;
+    border-radius: 4px;
+    color: var(--orange);
+  }
+  pre code { background: none; border: none; padding: 0; color: inherit; }
+  .kw  { color: #c792ea; }
+  .fn  { color: #82aaff; }
+  .str { color: #c3e88d; }
+  .cm  { color: var(--ink3); font-style: italic; }
+  .ty  { color: var(--yellow); }
+  .op  { color: var(--pink); }
+  .num { color: var(--orange); }
+  .file-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--accent2);
+    margin-bottom: 8px;
+  }
+
+  /* ── Cards & grids ───────────────────────────────────────── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .card .card-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card .card-title .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .card p { font-size: 13px; margin: 0; }
+  .dot-green  { background: var(--green); }
+  .dot-blue   { background: var(--accent2); }
+  .dot-purple { background: var(--accent); }
+  .dot-orange { background: var(--orange); }
+  .dot-pink   { background: var(--pink); }
+  .dot-yellow { background: var(--yellow); }
+  .dot-red    { background: var(--red); }
+
+  /* ── File tree ───────────────────────────────────────────── */
+  .tree {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 2;
+  }
+  .tree .t-folder { color: var(--yellow); }
+  .tree .t-file   { color: var(--ink2); }
+  .tree .t-new    { color: var(--green); }
+  .tree .t-key    { color: var(--accent); }
+  .tree .t-note {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--ink3);
+    font-style: italic;
+    margin-left: 8px;
+  }
+  .tree .t-indent { margin-left: 20px; display: block; }
+
+  /* ── Flow diagrams ───────────────────────────────────────── */
+  .flow {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    margin: 20px 0;
+    overflow-x: auto;
+  }
+  .flow svg { display: block; max-width: 100%; margin: 0 auto; }
+
+  /* ── Info boxes ──────────────────────────────────────────── */
+  .info-box {
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin: 16px 0;
+    font-size: 13.5px;
+  }
+  .info-box.tip    { background: rgba(74,222,128,.07); border: 1px solid rgba(74,222,128,.25); }
+  .info-box.warn   { background: rgba(251,146,60,.07);  border: 1px solid rgba(251,146,60,.25); }
+  .info-box.key    { background: rgba(124,109,255,.08); border: 1px solid rgba(124,109,255,.25); }
+  .info-box strong { display: block; margin-bottom: 4px; }
+  .info-box.tip  strong { color: var(--green); }
+  .info-box.warn strong { color: var(--orange); }
+  .info-box.key  strong { color: var(--accent); }
+
+  /* ── Comparison table ────────────────────────────────────── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+  th {
+    background: var(--bg3);
+    color: var(--ink);
+    font-size: 11px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--ink2);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,.02); }
+
+  /* ── Step list ───────────────────────────────────────────── */
+  .steps { list-style: none; margin: 16px 0; }
+  .steps li {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .steps li:last-child { border-bottom: none; }
+  .steps .step-num {
+    width: 28px; height: 28px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .steps .step-body strong { display: block; margin-bottom: 3px; color: var(--ink); }
+  .steps .step-body p { margin: 0; font-size: 13px; }
+
+  /* ── Scrollbar ───────────────────────────────────────────── */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  /* ── Responsive ──────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    #sidebar { display: none; }
+    #main { padding: 24px 20px; max-width: 100%; }
+  }
+
+  /* ── Pill labels ─────────────────────────────────────────── */
+  .pill {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin: 0 2px;
+  }
+  .pill.server  { background: rgba(74,222,128,.15); color: var(--green); }
+  .pill.client  { background: rgba(79,195,247,.15); color: var(--accent2); }
+  .pill.shared  { background: rgba(251,191,36,.15); color: var(--yellow); }
+  .pill.api     { background: rgba(244,114,182,.15); color: var(--pink); }
+
+  /* ── Arch diagram boxes ──────────────────────────────────── */
+  .arch {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 20px 0;
+  }
+  .arch-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
+  .arch-box {
+    flex: 1;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+    font-size: 12.5px;
+    position: relative;
+  }
+  .arch-box .ab-title {
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 12px;
+    margin-bottom: 4px;
+    font-family: var(--mono);
+  }
+  .arch-box .ab-desc { color: var(--ink3); font-size: 11.5px; }
+  .arch-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    color: var(--ink3);
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .arch-arrow.right {
+    writing-mode: horizontal-tb;
+    flex-direction: row;
+    font-size: 14px;
+    color: var(--accent);
+  }
+  .arch-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--ink3);
+    font-weight: 700;
+    padding: 10px 16px 4px;
+  }
+  .arch-box.accent-green  { border-color: rgba(74,222,128,.4);  }
+  .arch-box.accent-blue   { border-color: rgba(79,195,247,.4);  }
+  .arch-box.accent-purple { border-color: rgba(124,109,255,.4); }
+  .arch-box.accent-orange { border-color: rgba(251,146,60,.4);  }
+  .arch-box.accent-pink   { border-color: rgba(244,114,182,.4); }
+
+  /* ── Token flow ──────────────────────────────────────────── */
+  .token-flow {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .tf-node {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 12.5px;
+    min-width: 130px;
+    text-align: center;
+  }
+  .tf-node .tf-label { font-weight: 700; color: var(--ink); font-size: 12px; }
+  .tf-node .tf-sub   { color: var(--ink3); font-size: 10.5px; margin-top: 2px; }
+  .tf-arrow { padding: 0 8px; color: var(--accent); font-size: 18px; flex-shrink: 0; }
+  .tf-node.green  { border-color: rgba(74,222,128,.4);  }
+  .tf-node.blue   { border-color: rgba(79,195,247,.4);  }
+  .tf-node.purple { border-color: rgba(124,109,255,.4); }
+  .tf-node.pink   { border-color: rgba(244,114,182,.4); }
+  .tf-node.orange { border-color: rgba(251,146,60,.4);  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SIDEBAR
+══════════════════════════════════════════════════════════════ -->
+<aside id="sidebar">
+  <div class="logo">
+    <h1>Next.js Portfolio</h1>
+    <p>A to Z — Your codebase explained</p>
+  </div>
+  <nav>
+    <div class="group">Foundation</div>
+    <a href="#s1"><span class="num">1</span> What is Next.js?</a>
+    <a href="#s2"><span class="num">2</span> Project structure</a>
+    <a href="#s3"><span class="num">3</span> How a request flows</a>
+
+    <div class="group">Core Concepts</div>
+    <a href="#s4"><span class="num">4</span> App Router</a>
+    <a href="#s5"><span class="num">5</span> Server vs Client</a>
+    <a href="#s6"><span class="num">6</span> TypeScript basics</a>
+
+    <div class="group">Your Files</div>
+    <a href="#s7"><span class="num">7</span> layout.tsx</a>
+    <a href="#s8"><span class="num">8</span> page.tsx</a>
+    <a href="#s9"><span class="num">9</span> content.ts</a>
+    <a href="#s10"><span class="num">10</span> Each component</a>
+    <a href="#s11"><span class="num">11</span> API route</a>
+    <a href="#s12"><span class="num">12</span> Lib utilities</a>
+
+    <div class="group">System Design</div>
+    <a href="#s13"><span class="num">13</span> AI system design</a>
+    <a href="#s14"><span class="num">14</span> Token rate limiting</a>
+    <a href="#s15"><span class="num">15</span> Animations</a>
+    <a href="#s16"><span class="num">16</span> Fonts & theming</a>
+
+    <div class="group">Deploy</div>
+    <a href="#s17"><span class="num">17</span> Environment vars</a>
+    <a href="#s18"><span class="num">18</span> Build & deploy</a>
+    <a href="#s19"><span class="num">19</span> Customise content</a>
+  </nav>
+</aside>
+
+<!-- ══════════════════════════════════════════════════════════════
+     MAIN
+══════════════════════════════════════════════════════════════ -->
+<main id="main">
+
+  <h1 class="page-title">Next.js Portfolio — <span>A to Z</span></h1>
+  <p class="page-sub">Everything that was built, why it was built that way, and how it all fits together.</p>
+
+  <!-- ─────────────────────────────────────────────────────────
+       1 · WHAT IS NEXT.JS
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s1">
+    <h2>1 · What is Next.js? <span class="tag">Foundation</span></h2>
+    <p class="section-intro">Next.js is a <strong>React framework</strong> made by Vercel. React alone gives you UI components — Next.js adds routing, server-side rendering, API endpoints, fonts, and build optimisation on top, so you don't have to wire them all yourself.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title"><span class="dot dot-green"></span>React alone</div>
+        <p>Gives you components, state, and props. You must add a router, a build tool, and a server yourself.</p>
+      </div>
+      <div class="card">
+        <div class="card-title"><span class="dot dot-purple"></span>Next.js on top</div>
+        <p>Adds file-based routing, server components, API routes, image optimisation, and Vercel deploys in one install.</p>
+      </div>
+      <div class="card">
+        <div class="card-title"><span class="dot dot-blue"></span>Your version</div>
+        <p><strong>Next.js 16.2.6</strong> with React 19.2.4. Uses the new <strong>App Router</strong> (the modern approach, inside the <code>app/</code> folder).</p>
+      </div>
+    </div>
+
+    <h3>What Next.js replaced for you</h3>
+    <table>
+      <thead><tr><th>Without Next.js you'd need</th><th>Next.js provides</th></tr></thead>
+      <tbody>
+        <tr><td>A separate Express or Fastify server</td><td>Route Handlers in <code>app/api/*/route.ts</code></td></tr>
+        <tr><td>React Router or TanStack Router</td><td>File-based routing — a file <em>is</em> a route</td></tr>
+        <tr><td>Webpack / Vite config</td><td>Built-in Turbopack (zero config)</td></tr>
+        <tr><td>Google Fonts <code>&lt;link&gt;</code> tags</td><td><code>next/font/google</code> — zero layout shift</td></tr>
+        <tr><td>Manual SSR setup</td><td>Server Components render on the server automatically</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       2 · PROJECT STRUCTURE
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s2">
+    <h2>2 · Project structure <span class="tag">Foundation</span></h2>
+    <p class="section-intro">Every file has a specific purpose. Here's the full tree with explanations.</p>
+
+    <div class="tree">
+      <span class="t-folder">portfolio/</span>
+      <span class="t-indent"><span class="t-folder">app/</span><span class="t-note">← the entire Next.js app lives here</span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-key">layout.tsx</span><span class="t-note">← Root HTML shell. Wraps EVERY page. Fonts, &lt;html&gt;, &lt;body&gt; live here.</span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-key">page.tsx</span><span class="t-note">← The "/" route. Assembles all section components.</span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-key">globals.css</span><span class="t-note">← All CSS. Custom properties, theme, animations.</span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-new">content.ts</span><span class="t-note">← NEW. Single config file — all text, links, projects.</span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-folder">components/</span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-file">Nav.tsx</span><span class="t-note">← top navbar + mobile hamburger menu</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-file">Hero.tsx</span><span class="t-note">← full-screen landing section</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-file">About.tsx</span><span class="t-note">← about me + badges</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-file">Stack.tsx</span><span class="t-note">← tech skills grid</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-file">Experience.tsx</span><span class="t-note">← work history timeline</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">Projects.tsx</span><span class="t-note">← project cards + click-to-expand + AI chat</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-file">Contact.tsx</span><span class="t-note">← contact cards grid</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-file">Footer.tsx</span><span class="t-note">← site footer</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">AIWidget.tsx</span><span class="t-note">← AI chat box (hero + per-project)</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">AnimInit.tsx</span><span class="t-note">← scroll-reveal observer (renders nothing)</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">StatCounter.tsx</span><span class="t-note">← animated number counter</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-folder">api/ask/</span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">route.ts</span><span class="t-note">← POST /api/ask — Groq AI endpoint, rate limiting</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-folder">lib/</span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">usage.ts</span><span class="t-note">← localStorage token tracking, shared limit</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">renderBullet.tsx</span><span class="t-note">← **bold** text parser</span></span></span></span>
+      <span class="t-indent"><span class="t-folder">data/</span><span class="t-note">← AI context files (read server-side)</span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-new">resume.txt</span><span class="t-note">← paste your CV here</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-new">about-me.txt</span><span class="t-note">← paste personal info here</span></span></span></span>
+      <span class="t-indent"><span class="t-folder">public/</span><span class="t-note">← static files served as-is (SVGs, images)</span></span>
+      <span class="t-indent"><span class="t-file">.env.local</span><span class="t-note">← secret keys (NEVER commit to git)</span></span>
+      <span class="t-indent"><span class="t-file">next.config.ts</span><span class="t-note">← Next.js configuration</span></span>
+      <span class="t-indent"><span class="t-file">tsconfig.json</span><span class="t-note">← TypeScript compiler settings</span></span>
+      <span class="t-indent"><span class="t-file">package.json</span><span class="t-note">← dependencies + npm scripts</span></span>
+    </div>
+
+    <div class="info-box key">
+      <strong>Green = files we created/rewrote</strong>
+      Every file in <code>app/content.ts</code>, <code>app/api/</code>, <code>app/lib/</code>, <code>data/</code>, <code>AIWidget.tsx</code>, <code>AnimInit.tsx</code>, <code>StatCounter.tsx</code> was built from scratch for this project.
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       3 · HOW A REQUEST FLOWS
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s3">
+    <h2>3 · How a request flows <span class="tag">Foundation</span></h2>
+    <p class="section-intro">When a visitor opens your portfolio URL, here is exactly what happens — from browser to screen.</p>
+
+    <div class="flow">
+      <svg viewBox="0 0 820 460" xmlns="http://www.w3.org/2000/svg" width="820" height="460">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0,0 L10,5 L0,10 z" fill="#7c6dff"/>
+          </marker>
+          <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0,0 L10,5 L0,10 z" fill="#4fc3f7"/>
+          </marker>
+        </defs>
+
+        <!-- Browser -->
+        <rect x="20" y="190" width="130" height="60" rx="8" fill="#1c1c20" stroke="#4ade80" stroke-width="1.5"/>
+        <text x="85" y="214" text-anchor="middle" fill="#e8e8ec" font-size="12" font-weight="700" font-family="monospace">Browser</text>
+        <text x="85" y="232" text-anchor="middle" fill="#666680" font-size="10" font-family="sans-serif">GET /</text>
+        <text x="85" y="246" text-anchor="middle" fill="#666680" font-size="10" font-family="sans-serif">POST /api/ask</text>
+
+        <!-- Arrow 1 -->
+        <line x1="151" y1="220" x2="194" y2="220" stroke="#7c6dff" stroke-width="1.5" marker-end="url(#arr)"/>
+        <text x="172" y="212" text-anchor="middle" fill="#7c6dff" font-size="9" font-family="sans-serif">HTTP</text>
+
+        <!-- Next.js Server -->
+        <rect x="195" y="140" width="160" height="160" rx="8" fill="#141416" stroke="#7c6dff" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="275" y="162" text-anchor="middle" fill="#7c6dff" font-size="11" font-weight="700" font-family="monospace">Next.js Server</text>
+
+        <!-- Router -->
+        <rect x="210" y="172" width="130" height="36" rx="6" fill="#1c1c20" stroke="#2a2a30"/>
+        <text x="275" y="187" text-anchor="middle" fill="#a0a0b0" font-size="10" font-family="monospace">App Router</text>
+        <text x="275" y="200" text-anchor="middle" fill="#666680" font-size="9" font-family="sans-serif">/ → page.tsx</text>
+
+        <!-- layout.tsx -->
+        <rect x="210" y="217" width="130" height="36" rx="6" fill="#1c1c20" stroke="#2a2a30"/>
+        <text x="275" y="232" text-anchor="middle" fill="#a0a0b0" font-size="10" font-family="monospace">layout.tsx</text>
+        <text x="275" y="245" text-anchor="middle" fill="#666680" font-size="9" font-family="sans-serif">HTML shell, fonts</text>
+
+        <!-- page.tsx -->
+        <rect x="210" y="262" width="130" height="26" rx="6" fill="#1c1c20" stroke="#2a2a30"/>
+        <text x="275" y="280" text-anchor="middle" fill="#a0a0b0" font-size="10" font-family="monospace">page.tsx renders</text>
+
+        <!-- Arrow 2 -->
+        <line x1="356" y1="220" x2="394" y2="220" stroke="#7c6dff" stroke-width="1.5" marker-end="url(#arr)"/>
+        <text x="374" y="213" text-anchor="middle" fill="#7c6dff" font-size="9" font-family="sans-serif">RSC</text>
+        <text x="374" y="223" text-anchor="middle" fill="#7c6dff" font-size="9" font-family="sans-serif">HTML</text>
+
+        <!-- Server Components box -->
+        <rect x="395" y="100" width="160" height="90" rx="8" fill="#141416" stroke="#4ade80" stroke-width="1.5"/>
+        <text x="475" y="120" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="700" font-family="monospace">Server Components</text>
+        <text x="475" y="138" text-anchor="middle" fill="#666680" font-size="10" font-family="sans-serif">Nav, Hero, About</text>
+        <text x="475" y="152" text-anchor="middle" fill="#666680" font-size="10" font-family="sans-serif">Stack, Experience</text>
+        <text x="475" y="166" text-anchor="middle" fill="#666680" font-size="10" font-family="sans-serif">Contact, Footer</text>
+
+        <!-- Arrow 3 -->
+        <line x1="475" y1="191" x2="475" y2="228" stroke="#4ade80" stroke-width="1.2"/>
+
+        <!-- Client Components box -->
+        <rect x="395" y="230" width="160" height="90" rx="8" fill="#141416" stroke="#4fc3f7" stroke-width="1.5"/>
+        <text x="475" y="250" text-anchor="middle" fill="#4fc3f7" font-size="11" font-weight="700" font-family="monospace">Client Components</text>
+        <text x="475" y="268" text-anchor="middle" fill="#666680" font-size="10" font-family="sans-serif">Nav (theme toggle)</text>
+        <text x="475" y="282" text-anchor="middle" fill="#666680" font-size="10" font-family="sans-serif">AIWidget, Projects</text>
+        <text x="475" y="296" text-anchor="middle" fill="#666680" font-size="10" font-family="sans-serif">StatCounter, AnimInit</text>
+
+        <!-- Arrow 4 -->
+        <line x1="556" y1="145" x2="594" y2="145" stroke="#7c6dff" stroke-width="1.5" marker-end="url(#arr)"/>
+        <!-- Arrow 5 -->
+        <line x1="556" y1="275" x2="594" y2="275" stroke="#4fc3f7" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+        <!-- HTML stream -->
+        <rect x="595" y="90" width="140" height="260" rx="8" fill="#141416" stroke="#2a2a30"/>
+        <text x="665" y="115" text-anchor="middle" fill="#a0a0b0" font-size="11" font-weight="700" font-family="monospace">Response</text>
+
+        <rect x="608" y="128" width="115" height="28" rx="5" fill="#1c1c20"/>
+        <text x="665" y="143" text-anchor="middle" fill="#4ade80" font-size="9" font-family="monospace">HTML (server-rendered)</text>
+        <text x="665" y="155" text-anchor="middle" fill="#666680" font-size="9" font-family="sans-serif">sent immediately</text>
+
+        <rect x="608" y="164" width="115" height="28" rx="5" fill="#1c1c20"/>
+        <text x="665" y="180" text-anchor="middle" fill="#4fc3f7" font-size="9" font-family="monospace">JS bundle</text>
+        <text x="665" y="192" text-anchor="middle" fill="#666680" font-size="9" font-family="sans-serif">for client components</text>
+
+        <rect x="608" y="200" width="115" height="28" rx="5" fill="#1c1c20"/>
+        <text x="665" y="216" text-anchor="middle" fill="#fbbf24" font-size="9" font-family="monospace">CSS</text>
+        <text x="665" y="228" text-anchor="middle" fill="#666680" font-size="9" font-family="sans-serif">global stylesheet</text>
+
+        <rect x="608" y="236" width="115" height="28" rx="5" fill="#1c1c20"/>
+        <text x="665" y="252" text-anchor="middle" fill="#fb923c" font-size="9" font-family="monospace">Fonts</text>
+        <text x="665" y="264" text-anchor="middle" fill="#666680" font-size="9" font-family="sans-serif">preloaded subsets</text>
+
+        <rect x="608" y="272" width="115" height="28" rx="5" fill="#1c1c20"/>
+        <text x="665" y="288" text-anchor="middle" fill="#f472b6" font-size="9" font-family="monospace">Hydration</text>
+        <text x="665" y="300" text-anchor="middle" fill="#666680" font-size="9" font-family="sans-serif">React takes over</text>
+
+        <!-- Arrow 6 -->
+        <line x1="736" y1="220" x2="774" y2="220" stroke="#4ade80" stroke-width="1.5" marker-end="url(#arr)"/>
+
+        <!-- Browser 2 -->
+        <rect x="775" y="190" width="35" height="60" rx="8" fill="#1c1c20" stroke="#4ade80" stroke-width="1.5"/>
+        <text x="792" y="220" text-anchor="middle" fill="#4ade80" font-size="9" font-family="sans-serif" transform="rotate(-90 792 220)">Screen</text>
+
+        <!-- API branch -->
+        <line x1="85" y1="250" x2="85" y2="380" stroke="#666680" stroke-width="1" stroke-dasharray="4,3"/>
+        <line x1="85" y1="380" x2="194" y2="380" stroke="#f472b6" stroke-width="1.5" marker-end="url(#arr)"/>
+        <text x="140" y="372" text-anchor="middle" fill="#f472b6" font-size="9" font-family="sans-serif">POST /api/ask</text>
+
+        <rect x="195" y="355" width="160" height="50" rx="8" fill="#141416" stroke="#f472b6" stroke-width="1.5"/>
+        <text x="275" y="376" text-anchor="middle" fill="#f472b6" font-size="11" font-weight="700" font-family="monospace">API Route</text>
+        <text x="275" y="393" text-anchor="middle" fill="#666680" font-size="10" font-family="sans-serif">app/api/ask/route.ts</text>
+
+        <line x1="356" y1="380" x2="394" y2="380" stroke="#f472b6" stroke-width="1.5" marker-end="url(#arr)"/>
+
+        <rect x="395" y="355" width="160" height="50" rx="8" fill="#141416" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="475" y="376" text-anchor="middle" fill="#fb923c" font-size="11" font-weight="700" font-family="monospace">Groq API</text>
+        <text x="475" y="393" text-anchor="middle" fill="#666680" font-size="10" font-family="sans-serif">LLaMA 3.3-70b</text>
+
+        <line x1="556" y1="380" x2="739" y2="380" stroke="#fb923c" stroke-width="1.5" marker-end="url(#arr)"/>
+        <line x1="740" y1="380" x2="740" y2="252" stroke="#fb923c" stroke-width="1.5"/>
+        <text x="648" y="372" text-anchor="middle" fill="#fb923c" font-size="9" font-family="sans-serif">JSON { answer }</text>
+      </svg>
+    </div>
+
+    <div class="info-box tip">
+      <strong>Key insight — two rendering modes in one request</strong>
+      Server Components (green) render to HTML on the server — no JS sent to browser. Client Components (blue) send JS that runs in the browser. Next.js mixes both in the same page.
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       4 · APP ROUTER
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s4">
+    <h2>4 · App Router <span class="tag">Core Concept</span></h2>
+    <p class="section-intro">The App Router (introduced in Next.js 13) uses your <strong>folder structure</strong> to define routes. A file at <code>app/page.tsx</code> becomes the <code>/</code> route. A file at <code>app/blog/page.tsx</code> becomes <code>/blog</code>.</p>
+
+    <h3>Convention: special file names</h3>
+    <table>
+      <thead><tr><th>File name</th><th>Purpose</th><th>In your portfolio</th></tr></thead>
+      <tbody>
+        <tr><td><code>layout.tsx</code></td><td>Wraps all children — persistent shell</td><td>Sets &lt;html&gt;, fonts, theme script</td></tr>
+        <tr><td><code>page.tsx</code></td><td>The UI for that route's URL</td><td>Assembles all sections for <code>/</code></td></tr>
+        <tr><td><code>route.ts</code></td><td>API endpoint (like Express handler)</td><td><code>app/api/ask/route.ts</code> → <code>POST /api/ask</code></td></tr>
+        <tr><td><code>loading.tsx</code></td><td>Shown while the page streams</td><td>Not used (single-page site)</td></tr>
+        <tr><td><code>error.tsx</code></td><td>Error boundary for the route</td><td>Not used</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Why <code>app/api/ask/route.ts</code> becomes <code>/api/ask</code></h3>
+    <pre><code><span class="cm">// Folder path                   →  URL path</span>
+app/
+  api/
+    ask/
+      route.ts                   →  POST /api/ask
+
+<span class="cm">// route.ts must export named HTTP methods:</span>
+<span class="kw">export async function</span> <span class="fn">POST</span>(request: <span class="ty">NextRequest</span>) { <span class="cm">/* ... */</span> }
+<span class="kw">export async function</span> <span class="fn">GET</span>(request: <span class="ty">NextRequest</span>)  { <span class="cm">/* ... */</span> }</code></pre>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       5 · SERVER VS CLIENT
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s5">
+    <h2>5 · Server vs Client components <span class="tag">Core Concept</span></h2>
+    <p class="section-intro">This is the most important concept in modern Next.js. By default every component is a <strong>Server Component</strong>. Add <code>"use client"</code> at the top to opt into the browser.</p>
+
+    <table>
+      <thead><tr><th></th><th>Server Component</th><th>Client Component</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Where it runs</strong></td><td>Node.js server only</td><td>Browser (+ server on first load)</td></tr>
+        <tr><td><strong>Can use</strong></td><td>fs, env vars, databases, async/await at top level</td><td>useState, useEffect, onClick, localStorage, window</td></tr>
+        <tr><td><strong>Cannot use</strong></td><td>useState, useEffect, browser APIs</td><td>fs, secrets, server-only packages</td></tr>
+        <tr><td><strong>JS sent to browser</strong></td><td>None — renders to HTML</td><td>Yes — full component JS</td></tr>
+        <tr><td><strong>Directive</strong></td><td>(none — default)</td><td><code>"use client"</code> at top of file</td></tr>
+      </tbody>
+    </table>
+
+    <h3>How it maps to your files</h3>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title"><span class="dot dot-green"></span>Server Components <span class="pill server">server</span></div>
+        <p><code>page.tsx</code>, <code>layout.tsx</code>, <code>Hero.tsx</code>, <code>About.tsx</code>, <code>Stack.tsx</code>, <code>Experience.tsx</code>, <code>Contact.tsx</code>, <code>Footer.tsx</code></p>
+        <p style="margin-top:8px;font-size:12px">No interactivity needed — just render HTML from <code>content.ts</code> data.</p>
+      </div>
+      <div class="card">
+        <div class="card-title"><span class="dot dot-blue"></span>Client Components <span class="pill client">client</span></div>
+        <p><code>Nav.tsx</code>, <code>AIWidget.tsx</code>, <code>Projects.tsx</code>, <code>AnimInit.tsx</code>, <code>StatCounter.tsx</code></p>
+        <p style="margin-top:8px;font-size:12px">Need <code>useState</code>, <code>useEffect</code>, click handlers, or browser APIs (<code>localStorage</code>, <code>IntersectionObserver</code>).</p>
+      </div>
+    </div>
+
+    <pre><code><span class="cm">// Nav.tsx — needs useState for theme toggle + menu state</span>
+<span class="str">"use client"</span>;       <span class="cm">← THIS LINE makes it a Client Component</span>
+
+<span class="kw">import</span> { useState, useEffect } <span class="kw">from</span> <span class="str">"react"</span>;
+
+<span class="kw">export default function</span> <span class="fn">Nav</span>() {
+  <span class="kw">const</span> [isDark, setIsDark] = <span class="fn">useState</span>(<span class="op">false</span>);  <span class="cm">← browser state</span>
+  <span class="cm">// ...</span>
+}</code></pre>
+
+    <div class="info-box warn">
+      <strong>Common mistake — "use client" is contagious</strong>
+      If a Server Component imports a Client Component, the client component becomes the "client boundary." Everything <em>above</em> it can still be a server component. Everything <em>inside</em> it must also be a client component (or have no server-only code).
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       6 · TYPESCRIPT
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s6">
+    <h2>6 · TypeScript basics <span class="tag">Core Concept</span></h2>
+    <p class="section-intro">TypeScript adds types to JavaScript. The browser never sees TypeScript — it gets compiled away. Types are only for your editor and build step (they catch bugs before you run the code).</p>
+
+    <pre><code><span class="cm">// Plain JavaScript — no type safety</span>
+<span class="kw">function</span> <span class="fn">greet</span>(name) { <span class="kw">return</span> <span class="str">"Hello "</span> + name; }
+<span class="fn">greet</span>(<span class="num">42</span>);  <span class="cm">// no error — but "Hello 42" is probably wrong</span>
+
+<span class="cm">// TypeScript — compiler catches the mistake</span>
+<span class="kw">function</span> <span class="fn">greet</span>(name: <span class="ty">string</span>) { <span class="kw">return</span> <span class="str">"Hello "</span> + name; }
+<span class="fn">greet</span>(<span class="num">42</span>);  <span class="cm">// ❌ Error: Argument of type 'number' is not assignable to type 'string'</span></code></pre>
+
+    <h3>TypeScript patterns used in this project</h3>
+    <pre><code><span class="cm">// 1. Interface — describing the shape of an object</span>
+<span class="kw">interface</span> <span class="ty">Message</span> {
+  who: <span class="str">"user"</span> | <span class="str">"bot"</span>;  <span class="cm">← union type: only these two strings are valid</span>
+  text: <span class="ty">string</span>;
+  loading?: <span class="ty">boolean</span>;    <span class="cm">← ? means optional</span>
+}
+
+<span class="cm">// 2. Generic types — useState needs to know its type</span>
+<span class="kw">const</span> [messages, setMessages] = <span class="fn">useState</span>&lt;<span class="ty">Message</span>[]&gt;([]);
+<span class="cm">//                                        ↑ array of Message objects</span>
+
+<span class="cm">// 3. Props types — what a component accepts</span>
+<span class="kw">export default function</span> <span class="fn">AIWidget</span>({ projectContext }: { projectContext?: <span class="ty">string</span> }) {
+<span class="cm">//                                    ↑ optional string prop</span>
+
+<span class="cm">// 4. Return type of a function</span>
+<span class="kw">export async function</span> <span class="fn">POST</span>(request: <span class="ty">NextRequest</span>): <span class="ty">Promise</span>&lt;<span class="ty">Response</span>&gt; {</code></pre>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       7 · LAYOUT.TSX
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s7">
+    <h2>7 · <code>layout.tsx</code> — the root shell <span class="tag">Your Files</span></h2>
+    <p class="section-intro"><code>layout.tsx</code> wraps every page on the site. It renders once per navigation — its state persists between page changes. Think of it as the permanent outer frame.</p>
+
+    <div class="file-badge">📄 app/layout.tsx</div>
+
+    <pre><code><span class="kw">import type</span> { <span class="ty">Metadata</span> } <span class="kw">from</span> <span class="str">"next"</span>;
+<span class="kw">import</span> { Inter_Tight, JetBrains_Mono, Source_Serif_4 } <span class="kw">from</span> <span class="str">"next/font/google"</span>;
+<span class="kw">import</span> <span class="str">"./globals.css"</span>;   <span class="cm">← imported once here, applies to everything</span>
+
+<span class="cm">// next/font downloads the font subset at BUILD TIME
+// and self-hosts it — zero layout shift, no Google CDN request at runtime</span>
+<span class="kw">const</span> interTight = <span class="fn">Inter_Tight</span>({
+  subsets: [<span class="str">"latin"</span>],
+  weight:  [<span class="str">"400"</span>, <span class="str">"500"</span>, <span class="str">"600"</span>, <span class="str">"700"</span>, <span class="str">"800"</span>],
+  variable: <span class="str">"--font-inter-tight"</span>,  <span class="cm">← exposed as a CSS variable</span>
+});
+
+<span class="cm">// SEO metadata — shows in browser tab + search results</span>
+<span class="kw">export const</span> metadata: <span class="ty">Metadata</span> = {
+  title:       <span class="str">"Mohamed Idris — Senior React Developer"</span>,
+  description: <span class="str">"..."</span>,
+};
+
+<span class="kw">export default function</span> <span class="fn">RootLayout</span>({ children }: { children: <span class="ty">React.ReactNode</span> }) {
+  <span class="kw">return</span> (
+    &lt;<span class="fn">html</span>
+      lang=<span class="str">"en"</span>
+      data-theme=<span class="str">"light"</span>               <span class="cm">← default theme attribute</span>
+      suppressHydrationWarning           <span class="cm">← suppress mismatch warning (theme changes server→client)</span>
+      className={`${interTight.variable} ${jetbrainsMono.variable} ${sourceSerif.variable}`}
+    &gt;
+      &lt;<span class="fn">head</span>&gt;
+        &lt;<span class="fn">script</span> dangerouslySetInnerHTML={{
+          __html: <span class="str">`(function(){
+            var t = localStorage.getItem('v4-theme');
+            if(t) document.documentElement.setAttribute('data-theme', t);
+          })();`</span>
+          <span class="cm">// ↑ runs INSTANTLY before first paint — prevents theme flash</span>
+        }}/&gt;
+      &lt;/<span class="fn">head</span>&gt;
+      &lt;<span class="fn">body</span>&gt;{children}&lt;/<span class="fn">body</span>&gt;   <span class="cm">← page.tsx renders here</span>
+    &lt;/<span class="fn">html</span>&gt;
+  );
+}</code></pre>
+
+    <div class="info-box key">
+      <strong>Why suppressHydrationWarning?</strong>
+      The server renders <code>data-theme="light"</code>. But the browser's inline script immediately changes it to "dark" if the user prefers dark mode. React would normally warn "server and client HTML don't match." <code>suppressHydrationWarning</code> tells React to ignore this mismatch on the <code>&lt;html&gt;</code> element — because we intentionally changed it.
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       8 · PAGE.TSX
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s8">
+    <h2>8 · <code>page.tsx</code> — the home page <span class="tag">Your Files</span></h2>
+    <p class="section-intro"><code>page.tsx</code> is the "/" route. It's a Server Component that simply imports and arranges all section components. It has no logic of its own — just composition.</p>
+
+    <div class="file-badge">📄 app/page.tsx</div>
+
+    <pre><code><span class="cm">// No "use client" — this is a Server Component</span>
+<span class="kw">import</span> Nav        <span class="kw">from</span> <span class="str">"./components/Nav"</span>;
+<span class="kw">import</span> Hero       <span class="kw">from</span> <span class="str">"./components/Hero"</span>;
+<span class="kw">import</span> AnimInit   <span class="kw">from</span> <span class="str">"./components/AnimInit"</span>;
+<span class="cm">// ... all other components</span>
+
+<span class="kw">export default function</span> <span class="fn">Home</span>() {
+  <span class="kw">return</span> (
+    &lt;&gt;
+      &lt;<span class="fn">a</span> href=<span class="str">"#main"</span> className=<span class="str">"sr-only"</span>&gt;Skip to content&lt;/<span class="fn">a</span>&gt;  <span class="cm">← accessibility</span>
+      &lt;<span class="fn">Nav</span> /&gt;
+      &lt;<span class="fn">AnimInit</span> /&gt;    <span class="cm">← sets up scroll observer, renders nothing visible</span>
+      &lt;<span class="fn">main</span> id=<span class="str">"main"</span>&gt;
+        &lt;<span class="fn">Hero</span> /&gt;
+        &lt;<span class="fn">About</span> /&gt;
+        &lt;<span class="fn">Stack</span> /&gt;
+        &lt;<span class="fn">Experience</span> /&gt;
+        &lt;<span class="fn">Projects</span> /&gt;
+        &lt;<span class="fn">Contact</span> /&gt;
+      &lt;/<span class="fn">main</span>&gt;
+      &lt;<span class="fn">Footer</span> /&gt;
+    &lt;/&gt;
+  );
+}</code></pre>
+
+    <p>Notice there's no data fetching, no state, no effects — <code>page.tsx</code> is just the page skeleton. Each section component fetches its own data from <code>content.ts</code>.</p>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       9 · CONTENT.TS
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s9">
+    <h2>9 · <code>content.ts</code> — single source of truth <span class="tag">Your Files</span></h2>
+    <p class="section-intro">Instead of hunting through 10 component files to update your name or add a project, <strong>everything is in one place</strong>. This is a common pattern for content-heavy sites.</p>
+
+    <div class="file-badge">📄 app/content.ts</div>
+
+    <pre><code><span class="cm">// This file is the ONLY place you need to edit to customise the portfolio.</span>
+<span class="cm">// All components import from here — they never contain raw text.</span>
+
+<span class="kw">export const</span> SITE = {
+  name:          <span class="str">"Mohamed Idris"</span>,
+  email:         <span class="str">"idrishan1996@gmail.com"</span>,
+  linkedinUrl:   <span class="str">"https://linkedin.com/in/irmh"</span>,
+  <span class="cm">// ...</span>
+};
+
+<span class="cm">// Components consume it:</span>
+<span class="kw">import</span> { SITE } <span class="kw">from</span> <span class="str">"../content"</span>;
+&lt;<span class="fn">a</span> href={`mailto:${SITE.email}`}&gt;{SITE.email}&lt;/<span class="fn">a</span>&gt;</code></pre>
+
+    <h3>The <code>**bold**</code> convention</h3>
+    <p>Long strings in <code>ABOUT.paragraphs</code> and <code>EXPERIENCE[].bullets</code> use <code>**double asterisks**</code> to mark bold text — just like Markdown.</p>
+    <pre><code><span class="cm">// In content.ts:</span>
+<span class="str">"I build **scalable, production-grade** web applications…"</span>
+
+<span class="cm">// renderBullet.tsx processes this:</span>
+<span class="kw">export function</span> <span class="fn">renderBullet</span>(text: <span class="ty">string</span>) {
+  <span class="kw">return</span> text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span class="op">/</span>).<span class="fn">map</span>((part, i) =>
+    part.<span class="fn">startsWith</span>(<span class="str">"**"</span>)
+      ? &lt;<span class="fn">strong</span> key={i}&gt;{part.<span class="fn">slice</span>(<span class="num">2</span>, -<span class="num">2</span>)}&lt;/<span class="fn">strong</span>&gt;
+      : &lt;<span class="ty">Fragment</span> key={i}&gt;{part}&lt;/<span class="ty">Fragment</span>&gt;
+  );
+}
+
+<span class="cm">// In Experience.tsx / About.tsx:</span>
+&lt;<span class="fn">li</span>&gt;{<span class="fn">renderBullet</span>(bullet)}&lt;/<span class="fn">li</span>&gt;</code></pre>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       10 · EACH COMPONENT
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s10">
+    <h2>10 · Every component explained <span class="tag">Your Files</span></h2>
+
+    <h3>Nav.tsx <span class="pill client">client</span></h3>
+    <div class="file-badge">📄 app/components/Nav.tsx</div>
+    <p>Manages two pieces of state: <code>isDark</code> (theme) and <code>menuOpen</code> (mobile hamburger). The theme toggle writes to <code>localStorage</code> and sets <code>data-theme</code> on <code>&lt;html&gt;</code> directly — the CSS custom properties react instantly.</p>
+    <pre><code><span class="kw">function</span> <span class="fn">toggleTheme</span>() {
+  <span class="kw">const</span> next = isDark ? <span class="str">"light"</span> : <span class="str">"dark"</span>;
+  document.documentElement.<span class="fn">setAttribute</span>(<span class="str">"data-theme"</span>, next);  <span class="cm">← all CSS vars switch</span>
+  localStorage.<span class="fn">setItem</span>(<span class="str">"v4-theme"</span>, next);                     <span class="cm">← persists across visits</span>
+  <span class="fn">setIsDark</span>(!isDark);                                           <span class="cm">← re-renders icon</span>
+}</code></pre>
+    <p>The <strong>mobile menu CSS specificity fix</strong>: <code>.mobile-menu a</code> has specificity <code>0,1,1</code> which overrode <code>.mobile-cta</code> at <code>0,1,0</code>. Fixed with <code>.mobile-menu .mobile-cta</code> — two class selectors = <code>0,2,0</code>.</p>
+
+    <h3>Hero.tsx <span class="pill server">server</span></h3>
+    <div class="file-badge">📄 app/components/Hero.tsx</div>
+    <p>The landing section. Imports <code>HERO</code> from <code>content.ts</code>, renders animated stat counters via <code>&lt;StatCounter&gt;</code>, and includes an <code>&lt;AIWidget&gt;</code> with no <code>projectContext</code> prop (global mode).</p>
+
+    <h3>StatCounter.tsx <span class="pill client">client</span></h3>
+    <div class="file-badge">📄 app/components/StatCounter.tsx</div>
+    <p>Uses <code>IntersectionObserver</code> to detect when the number is scrolled into view, then animates from 0 to the target with a cubic ease-out. Uses <code>requestAnimationFrame</code> for smooth 60fps animation.</p>
+    <pre><code><span class="kw">const</span> tick = (now: <span class="ty">number</span>) => {
+  <span class="kw">const</span> progress = Math.<span class="fn">min</span>((now - start) / duration, <span class="num">1</span>);
+  <span class="kw">const</span> eased = <span class="num">1</span> - Math.<span class="fn">pow</span>(<span class="num">1</span> - progress, <span class="num">3</span>);  <span class="cm">← cubic ease-out</span>
+  <span class="fn">setDisplay</span>(Math.<span class="fn">round</span>(eased * value * <span class="num">10</span>) / <span class="num">10</span>);
+  <span class="kw">if</span> (progress &lt; <span class="num">1</span>) <span class="fn">requestAnimationFrame</span>(tick);
+};</code></pre>
+
+    <h3>AnimInit.tsx <span class="pill client">client</span></h3>
+    <div class="file-badge">📄 app/components/AnimInit.tsx</div>
+    <p>Renders <strong>nothing visible</strong>. Its only job: set up an <code>IntersectionObserver</code> on every <code>.reveal</code> element in the DOM. When an element enters the viewport, it adds the <code>.in</code> class which triggers the CSS fade-up animation.</p>
+    <pre><code><span class="kw">const</span> observer = <span class="kw">new</span> <span class="ty">IntersectionObserver</span>(
+  (entries) => {
+    entries.<span class="fn">forEach</span>(entry => {
+      <span class="kw">if</span> (entry.isIntersecting) {
+        entry.target.classList.<span class="fn">add</span>(<span class="str">"in"</span>);    <span class="cm">← triggers CSS animation</span>
+        observer.<span class="fn">unobserve</span>(entry.target);  <span class="cm">← only animate once</span>
+      }
+    });
+  },
+  { threshold: <span class="num">0.08</span>, rootMargin: <span class="str">"0px 0px -32px 0px"</span> }
+  <span class="cm">//                   ↑ trigger 32px before the element reaches the edge</span>
+);</code></pre>
+
+    <h3>Projects.tsx <span class="pill client">client</span></h3>
+    <div class="file-badge">📄 app/components/Projects.tsx</div>
+    <p>Tracks <code>openId</code> — the ID of the currently expanded project. When a project card is clicked, it toggles open/closed. A <code>useEffect</code> watches <code>openId</code> and auto-scrolls to the AI widget using a <strong>double requestAnimationFrame</strong>.</p>
+    <pre><code><span class="cm">// Double rAF trick — why?
+// rAF 1: React's state update has been committed to the DOM
+// rAF 2: The browser has painted the new layout (project detail panel is visible)
+// Then scrollIntoView can measure the element's actual position</span>
+<span class="kw">const</span> id = <span class="fn">requestAnimationFrame</span>(() =>
+  <span class="fn">requestAnimationFrame</span>(() => {
+    <span class="kw">const</span> widget = document.<span class="fn">querySelector</span>&lt;<span class="ty">HTMLElement</span>&gt;(<span class="str">".proj-detail .ai-widget"</span>);
+    <span class="kw">if</span> (widget) widget.<span class="fn">scrollIntoView</span>({ behavior: <span class="str">"smooth"</span>, block: <span class="str">"nearest"</span> });
+  })
+);</code></pre>
+
+    <h3>AIWidget.tsx <span class="pill client">client</span></h3>
+    <div class="file-badge">📄 app/components/AIWidget.tsx</div>
+    <p>The interactive chat component. Used twice: once in <code>Hero.tsx</code> (no <code>projectContext</code> prop), and once per expanded project in <code>Projects.tsx</code> (passes <code>projectContext</code> so the AI knows which project is being discussed).</p>
+    <p>All instances share the same token budget via <code>localStorage</code> — usage in the hero widget counts against the same daily limit as usage in the project widget.</p>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       11 · API ROUTE
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s11">
+    <h2>11 · <code>api/ask/route.ts</code> — the AI endpoint <span class="tag">Your Files</span></h2>
+    <p class="section-intro">This is a <strong>server-only</strong> file. It's a mini Express-like handler that receives a POST request, validates the request, checks rate limits, calls the Groq AI, and returns a JSON response.</p>
+
+    <div class="file-badge">📄 app/api/ask/route.ts</div>
+
+    <ul class="steps">
+      <li>
+        <span class="step-num">1</span>
+        <div class="step-body">
+          <strong>Receive the request</strong>
+          <p>Browser sends <code>POST /api/ask</code> with JSON body <code>{ question, context, deviceId }</code>.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <div class="step-body">
+          <strong>Check the API key</strong>
+          <p>If <code>GROQ_API_KEY</code> is missing or still a placeholder → return <code>503 Service Unavailable</code> with a helpful message.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <div class="step-body">
+          <strong>Build the rate-limit key</strong>
+          <p>Combines <code>deviceId</code> (from localStorage) and the client's IP address into a string like <code>"abc123:192.168.1.1"</code>. This makes it hard to bypass by just clearing localStorage or using a VPN.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">4</span>
+        <div class="step-body">
+          <strong>Check the server-side usage map</strong>
+          <p>An in-memory <code>Map</code> stores <code>{ tokens, resetAt }</code> per key. If over limit → <code>429 Too Many Requests</code>.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">5</span>
+        <div class="step-body">
+          <strong>Build the system prompt</strong>
+          <p>Reads <code>data/resume.txt</code> and <code>data/about-me.txt</code> from disk. Appends them to the system prompt so the AI knows Mohamed's background. Ignores files that still contain the template placeholder text.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">6</span>
+        <div class="step-body">
+          <strong>Call Groq API</strong>
+          <p>Sends the user's question + context + system prompt to LLaMA 3.3-70b. Max 200 output tokens. Returns the answer + token count used.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">7</span>
+        <div class="step-body">
+          <strong>Update usage &amp; respond</strong>
+          <p>Increments the server-side token counter. Returns <code>{ answer, tokensUsed, serverTokensUsed, tokenLimit }</code>.</p>
+        </div>
+      </li>
+    </ul>
+
+    <pre><code><span class="cm">// The in-memory Map — lives as long as the server process</span>
+<span class="kw">const</span> serverUsage = <span class="kw">new</span> Map&lt;<span class="ty">string</span>, { tokens: <span class="ty">number</span>; resetAt: <span class="ty">number</span> }&gt;();
+
+<span class="cm">// Reading files from disk (server-side only — never from a browser)</span>
+<span class="kw">function</span> <span class="fn">readData</span>(file: <span class="ty">string</span>): <span class="ty">string</span> {
+  <span class="kw">try</span> { <span class="kw">return</span> <span class="fn">readFileSync</span>(<span class="fn">join</span>(<span class="fn">process.cwd</span>(), <span class="str">"data"</span>, file), <span class="str">"utf-8"</span>).<span class="fn">trim</span>(); }
+  <span class="kw">catch</span> { <span class="kw">return</span> <span class="str">""</span>; }  <span class="cm">← fails silently if file missing</span>
+}</code></pre>
+
+    <div class="info-box warn">
+      <strong>In-memory Map resets on server restart</strong>
+      This is fine for a portfolio — it means rate limits reset whenever Vercel redeploys (which is rare). For a production app with real security requirements you'd use Redis or a database instead.
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       12 · LIB UTILITIES
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s12">
+    <h2>12 · <code>lib/</code> utilities <span class="tag">Your Files</span></h2>
+
+    <h3>lib/usage.ts <span class="pill client">browser only</span></h3>
+    <div class="file-badge">📄 app/lib/usage.ts</div>
+    <p>Manages the token budget on the <em>client side</em> using <code>localStorage</code>. This is what shows the usage meter in the UI. It stores a JSON object:</p>
+    <pre><code>{
+  deviceId:   <span class="str">"a3f8-..."</span>,      <span class="cm">← stable UUID, identifies this browser</span>
+  tokensUsed: <span class="num">350</span>,             <span class="cm">← accumulated token usage today</span>
+  limit:      <span class="num">2000</span>,            <span class="cm">← from AI_TOKEN_LIMIT in content.ts</span>
+  resetAt:    <span class="num">1748123456789</span>    <span class="cm">← Unix ms timestamp 24h from first use</span>
+}</code></pre>
+    <p><strong>Key design</strong>: all three <code>AIWidget</code> instances on the page call <code>readUsage()</code> and <code>addTokens()</code> which read/write the <em>same localStorage key</em> — so the 2000 token limit is shared, not per-widget.</p>
+
+    <h3>lib/renderBullet.tsx <span class="pill shared">shared</span></h3>
+    <div class="file-badge">📄 app/lib/renderBullet.tsx</div>
+    <p>A pure utility function. Takes a string with <code>**bold**</code> markers, splits it on the regex pattern, and returns an array of React elements (mix of plain text and <code>&lt;strong&gt;</code> tags).</p>
+    <pre><code><span class="cm">// Input:  "He led **3 engineers** at Comcast"
+// Output: ["He led ", &lt;strong&gt;3 engineers&lt;/strong&gt;, " at Comcast"]</span>
+
+text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span class="op">/</span>)
+<span class="cm">// The () around the regex captures the delimiter too, so it appears in the array
+// Without (): ["He led ", " at Comcast"]         ← bold text lost
+// With    (): ["He led ", "**3 engineers**", " at Comcast"]  ← we can transform it</span></span></code></pre>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       13 · AI SYSTEM DESIGN
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s13">
+    <h2>13 · AI system design <span class="tag">System Design</span></h2>
+    <p class="section-intro">The AI feature spans four layers: browser UI, server route, rate-limit store, and external AI API. Here's the full picture.</p>
+
+    <div class="arch">
+      <div class="arch-label">LAYER 1 — Browser</div>
+      <div class="arch-row">
+        <div class="arch-box accent-blue">
+          <div class="ab-title">AIWidget.tsx</div>
+          <div class="ab-desc">User types question → reads localStorage for deviceId + usage → sends POST /api/ask</div>
+        </div>
+        <div class="arch-box accent-blue" style="border-left:none">
+          <div class="ab-title">lib/usage.ts</div>
+          <div class="ab-desc">localStorage "portfolio_ai_v1" — tracks tokensUsed, resets after 24h. Shared by ALL widget instances.</div>
+        </div>
+        <div class="arch-box accent-blue" style="border-left:none">
+          <div class="ab-title">Usage meter UI</div>
+          <div class="ab-desc">Progress bar + "350 / 2000 tokens" shown below each chat form. Updated after every response.</div>
+        </div>
+      </div>
+
+      <div class="arch-arrow">↓ POST /api/ask  {question, context, deviceId}</div>
+
+      <div class="arch-label">LAYER 2 — Next.js Server</div>
+      <div class="arch-row">
+        <div class="arch-box accent-purple">
+          <div class="ab-title">app/api/ask/route.ts</div>
+          <div class="ab-desc">Validates request, reads env var GROQ_API_KEY, extracts IP from headers.</div>
+        </div>
+        <div class="arch-box accent-purple" style="border-left:none">
+          <div class="ab-title">serverUsage Map</div>
+          <div class="ab-desc">In-memory rate limit. Key = deviceId:IP. Prevents server-side bypass even if localStorage is cleared.</div>
+        </div>
+        <div class="arch-box accent-purple" style="border-left:none">
+          <div class="ab-title">data/ files</div>
+          <div class="ab-desc">Reads resume.txt + about-me.txt via fs.readFileSync. Injected into system prompt. Never exposed to browser.</div>
+        </div>
+      </div>
+
+      <div class="arch-arrow">↓ POST to Groq API  {model, messages, max_tokens: 200}</div>
+
+      <div class="arch-label">LAYER 3 — Groq Cloud</div>
+      <div class="arch-row">
+        <div class="arch-box accent-orange">
+          <div class="ab-title">LLaMA 3.3-70b-versatile</div>
+          <div class="ab-desc">Free-tier LLM. Receives system prompt (bio + resume + about-me) + user question. Returns answer in ≤200 tokens.</div>
+        </div>
+        <div class="arch-box accent-orange" style="border-left:none">
+          <div class="ab-title">System prompt</div>
+          <div class="ab-desc">"You are Mohamed Idris speaking in first person. Answer in ≤90 words, confident, no bullet lists, no invented metrics."</div>
+        </div>
+      </div>
+
+      <div class="arch-arrow">↑ {answer, tokensUsed, serverTokensUsed, tokenLimit}</div>
+
+      <div class="arch-label">LAYER 4 — Back to browser</div>
+      <div class="arch-row">
+        <div class="arch-box accent-green">
+          <div class="ab-title">AIWidget receives response</div>
+          <div class="ab-desc">Calls addTokens(data.tokensUsed) → updates localStorage → re-renders usage meter → patches message in conversation.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       14 · TOKEN RATE LIMITING
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s14">
+    <h2>14 · Token rate limiting — two-layer defence <span class="tag">System Design</span></h2>
+    <p class="section-intro">A free Groq account has a daily token budget. To prevent any one visitor from exhausting it, there are two independent limits that must <em>both</em> pass.</p>
+
+    <div class="token-flow">
+      <div class="tf-node blue">
+        <div class="tf-label">Browser checks</div>
+        <div class="tf-sub">readUsage() from localStorage</div>
+      </div>
+      <div class="tf-arrow">→</div>
+      <div class="tf-node green">
+        <div class="tf-label">Under limit?</div>
+        <div class="tf-sub">tokensUsed &lt; 2000</div>
+      </div>
+      <div class="tf-arrow">→</div>
+      <div class="tf-node purple">
+        <div class="tf-label">POST /api/ask</div>
+        <div class="tf-sub">deviceId + question sent</div>
+      </div>
+      <div class="tf-arrow">→</div>
+      <div class="tf-node orange">
+        <div class="tf-label">Server checks</div>
+        <div class="tf-sub">serverUsage Map (deviceId:IP)</div>
+      </div>
+      <div class="tf-arrow">→</div>
+      <div class="tf-node pink">
+        <div class="tf-label">Groq API</div>
+        <div class="tf-sub">LLaMA answers</div>
+      </div>
+    </div>
+
+    <table>
+      <thead><tr><th></th><th>Client layer (localStorage)</th><th>Server layer (Map)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Runs on</strong></td><td>Browser</td><td>Node.js server</td></tr>
+        <tr><td><strong>Key</strong></td><td>"portfolio_ai_v1" (same for all)</td><td>"deviceId:IP"</td></tr>
+        <tr><td><strong>Purpose</strong></td><td>Shows usage meter, fast local check</td><td>Prevent abuse even if localStorage cleared</td></tr>
+        <tr><td><strong>Bypassable?</strong></td><td>Yes — clear localStorage</td><td>Harder — needs same IP</td></tr>
+        <tr><td><strong>Resets</strong></td><td>After 24h (stored in resetAt)</td><td>After 24h (server-side resetAt)</td></tr>
+        <tr><td><strong>Persists across</strong></td><td>Browser tabs on same device</td><td>All devices on same IP</td></tr>
+      </tbody>
+    </table>
+
+    <div class="info-box tip">
+      <strong>Change the token limit</strong>
+      Edit <code>AI_TOKEN_LIMIT</code> in <code>app/content.ts</code>. It's imported by both the client (<code>lib/usage.ts</code>) and the server (<code>api/ask/route.ts</code>) — change it once, takes effect everywhere.
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       15 · ANIMATIONS
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s15">
+    <h2>15 · Animations — two systems <span class="tag">System Design</span></h2>
+
+    <h3>System 1 — Hero entrance (CSS keyframes, runs once on page load)</h3>
+    <pre><code><span class="cm">/* globals.css — plays automatically when the element renders */</span>
+@keyframes fadeUp {
+  <span class="kw">from</span> { opacity: <span class="num">0</span>; transform: translateY(<span class="num">14px</span>); }
+  <span class="kw">to</span>   { opacity: <span class="num">1</span>; transform: translateY(<span class="num">0</span>); }
+}
+
+.hero-meta  { animation: fadeUp <span class="num">0.55s</span>  <span class="num">0.05s</span>  var(--ease) both; }
+.display    { animation: fadeUp <span class="num">0.65s</span>  <span class="num">0.12s</span>  var(--ease) both; }  <span class="cm">← h1</span>
+.hero-lede  { animation: fadeUp <span class="num">0.55s</span>  <span class="num">0.22s</span>  var(--ease) both; }
+.hero-cta-row { animation: fadeUp <span class="num">0.5s</span> <span class="num">0.32s</span>  var(--ease) both; }
+<span class="cm">//                                 ↑ stagger: each element starts 0.1s later</span></code></pre>
+
+    <h3>System 2 — Scroll reveal (IntersectionObserver, triggers on scroll)</h3>
+    <pre><code><span class="cm">/* Base state — invisible, shifted down */</span>
+.reveal {
+  opacity: <span class="num">0</span>;
+  transform: translateY(<span class="num">18px</span>);
+  transition: opacity <span class="num">0.5s</span> var(--ease), transform <span class="num">0.5s</span> var(--ease);
+}
+
+<span class="cm">/* AnimInit.tsx adds ".in" when element enters viewport */</span>
+.reveal.in {
+  opacity: <span class="num">1</span>;
+  transform: translateY(<span class="num">0</span>);
+}
+
+<span class="cm">/* Delay variants — stagger siblings in a group */</span>
+.reveal-d1 { transition-delay: <span class="num">0.05s</span>; }
+.reveal-d2 { transition-delay: <span class="num">0.15s</span>; }
+.reveal-d3 { transition-delay: <span class="num">0.25s</span>; }
+.reveal-d4 { transition-delay: <span class="num">0.35s</span>; }</code></pre>
+
+    <div class="info-box key">
+      <strong>Why two separate systems?</strong>
+      The hero plays immediately — the user should see it right away. Everything else should animate as the user <em>scrolls to it</em> — that's what makes the page feel alive as you explore it. Using keyframes for one and IntersectionObserver for the other keeps each system focused on its job.
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       16 · FONTS & THEMING
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s16">
+    <h2>16 · Fonts &amp; theming <span class="tag">System Design</span></h2>
+
+    <h3>Three typefaces, three roles</h3>
+    <table>
+      <thead><tr><th>Font</th><th>CSS variable</th><th>Used for</th></tr></thead>
+      <tbody>
+        <tr><td>Inter Tight</td><td><code>--font-inter</code></td><td>Body text, UI labels</td></tr>
+        <tr><td>JetBrains Mono</td><td><code>--font-mono</code></td><td>Code, tags, stats, timestamps</td></tr>
+        <tr><td>Source Serif 4</td><td><code>--font-serif</code></td><td>Large headings, the quote in About</td></tr>
+      </tbody>
+    </table>
+
+    <h3>CSS custom properties — the theming system</h3>
+    <pre><code><span class="cm">/* Two sets of variables, swapped by data-theme attribute on &lt;html&gt; */</span>
+
+[data-theme="light"] {
+  --bg:     #f8f7f4;    <span class="cm">← warm off-white</span>
+  --ink:    #0e0e0f;    <span class="cm">← near-black text</span>
+  --accent: #1a1aff;    <span class="cm">← blue highlight</span>
+}
+
+[data-theme="dark"] {
+  --bg:     #0d0d0f;    <span class="cm">← near-black background</span>
+  --ink:    #e8e8ec;    <span class="cm">← soft white text</span>
+  --accent: #7272ff;    <span class="cm">← lighter blue (readable on dark)</span>
+}
+
+<span class="cm">/* Every component just uses the variable — never a hardcoded colour */</span>
+.hero { background: var(--bg); }
+h1    { color:      var(--ink); }
+a     { color:      var(--accent); }</code></pre>
+
+    <p>When <code>toggleTheme()</code> in <code>Nav.tsx</code> flips <code>data-theme</code>, <strong>every single CSS custom property updates simultaneously</strong> — the entire site repaints in one operation with zero JavaScript iteration.</p>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       17 · ENVIRONMENT VARIABLES
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s17">
+    <h2>17 · Environment variables <span class="tag">Deploy</span></h2>
+    <p class="section-intro">Environment variables let you store secret keys separately from your code — they never get committed to git.</p>
+
+    <div class="file-badge">📄 .env.local</div>
+    <pre><code>GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxx</code></pre>
+
+    <table>
+      <thead><tr><th>Variable</th><th>Where set</th><th>Available in</th></tr></thead>
+      <tbody>
+        <tr><td><code>GROQ_API_KEY</code></td><td><code>.env.local</code> (local dev), Vercel dashboard (production)</td><td>Server-only — <code>process.env.GROQ_API_KEY</code></td></tr>
+      </tbody>
+    </table>
+
+    <div class="info-box warn">
+      <strong>NEVER prefix with NEXT_PUBLIC_ unless intentional</strong>
+      Variables prefixed <code>NEXT_PUBLIC_</code> are bundled into the JavaScript that ships to the browser — anyone can read them in DevTools. <code>GROQ_API_KEY</code> must stay server-only (no prefix), so it never leaks.
+    </div>
+
+    <h3>How Next.js loads .env files</h3>
+    <table>
+      <thead><tr><th>File</th><th>When loaded</th><th>Committed to git?</th></tr></thead>
+      <tbody>
+        <tr><td><code>.env.local</code></td><td>Local dev + build</td><td>No — in .gitignore</td></tr>
+        <tr><td><code>.env</code></td><td>All environments</td><td>Yes — for non-secret defaults</td></tr>
+        <tr><td><code>.env.production</code></td><td>Production build only</td><td>Yes — non-secret prod config</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       18 · BUILD & DEPLOY
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s18">
+    <h2>18 · Build &amp; deploy <span class="tag">Deploy</span></h2>
+
+    <h3>npm scripts in package.json</h3>
+    <table>
+      <thead><tr><th>Command</th><th>What it does</th><th>When to use</th></tr></thead>
+      <tbody>
+        <tr><td><code>npm run dev</code></td><td>Starts dev server with hot reload on port 3000</td><td>While developing</td></tr>
+        <tr><td><code>npm run build</code></td><td>Creates optimised production build in <code>.next/</code></td><td>Before deploying</td></tr>
+        <tr><td><code>npm run start</code></td><td>Starts production server (needs build first)</td><td>On a VPS/server</td></tr>
+        <tr><td><code>npm run lint</code></td><td>Runs ESLint across all files</td><td>Before committing</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Deploying to Vercel (recommended — free)</h3>
+    <ul class="steps">
+      <li><span class="step-num">1</span><div class="step-body"><strong>Push code to GitHub</strong><p><code>git push origin main</code> — make sure <code>.env.local</code> is in <code>.gitignore</code>.</p></div></li>
+      <li><span class="step-num">2</span><div class="step-body"><strong>Import on vercel.com</strong><p>Connect your GitHub repo. Vercel auto-detects Next.js.</p></div></li>
+      <li><span class="step-num">3</span><div class="step-body"><strong>Add environment variable</strong><p>In Vercel dashboard → Settings → Environment Variables → add <code>GROQ_API_KEY</code> with your real key.</p></div></li>
+      <li><span class="step-num">4</span><div class="step-body"><strong>Deploy</strong><p>Every push to <code>main</code> auto-deploys. Vercel runs <code>npm run build</code> and hosts the result globally.</p></div></li>
+    </ul>
+
+    <div class="info-box tip">
+      <strong>What Vercel gives you for free</strong>
+      Global CDN, automatic HTTPS, preview deployments per branch, serverless functions for your API routes, and custom domain support.
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+       19 · CUSTOMISE CONTENT
+  ───────────────────────────────────────────────────────────── -->
+  <section id="s19">
+    <h2>19 · How to customise the portfolio <span class="tag">Deploy</span></h2>
+    <p class="section-intro">The entire portfolio is designed to be customised by editing a handful of files — no component hunting required.</p>
+
+    <table>
+      <thead><tr><th>What to change</th><th>Where</th></tr></thead>
+      <tbody>
+        <tr><td>Your name, email, phone, LinkedIn, GitHub</td><td><code>app/content.ts</code> → <code>SITE</code> object</td></tr>
+        <tr><td>Hero headline, stats, availability status</td><td><code>app/content.ts</code> → <code>HERO</code> object</td></tr>
+        <tr><td>About me paragraphs, badges, quote</td><td><code>app/content.ts</code> → <code>ABOUT</code> object</td></tr>
+        <tr><td>Tech stack rows</td><td><code>app/content.ts</code> → <code>STACK_ROWS</code> array</td></tr>
+        <tr><td>Work experience entries</td><td><code>app/content.ts</code> → <code>EXPERIENCE</code> array</td></tr>
+        <tr><td>Portfolio projects</td><td><code>app/content.ts</code> → <code>PROJECTS</code> array</td></tr>
+        <tr><td>AI quick-reply chips</td><td><code>app/content.ts</code> → <code>AI_CHIPS</code> array</td></tr>
+        <tr><td>Daily token limit</td><td><code>app/content.ts</code> → <code>AI_TOKEN_LIMIT</code></td></tr>
+        <tr><td>AI knowledge about you</td><td><code>data/resume.txt</code> + <code>data/about-me.txt</code></td></tr>
+        <tr><td>Groq API key</td><td><code>.env.local</code> → <code>GROQ_API_KEY</code></td></tr>
+        <tr><td>SEO title &amp; description</td><td><code>app/layout.tsx</code> → <code>metadata</code> export</td></tr>
+        <tr><td>Colour scheme</td><td><code>app/globals.css</code> → <code>[data-theme="light"]</code> / <code>[data-theme="dark"]</code></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Adding a new project</h3>
+    <pre><code><span class="cm">// app/content.ts — add to the PROJECTS array:</span>
+{
+  id:     <span class="str">"my-project"</span>,        <span class="cm">← unique ID string</span>
+  num:    <span class="str">"06"</span>,               <span class="cm">← display number</span>
+  name:   <span class="str">"My Project Name"</span>,
+  client: <span class="str">"Company · City"</span>,
+  desc:   <span class="str">"Short description shown on the card"</span>,
+  detail: <span class="str">"Full paragraph for the expanded panel"</span>,
+  kpi:    <span class="str">"Key metric or achievement"</span>,
+  tags:   [<span class="str">"React"</span>, <span class="str">"TypeScript"</span>, <span class="str">"GraphQL"</span>],
+}</code></pre>
+
+    <div class="info-box key">
+      <strong>That's all it takes</strong>
+      The Projects component maps over the array dynamically — adding one entry here automatically adds a new card, expandable detail panel, and per-project AI widget with that project's context passed in.
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Active sidebar link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const links    = document.querySelectorAll('#sidebar nav a');
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`#sidebar a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+
+  sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
