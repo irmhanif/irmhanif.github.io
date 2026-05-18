@@ -2,6 +2,8 @@ import { NextRequest } from "next/server";
 import { readFileSync } from "fs";
 import { join } from "path";
 
+export const dynamic = "force-static";
+
 export async function GET(request: NextRequest) {
   const url      = new URL(request.url);
   const password = request.headers.get("x-admin-password") ?? url.searchParams.get("p");

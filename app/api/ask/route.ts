@@ -4,8 +4,10 @@ import { readFileSync, appendFileSync, mkdirSync } from "fs";
 import { join } from "path";
 import { AI_TOKEN_LIMIT } from "@/app/content";
 
+export const dynamic = "force-dynamic";
+
 // ─── Groq client ────────────────────────────────────────────────
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY || "" });
 
 // ─── Server-side rate limit (in-memory, resets on redeploy) ─────
 const serverUsage = new Map<string, { tokens: number; resetAt: number }>();
