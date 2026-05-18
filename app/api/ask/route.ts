@@ -6,6 +6,22 @@ import { AI_TOKEN_LIMIT } from "@/app/content";
 
 export const dynamic = "force-dynamic";
 
+// ─── CORS (frontend is hosted cross-origin on GitHub Pages) ──────
+const CORS_ORIGIN = process.env.CORS_ORIGIN || "https://idrism.com";
+const corsHeaders = {
+  "Access-Control-Allow-Origin":  CORS_ORIGIN,
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+};
+
+export function OPTIONS() {
+  return new Response(null, { status: 204, headers: corsHeaders });
+}
+
+function json(body: object, status = 200) {
+  return Response.json(body, { status, headers: corsHeaders });
+}
+
 // ─── Groq client ────────────────────────────────────────────────
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY || "" });
 
@@ -76,16 +92,16 @@ function appendLog(entry: object) {
 // ─── Route handler ───────────────────────────────────────────────
 export async function POST(request: NextRequest) {
   if (!process.env.GROQ_API_KEY || process.env.GROQ_API_KEY === "your_groq_api_key_here") {
-    return Response.json(
+    return json(
       { error: "AI not configured. Add GROQ_API_KEY to .env.local (get one free at console.groq.com)." },
-      { status: 503 }
+      503
     );
   }
 
   const { question, context, deviceId } = await request.json();
 
   if (!question?.trim()) {
-    return Response.json({ error: "Question is required." }, { status: 400 });
+    return json({ error: "Question is required." }, 400);
   }
 
   // Build a stable key from deviceId + IP
@@ -96,9 +112,9 @@ export async function POST(request: NextRequest) {
   const rec = getRecord(key);
 
   if (rec.tokens >= AI_TOKEN_LIMIT) {
-    return Response.json(
+    return json(
       { error: "Token limit reached for today. Try again in 24 hours.", limited: true },
-      { status: 429 }
+      429
     );
   }
 
@@ -118,7 +134,7 @@ export async function POST(request: NextRequest) {
   ]);
 
   if (completionResult.status === "rejected") {
-    return Response.json({ error: "AI service error. Please try again." }, { status: 500 });
+    return json({ error: "AI service error. Please try again." }, 500);
   }
 
   const completion = completionResult.value;
@@ -145,7 +161,7 @@ export async function POST(request: NextRequest) {
     tokensUsed: used,
   });
 
-  return Response.json({
+  return json({
     answer,
     tokensUsed:       used,
     serverTokensUsed: rec.tokens,

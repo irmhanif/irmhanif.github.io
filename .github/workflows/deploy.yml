@@ -30,8 +30,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Remove server route handlers (incompatible with static export)
+        run: rm -rf app/api
+
       - name: Build (static export)
         run: npm run build
+        env:
+          # AI / admin API is hosted separately on Vercel, not on GitHub Pages.
+          # Replace with your actual Vercel deployment URL.
+          NEXT_PUBLIC_API_BASE: "https://irmhanif-github-io.vercel.app"
 
       - name: Add .nojekyll (prevent GitHub Pages from ignoring _next folder)
         run: touch out/.nojekyll

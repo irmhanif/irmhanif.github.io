@@ -29,7 +29,8 @@ export default function AdminPage() {
     setLoading(true);
     setError("");
     try {
-      const res  = await fetch("/api/admin/logs", {
+      const apiBase = process.env.NEXT_PUBLIC_API_BASE ?? "";
+      const res  = await fetch(`${apiBase}/api/admin/logs`, {
         headers: { "x-admin-password": pw },
       });
       const data = await res.json();

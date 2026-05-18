@@ -2,14 +2,29 @@ import { NextRequest } from "next/server";
 import { readFileSync } from "fs";
 import { join } from "path";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
+
+const CORS_ORIGIN = process.env.CORS_ORIGIN || "https://idrism.com";
+const corsHeaders = {
+  "Access-Control-Allow-Origin":  CORS_ORIGIN,
+  "Access-Control-Allow-Methods": "GET, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type, x-admin-password",
+};
+
+export function OPTIONS() {
+  return new Response(null, { status: 204, headers: corsHeaders });
+}
+
+function json(body: object, status = 200) {
+  return Response.json(body, { status, headers: corsHeaders });
+}
 
 export async function GET(request: NextRequest) {
   const url      = new URL(request.url);
   const password = request.headers.get("x-admin-password") ?? url.searchParams.get("p");
 
   if (!process.env.ADMIN_PASSWORD || password !== process.env.ADMIN_PASSWORD) {
-    return Response.json({ error: "Unauthorized" }, { status: 401 });
+    return json({ error: "Unauthorized" }, 401);
   }
 
   try {
@@ -20,8 +35,8 @@ export async function GET(request: NextRequest) {
       .filter(Boolean)
       .map(line => JSON.parse(line))
       .reverse();
-    return Response.json({ logs, total: logs.length });
+    return json({ logs, total: logs.length });
   } catch {
-    return Response.json({ logs: [], total: 0 });
+    return json({ logs: [], total: 0 });
   }
 }
