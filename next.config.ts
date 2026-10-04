@@ -7,3 +7,14 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+// next.config.js
+module.exports = {
+  async rewrites() {
+    return [
+      { source: "/apps/todo", destination: "https://dyi0pkeohsgur.cloudfront.net/" },
+      { source: "/apps/todo/", destination: "https://dyi0pkeohsgur.cloudfront.net/" },
+      { source: "/apps/todo/:path*", destination: "https://dyi0pkeohsgur.cloudfront.net/:path*" },
+    ];
+  },
+};
