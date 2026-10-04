@@ -6,8 +6,6 @@ const nextConfig: NextConfig = {
   ...(process.env.STATIC_EXPORT === "true" ? { output: "export" as const } : {}),
 };
 
-export default nextConfig;
-
 // next.config.js
 module.exports = {
   async rewrites() {
@@ -18,3 +16,6 @@ module.exports = {
     ];
   },
 };
+
+export default nextConfig;
+
