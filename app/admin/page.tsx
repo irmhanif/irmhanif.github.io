@@ -3,26 +3,26 @@
 import { useState } from "react";
 
 interface LogEntry {
-  ts:         string;
-  ip:         string;
-  city:       string;
-  region:     string;
-  country:    string;
-  deviceId:   string | null;
-  question:   string;
-  context:    string | null;
-  answer:     string;
+  ts: string;
+  ip: string;
+  city: string;
+  region: string;
+  country: string;
+  deviceId: string | null;
+  question: string;
+  context: string | null;
+  answer: string;
   tokensUsed: number;
 }
 
 export default function AdminPage() {
   const [password, setPassword] = useState("");
-  const [authed,   setAuthed]   = useState(false);
-  const [logs,     setLogs]     = useState<LogEntry[]>([]);
-  const [total,    setTotal]    = useState(0);
-  const [error,    setError]    = useState("");
-  const [loading,  setLoading]  = useState(false);
-  const [savedPw,  setSavedPw]  = useState("");
+  const [authed, setAuthed] = useState(false);
+  const [logs, setLogs] = useState<LogEntry[]>([]);
+  const [total, setTotal] = useState(0);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [savedPw, setSavedPw] = useState("");
   const [expanded, setExpanded] = useState<number | null>(null);
 
   async function fetchLogs(pw: string) {
@@ -30,7 +30,7 @@ export default function AdminPage() {
     setError("");
     try {
       const apiBase = process.env.NEXT_PUBLIC_API_BASE ?? "";
-      const res  = await fetch(`${apiBase}/api/admin/logs`, {
+      const res = await fetch(`${apiBase}/api/admin/logs`, {
         headers: { "x-admin-password": pw },
       });
       const data = await res.json();
@@ -42,7 +42,7 @@ export default function AdminPage() {
       setTotal(data.total);
       return true;
     } catch {
-      setError("Network error — check server.");
+      setError("Network error - check server.");
       return false;
     } finally {
       setLoading(false);
@@ -64,20 +64,20 @@ export default function AdminPage() {
 
   /* ── styles ── */
   const s = {
-    page:    { minHeight: "100vh", background: "#0d0d0f", color: "#e8e8ec", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", padding: "40px 32px" } as React.CSSProperties,
-    wrap:    { maxWidth: 1300, margin: "0 auto" } as React.CSSProperties,
-    hdr:     { marginBottom: 32 } as React.CSSProperties,
-    h1:      { fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", marginBottom: 4 } as React.CSSProperties,
-    sub:     { color: "#666680", fontSize: 13 } as React.CSSProperties,
-    card:    { background: "#141416", border: "1px solid #2a2a30", borderRadius: 12, padding: "28px 24px", maxWidth: 380 } as React.CSSProperties,
-    label:   { display: "block", fontSize: 11, color: "#a0a0b0", marginBottom: 8, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase" as const },
-    input:   { width: "100%", background: "#0d0d0f", border: "1px solid #2a2a30", borderRadius: 8, padding: "10px 14px", color: "#e8e8ec", fontSize: 14, outline: "none", marginBottom: 14, boxSizing: "border-box" as const },
-    btn:     { background: "#7c6dff", color: "#fff", border: "none", borderRadius: 8, padding: "10px 20px", fontSize: 13, fontWeight: 700, cursor: "pointer", width: "100%" } as React.CSSProperties,
-    err:     { color: "#f87171", fontSize: 12, marginBottom: 12 } as React.CSSProperties,
-    th:      { padding: "10px 14px", textAlign: "left" as const, fontSize: 10, fontWeight: 700, letterSpacing: ".07em", textTransform: "uppercase" as const, color: "#666680", borderBottom: "1px solid #2a2a30", whiteSpace: "nowrap" as const, background: "#141416" },
-    td:      { padding: "10px 14px", borderBottom: "1px solid #1c1c20", verticalAlign: "top" as const },
-    mono:    { fontFamily: "'JetBrains Mono', 'Fira Code', monospace", fontSize: 11.5 } as React.CSSProperties,
-    pill:    (c: string) => ({ display: "inline-block", padding: "2px 8px", borderRadius: 20, fontSize: 10, fontWeight: 700, letterSpacing: ".04em", textTransform: "uppercase" as const, background: c === "country" ? "rgba(79,195,247,.12)" : "rgba(124,109,255,.12)", color: c === "country" ? "#4fc3f7" : "#7c6dff" }),
+    page: { minHeight: "100vh", background: "#0d0d0f", color: "#e8e8ec", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", padding: "40px 32px" } as React.CSSProperties,
+    wrap: { maxWidth: 1300, margin: "0 auto" } as React.CSSProperties,
+    hdr: { marginBottom: 32 } as React.CSSProperties,
+    h1: { fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", marginBottom: 4 } as React.CSSProperties,
+    sub: { color: "#666680", fontSize: 13 } as React.CSSProperties,
+    card: { background: "#141416", border: "1px solid #2a2a30", borderRadius: 12, padding: "28px 24px", maxWidth: 380 } as React.CSSProperties,
+    label: { display: "block", fontSize: 11, color: "#a0a0b0", marginBottom: 8, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase" as const },
+    input: { width: "100%", background: "#0d0d0f", border: "1px solid #2a2a30", borderRadius: 8, padding: "10px 14px", color: "#e8e8ec", fontSize: 14, outline: "none", marginBottom: 14, boxSizing: "border-box" as const },
+    btn: { background: "#7c6dff", color: "#fff", border: "none", borderRadius: 8, padding: "10px 20px", fontSize: 13, fontWeight: 700, cursor: "pointer", width: "100%" } as React.CSSProperties,
+    err: { color: "#f87171", fontSize: 12, marginBottom: 12 } as React.CSSProperties,
+    th: { padding: "10px 14px", textAlign: "left" as const, fontSize: 10, fontWeight: 700, letterSpacing: ".07em", textTransform: "uppercase" as const, color: "#666680", borderBottom: "1px solid #2a2a30", whiteSpace: "nowrap" as const, background: "#141416" },
+    td: { padding: "10px 14px", borderBottom: "1px solid #1c1c20", verticalAlign: "top" as const },
+    mono: { fontFamily: "'JetBrains Mono', 'Fira Code', monospace", fontSize: 11.5 } as React.CSSProperties,
+    pill: (c: string) => ({ display: "inline-block", padding: "2px 8px", borderRadius: 20, fontSize: 10, fontWeight: 700, letterSpacing: ".04em", textTransform: "uppercase" as const, background: c === "country" ? "rgba(79,195,247,.12)" : "rgba(124,109,255,.12)", color: c === "country" ? "#4fc3f7" : "#7c6dff" }),
   };
 
   /* ── login screen ── */
@@ -87,7 +87,7 @@ export default function AdminPage() {
         <div style={s.wrap}>
           <div style={s.hdr}>
             <h1 style={s.h1}>AI Interaction Log</h1>
-            <p style={s.sub}>Admin access — enter password to view logged questions.</p>
+            <p style={s.sub}>Admin access - enter password to view logged questions.</p>
           </div>
           <form onSubmit={handleLogin} style={s.card}>
             <label style={s.label}>Admin password</label>
@@ -154,7 +154,7 @@ export default function AdminPage() {
               <tbody>
                 {logs.map((log, i) => {
                   const isOpen = expanded === i;
-                  const rowBg  = i % 2 === 0 ? "transparent" : "rgba(255,255,255,.013)";
+                  const rowBg = i % 2 === 0 ? "transparent" : "rgba(255,255,255,.013)";
                   return (
                     <tr key={i} style={{ background: rowBg, cursor: "pointer" }} onClick={() => setExpanded(isOpen ? null : i)}>
 

@@ -7,7 +7,7 @@ export default function About() {
       <div className="wrap">
         <div className="grid-2 reveal">
           <div className="sec-label reveal reveal-d1">
-            <span className="num">01</span>About
+            About
           </div>
           <div className="reveal reveal-d2">
             <h2 className="sr-only" id="about-h">About</h2>

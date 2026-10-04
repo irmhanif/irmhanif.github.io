@@ -7,9 +7,9 @@ import { AI_TOKEN_LIMIT } from "@/app/content";
 export const dynamic = "force-dynamic";
 
 // ─── CORS (frontend is hosted cross-origin on GitHub Pages) ──────
-const CORS_ORIGIN = process.env.CORS_ORIGIN || "https://idrism.com";
+const CORS_ORIGIN = process.env.CORS_ORIGIN || "*";
 const corsHeaders = {
-  "Access-Control-Allow-Origin":  CORS_ORIGIN,
+  "Access-Control-Allow-Origin": CORS_ORIGIN,
   "Access-Control-Allow-Methods": "POST, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type",
 };
@@ -27,7 +27,7 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY || "" });
 
 // ─── Server-side rate limit (in-memory, resets on redeploy) ─────
 const serverUsage = new Map<string, { tokens: number; resetAt: number }>();
-const RESET_MS    = 24 * 60 * 60 * 1000;
+const RESET_MS = 24 * 60 * 60 * 1000;
 
 function getRecord(key: string) {
   const now = Date.now();
@@ -47,12 +47,12 @@ function readData(file: string): string {
 }
 
 function buildSystem(): string {
-  const resume  = readData("resume.txt");
+  const resume = readData("resume.txt");
 
-  const base = `You are Mohamed Idris speaking in first person. Senior React Developer, 7.5 years. Current: Comcast Dev Engineer 3, FreeWheel MRM, Spotlight Award Q2 2025, ~90% Playwright test coverage. Stack: React, TypeScript, Redux, GraphQL, Node.js, Go, Playwright. Open to UK, EU, Canada, UAE, Singapore, remote. Answer in ≤90 words, first person, confident and direct. No bullet lists. No invented metrics. If you don't know something, say so honestly.`;
+  const base = `You are Mohamed Idris speaking in first person. Senior React Developer, 8+ years. Current: Comcast Dev Engineer 3, FreeWheel MRM, Spotlight Award Q2 2025, ~90% Playwright test coverage. Stack: React, TypeScript, Redux, GraphQL, Node.js, Go, Playwright. Open to UK, EU, Canada, UAE, Singapore, remote. Answer in ≤90 words, first person, confident and direct. No bullet lists. No invented metrics. If you don't know something, say so honestly.`;
 
-  const rSection = resume  && !resume.startsWith("RESUME — Mohamed Idris")
-    ? `\n\n--- RESUME ---\n${resume}`  : "";
+  const rSection = resume && !resume.startsWith("RESUME - Mohamed Idris")
+    ? `\n\n--- RESUME ---\n${resume}` : "";
 
   return base + rSection;
 }
@@ -66,9 +66,9 @@ async function fetchGeo(ip: string): Promise<GeoInfo> {
     return { city: "localhost", region: "-", country: "-" };
   }
   const ctrl = new AbortController();
-  const t    = setTimeout(() => ctrl.abort(), 2000);
+  const t = setTimeout(() => ctrl.abort(), 2000);
   try {
-    const res  = await fetch(
+    const res = await fetch(
       `http://ip-api.com/json/${ip}?fields=status,city,regionName,country`,
       { signal: ctrl.signal }
     );
@@ -77,7 +77,7 @@ async function fetchGeo(ip: string): Promise<GeoInfo> {
       ? { city: data.city, region: data.regionName, country: data.country }
       : blank;
   } catch { return blank; }
-  finally   { clearTimeout(t); }
+  finally { clearTimeout(t); }
 }
 
 // ─── Append one line to data/ai-logs.jsonl ───────────────────────
@@ -105,9 +105,9 @@ export async function POST(request: NextRequest) {
   }
 
   // Build a stable key from deviceId + IP
-  const ip  = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
-            ?? request.headers.get("x-real-ip")
-            ?? "unknown";
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
+    ?? request.headers.get("x-real-ip")
+    ?? "unknown";
   const key = deviceId ? `${deviceId}:${ip}` : ip;
   const rec = getRecord(key);
 
@@ -120,14 +120,14 @@ export async function POST(request: NextRequest) {
 
   const prompt = context ? `(Project context: ${context}) ${question}` : question;
 
-  // Groq + geo lookup run in parallel — geo never delays the AI response
+  // Groq + geo lookup run in parallel - geo never delays the AI response
   const [completionResult, geoResult] = await Promise.allSettled([
     groq.chat.completions.create({
-      model:      "llama-3.3-70b-versatile",
+      model: "llama-3.3-70b-versatile",
       max_tokens: 200,
       messages: [
         { role: "system", content: buildSystem() },
-        { role: "user",   content: prompt },
+        { role: "user", content: prompt },
       ],
     }),
     fetchGeo(ip),
@@ -138,33 +138,33 @@ export async function POST(request: NextRequest) {
   }
 
   const completion = completionResult.value;
-  const geo        = geoResult.status === "fulfilled"
+  const geo = geoResult.status === "fulfilled"
     ? geoResult.value
     : { city: "-", region: "-", country: "-" };
 
   const answer = completion.choices[0]?.message?.content ?? "No response received.";
-  const used   = completion.usage?.total_tokens ?? 50;
+  const used = completion.usage?.total_tokens ?? 50;
 
   rec.tokens += used;
   serverUsage.set(key, rec);
 
   appendLog({
-    ts:         new Date().toISOString(),
+    ts: new Date().toISOString(),
     ip,
-    city:       geo.city,
-    region:     geo.region,
-    country:    geo.country,
-    deviceId:   deviceId ?? null,
+    city: geo.city,
+    region: geo.region,
+    country: geo.country,
+    deviceId: deviceId ?? null,
     question,
-    context:    context ?? null,
+    context: context ?? null,
     answer,
     tokensUsed: used,
   });
 
   return json({
     answer,
-    tokensUsed:       used,
+    tokensUsed: used,
     serverTokensUsed: rec.tokens,
-    tokenLimit:       AI_TOKEN_LIMIT,
+    tokenLimit: AI_TOKEN_LIMIT,
   });
 }

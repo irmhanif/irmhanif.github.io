@@ -1,30 +1,31 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter_Tight, JetBrains_Mono, Source_Serif_4 } from "next/font/google";
+import { DM_Serif_Display, Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const interTight = Inter_Tight({
+const dmSerifDisplay = DM_Serif_Display({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-dm-serif",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-inter-tight",
+  variable: "--font-plus-jakarta",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const geistMono = Geist_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
-  variable: "--font-jetbrains-mono",
-});
-
-const sourceSerif = Source_Serif_4({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--font-source-serif",
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
-  title: "Mohamed Idris — Senior React Developer",
+  title: "Mohamed Idris - Senior React Developer",
   description:
-    "Mohamed Idris — Senior React Developer, 7.5 years building enterprise apps at Comcast, Cognizant, Verizon and Walgreens.",
+    "Mohamed Idris - Senior React Developer, 8+ years building enterprise apps at Comcast, Cognizant, Verizon and Walgreens.",
 };
 
 export default function RootLayout({
@@ -35,18 +36,13 @@ export default function RootLayout({
       lang="en"
       data-theme="light"
       suppressHydrationWarning
-      className={`${interTight.variable} ${jetbrainsMono.variable} ${sourceSerif.variable}`}
+      className={`${dmSerifDisplay.variable} ${plusJakartaSans.variable} ${geistMono.variable}`}
     >
       <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){var t=localStorage.getItem('v4-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();`,
           }}
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=Cabinet+Grotesk:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600&display=swap"
-          rel="stylesheet"
         />
         {/* Google tag (gtag.js) */}
         <Script

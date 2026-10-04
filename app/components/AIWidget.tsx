@@ -8,9 +8,9 @@ interface Message { who: "user" | "bot"; text: string; loading?: boolean; }
 
 export default function AIWidget({ projectContext }: { projectContext?: string }) {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [input,    setInput]    = useState("");
-  const [loading,  setLoading]  = useState(false);
-  const [usage,    setUsage]    = useState<UsageState | null>(null);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [usage, setUsage] = useState<UsageState | null>(null);
 
   useEffect(() => { setUsage(readUsage()); }, []);
 
@@ -23,7 +23,7 @@ export default function AIWidget({ projectContext }: { projectContext?: string }
       setMessages(p => [
         ...p,
         { who: "user", text: q },
-        { who: "bot",  text: `Daily limit of ${u.limit} tokens reached. Resets in ${timeUntilReset()}.` },
+        { who: "bot", text: `Daily limit of ${u.limit} tokens reached. Resets in ${timeUntilReset()}.` },
       ]);
       return;
     }
@@ -31,16 +31,18 @@ export default function AIWidget({ projectContext }: { projectContext?: string }
     setMessages(p => [
       ...p,
       { who: "user", text: q },
-      { who: "bot",  text: "", loading: true },
+      { who: "bot", text: "", loading: true },
     ]);
     setLoading(true);
 
     try {
-      const apiBase = process.env.NEXT_PUBLIC_API_BASE ?? "";
-      const res  = await fetch(`${apiBase}/api/ask`, {
-        method:  "POST",
+      const apiBase = process.env.NEXT_PUBLIC_API_BASE || "https://irmhanif-github-io.vercel.app";
+      // Remove trailing slash if present to avoid /api/ask becoming //api/ask
+      const cleanApiBase = apiBase.replace(/\/$/, "");
+      const res = await fetch(`${cleanApiBase}/api/ask`, {
+        method: "POST",
         headers: { "Content-Type": "application/json" },
-        body:    JSON.stringify({ question: q, context: projectContext, deviceId: u.deviceId }),
+        body: JSON.stringify({ question: q, context: projectContext, deviceId: u.deviceId }),
       });
       const data = await res.json();
 
@@ -53,7 +55,7 @@ export default function AIWidget({ projectContext }: { projectContext?: string }
       setUsage(newUsage);
       patch({ who: "bot", text: data.answer || data.error || "Something went wrong." });
     } catch {
-      patch({ who: "bot", text: "Can't reach assistant right now — email idrishan1996@gmail.com, 24h response." });
+      patch({ who: "bot", text: "Can't reach assistant right now - email idrishan1996@gmail.com, 24h response." });
     } finally {
       setLoading(false);
     }
@@ -63,13 +65,13 @@ export default function AIWidget({ projectContext }: { projectContext?: string }
     setMessages(p => { const n = [...p]; n[n.length - 1] = msg; return n; });
   }
 
-  const used    = usage?.tokensUsed ?? 0;
-  const limit   = usage?.limit      ?? 2000;
-  const pct     = Math.min(100, (used / limit) * 100);
+  const used = usage?.tokensUsed ?? 0;
+  const limit = usage?.limit ?? 2000;
+  const pct = Math.min(100, (used / limit) * 100);
   const inputId = projectContext ? "projAiQ" : "aiQ";
 
   return (
-    <div className="ai-widget" aria-label="AI assistant — ask about Mohamed">
+    <div className="ai-widget" aria-label="AI assistant - ask about Mohamed">
       <div className="ai-hd">
         <div className="ai-hd-left">
           <div className="ai-glyph" aria-hidden="true">ai</div>
@@ -99,7 +101,7 @@ export default function AIWidget({ projectContext }: { projectContext?: string }
             type="text"
             value={input}
             onChange={e => setInput(e.target.value)}
-            placeholder={projectContext ? "Ask about this project…" : "Ask anything — stack, availability, architecture…"}
+            placeholder={projectContext ? "Ask about this project…" : "Ask anything - stack, availability, architecture…"}
             disabled={loading}
           />
           <button type="submit" className="ai-send" disabled={loading || !input.trim()}>Ask</button>
@@ -118,7 +120,7 @@ export default function AIWidget({ projectContext }: { projectContext?: string }
           </div>
         )}
 
-        {/* ── Usage meter — shared across all widgets via localStorage ── */}
+        {/* ── Usage meter - shared across all widgets via localStorage ── */}
         {usage !== null && (
           <div className="ai-usage">
             <div className="ai-usage-bar">

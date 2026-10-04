@@ -6,7 +6,7 @@ export default function Stack() {
       <div className="wrap">
         <div className="grid-2 reveal">
           <div className="sec-label reveal reveal-d1">
-            <span className="num">02</span>Stack
+            Stack
           </div>
           <div className="reveal reveal-d2">
             <h2 className="sr-only" id="stack-h">Technical stack</h2>

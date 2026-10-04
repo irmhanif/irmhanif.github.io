@@ -1,6 +1,5 @@
-import AIWidget from "./AIWidget";
-import StatCounter from "./StatCounter";
-import { HERO, SITE } from "../content";
+import DownloadResumeButton from "./DownloadResumeButton";
+import { HERO } from "../content";
 
 export default function Hero() {
   return (
@@ -36,20 +35,21 @@ export default function Hero() {
           <a href="#contact" className="btn btn-ghost">
             Hire me <span className="arr">→</span>
           </a>
+          <DownloadResumeButton />
         </div>
 
-        <div className="hero-specs" aria-label="At a glance">
-          {HERO.specs.map(s => (
-            <div key={s.k} className="spec">
-              <div className="k">{s.k}</div>
-              <div className="v">
-                <StatCounter value={s.value} suffix={s.suffix} prefix={s.prefix} />
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <AIWidget />
+        {/* Inline engineering spec line - replaces the 4-box metric grid */}
+        <p className="hero-spec-line" aria-label="At a glance">
+          <span className="spec-seg"><strong>8 yrs</strong>&nbsp;enterprise&nbsp;</span>
+          <span className="sep">·</span>
+          <span className="spec-seg">Comcast&nbsp;<strong>FreeWheel</strong></span>
+          <span className="sep">·</span>
+          <span className="spec-seg"><strong>~90%</strong>&nbsp;Playwright&nbsp;coverage</span>
+          <span className="sep">·</span>
+          <span className="spec-seg">Walgreens&nbsp;<strong>100%&nbsp;CDC/WCAG</strong></span>
+          <span className="sep">·</span>
+          <span className="spec-seg"><strong>15+</strong>&nbsp;production&nbsp;apps</span>
+        </p>
       </div>
     </div>
   );

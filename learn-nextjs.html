@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Next.js Portfolio — A to Z Guide</title>
+<title>Next.js Portfolio - A to Z Guide</title>
 <style>
   /* ── Reset & base ─────────────────────────────────────────── */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -441,7 +441,7 @@
 <aside id="sidebar">
   <div class="logo">
     <h1>Next.js Portfolio</h1>
-    <p>A to Z — Your codebase explained</p>
+    <p>A to Z - Your codebase explained</p>
   </div>
   <nav>
     <div class="group">Foundation</div>
@@ -480,7 +480,7 @@
 ══════════════════════════════════════════════════════════════ -->
 <main id="main">
 
-  <h1 class="page-title">Next.js Portfolio — <span>A to Z</span></h1>
+  <h1 class="page-title">Next.js Portfolio - <span>A to Z</span></h1>
   <p class="page-sub">Everything that was built, why it was built that way, and how it all fits together.</p>
 
   <!-- ─────────────────────────────────────────────────────────
@@ -488,7 +488,7 @@
   ───────────────────────────────────────────────────────────── -->
   <section id="s1">
     <h2>1 · What is Next.js? <span class="tag">Foundation</span></h2>
-    <p class="section-intro">Next.js is a <strong>React framework</strong> made by Vercel. React alone gives you UI components — Next.js adds routing, server-side rendering, API endpoints, fonts, and build optimisation on top, so you don't have to wire them all yourself.</p>
+    <p class="section-intro">Next.js is a <strong>React framework</strong> made by Vercel. React alone gives you UI components - Next.js adds routing, server-side rendering, API endpoints, fonts, and build optimisation on top, so you don't have to wire them all yourself.</p>
 
     <div class="card-grid">
       <div class="card">
@@ -510,9 +510,9 @@
       <thead><tr><th>Without Next.js you'd need</th><th>Next.js provides</th></tr></thead>
       <tbody>
         <tr><td>A separate Express or Fastify server</td><td>Route Handlers in <code>app/api/*/route.ts</code></td></tr>
-        <tr><td>React Router or TanStack Router</td><td>File-based routing — a file <em>is</em> a route</td></tr>
+        <tr><td>React Router or TanStack Router</td><td>File-based routing - a file <em>is</em> a route</td></tr>
         <tr><td>Webpack / Vite config</td><td>Built-in Turbopack (zero config)</td></tr>
-        <tr><td>Google Fonts <code>&lt;link&gt;</code> tags</td><td><code>next/font/google</code> — zero layout shift</td></tr>
+        <tr><td>Google Fonts <code>&lt;link&gt;</code> tags</td><td><code>next/font/google</code> - zero layout shift</td></tr>
         <tr><td>Manual SSR setup</td><td>Server Components render on the server automatically</td></tr>
       </tbody>
     </table>
@@ -531,7 +531,7 @@
       <span class="t-indent"><span class="t-indent"><span class="t-key">layout.tsx</span><span class="t-note">← Root HTML shell. Wraps EVERY page. Fonts, &lt;html&gt;, &lt;body&gt; live here.</span></span></span>
       <span class="t-indent"><span class="t-indent"><span class="t-key">page.tsx</span><span class="t-note">← The "/" route. Assembles all section components.</span></span></span>
       <span class="t-indent"><span class="t-indent"><span class="t-key">globals.css</span><span class="t-note">← All CSS. Custom properties, theme, animations.</span></span></span>
-      <span class="t-indent"><span class="t-indent"><span class="t-new">content.ts</span><span class="t-note">← NEW. Single config file — all text, links, projects.</span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-new">content.ts</span><span class="t-note">← NEW. Single config file - all text, links, projects.</span></span></span>
       <span class="t-indent"><span class="t-indent"><span class="t-folder">components/</span></span></span>
       <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-file">Nav.tsx</span><span class="t-note">← top navbar + mobile hamburger menu</span></span></span></span>
       <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-file">Hero.tsx</span><span class="t-note">← full-screen landing section</span></span></span></span>
@@ -545,7 +545,7 @@
       <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">AnimInit.tsx</span><span class="t-note">← scroll-reveal observer (renders nothing)</span></span></span></span>
       <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">StatCounter.tsx</span><span class="t-note">← animated number counter</span></span></span></span>
       <span class="t-indent"><span class="t-indent"><span class="t-folder">api/ask/</span></span></span>
-      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">route.ts</span><span class="t-note">← POST /api/ask — Groq AI endpoint, rate limiting</span></span></span></span>
+      <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">route.ts</span><span class="t-note">← POST /api/ask - Groq AI endpoint, rate limiting</span></span></span></span>
       <span class="t-indent"><span class="t-indent"><span class="t-folder">lib/</span></span></span>
       <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">usage.ts</span><span class="t-note">← localStorage token tracking, shared limit</span></span></span></span>
       <span class="t-indent"><span class="t-indent"><span class="t-indent"><span class="t-new">renderBullet.tsx</span><span class="t-note">← **bold** text parser</span></span></span></span>
@@ -570,7 +570,7 @@
   ───────────────────────────────────────────────────────────── -->
   <section id="s3">
     <h2>3 · How a request flows <span class="tag">Foundation</span></h2>
-    <p class="section-intro">When a visitor opens your portfolio URL, here is exactly what happens — from browser to screen.</p>
+    <p class="section-intro">When a visitor opens your portfolio URL, here is exactly what happens - from browser to screen.</p>
 
     <div class="flow">
       <svg viewBox="0 0 820 460" xmlns="http://www.w3.org/2000/svg" width="820" height="460">
@@ -691,8 +691,8 @@
     </div>
 
     <div class="info-box tip">
-      <strong>Key insight — two rendering modes in one request</strong>
-      Server Components (green) render to HTML on the server — no JS sent to browser. Client Components (blue) send JS that runs in the browser. Next.js mixes both in the same page.
+      <strong>Key insight - two rendering modes in one request</strong>
+      Server Components (green) render to HTML on the server - no JS sent to browser. Client Components (blue) send JS that runs in the browser. Next.js mixes both in the same page.
     </div>
   </section>
 
@@ -707,7 +707,7 @@
     <table>
       <thead><tr><th>File name</th><th>Purpose</th><th>In your portfolio</th></tr></thead>
       <tbody>
-        <tr><td><code>layout.tsx</code></td><td>Wraps all children — persistent shell</td><td>Sets &lt;html&gt;, fonts, theme script</td></tr>
+        <tr><td><code>layout.tsx</code></td><td>Wraps all children - persistent shell</td><td>Sets &lt;html&gt;, fonts, theme script</td></tr>
         <tr><td><code>page.tsx</code></td><td>The UI for that route's URL</td><td>Assembles all sections for <code>/</code></td></tr>
         <tr><td><code>route.ts</code></td><td>API endpoint (like Express handler)</td><td><code>app/api/ask/route.ts</code> → <code>POST /api/ask</code></td></tr>
         <tr><td><code>loading.tsx</code></td><td>Shown while the page streams</td><td>Not used (single-page site)</td></tr>
@@ -740,8 +740,8 @@ app/
         <tr><td><strong>Where it runs</strong></td><td>Node.js server only</td><td>Browser (+ server on first load)</td></tr>
         <tr><td><strong>Can use</strong></td><td>fs, env vars, databases, async/await at top level</td><td>useState, useEffect, onClick, localStorage, window</td></tr>
         <tr><td><strong>Cannot use</strong></td><td>useState, useEffect, browser APIs</td><td>fs, secrets, server-only packages</td></tr>
-        <tr><td><strong>JS sent to browser</strong></td><td>None — renders to HTML</td><td>Yes — full component JS</td></tr>
-        <tr><td><strong>Directive</strong></td><td>(none — default)</td><td><code>"use client"</code> at top of file</td></tr>
+        <tr><td><strong>JS sent to browser</strong></td><td>None - renders to HTML</td><td>Yes - full component JS</td></tr>
+        <tr><td><strong>Directive</strong></td><td>(none - default)</td><td><code>"use client"</code> at top of file</td></tr>
       </tbody>
     </table>
 
@@ -750,7 +750,7 @@ app/
       <div class="card">
         <div class="card-title"><span class="dot dot-green"></span>Server Components <span class="pill server">server</span></div>
         <p><code>page.tsx</code>, <code>layout.tsx</code>, <code>Hero.tsx</code>, <code>About.tsx</code>, <code>Stack.tsx</code>, <code>Experience.tsx</code>, <code>Contact.tsx</code>, <code>Footer.tsx</code></p>
-        <p style="margin-top:8px;font-size:12px">No interactivity needed — just render HTML from <code>content.ts</code> data.</p>
+        <p style="margin-top:8px;font-size:12px">No interactivity needed - just render HTML from <code>content.ts</code> data.</p>
       </div>
       <div class="card">
         <div class="card-title"><span class="dot dot-blue"></span>Client Components <span class="pill client">client</span></div>
@@ -759,7 +759,7 @@ app/
       </div>
     </div>
 
-    <pre><code><span class="cm">// Nav.tsx — needs useState for theme toggle + menu state</span>
+    <pre><code><span class="cm">// Nav.tsx - needs useState for theme toggle + menu state</span>
 <span class="str">"use client"</span>;       <span class="cm">← THIS LINE makes it a Client Component</span>
 
 <span class="kw">import</span> { useState, useEffect } <span class="kw">from</span> <span class="str">"react"</span>;
@@ -770,7 +770,7 @@ app/
 }</code></pre>
 
     <div class="info-box warn">
-      <strong>Common mistake — "use client" is contagious</strong>
+      <strong>Common mistake - "use client" is contagious</strong>
       If a Server Component imports a Client Component, the client component becomes the "client boundary." Everything <em>above</em> it can still be a server component. Everything <em>inside</em> it must also be a client component (or have no server-only code).
     </div>
   </section>
@@ -780,29 +780,29 @@ app/
   ───────────────────────────────────────────────────────────── -->
   <section id="s6">
     <h2>6 · TypeScript basics <span class="tag">Core Concept</span></h2>
-    <p class="section-intro">TypeScript adds types to JavaScript. The browser never sees TypeScript — it gets compiled away. Types are only for your editor and build step (they catch bugs before you run the code).</p>
+    <p class="section-intro">TypeScript adds types to JavaScript. The browser never sees TypeScript - it gets compiled away. Types are only for your editor and build step (they catch bugs before you run the code).</p>
 
-    <pre><code><span class="cm">// Plain JavaScript — no type safety</span>
+    <pre><code><span class="cm">// Plain JavaScript - no type safety</span>
 <span class="kw">function</span> <span class="fn">greet</span>(name) { <span class="kw">return</span> <span class="str">"Hello "</span> + name; }
-<span class="fn">greet</span>(<span class="num">42</span>);  <span class="cm">// no error — but "Hello 42" is probably wrong</span>
+<span class="fn">greet</span>(<span class="num">42</span>);  <span class="cm">// no error - but "Hello 42" is probably wrong</span>
 
-<span class="cm">// TypeScript — compiler catches the mistake</span>
+<span class="cm">// TypeScript - compiler catches the mistake</span>
 <span class="kw">function</span> <span class="fn">greet</span>(name: <span class="ty">string</span>) { <span class="kw">return</span> <span class="str">"Hello "</span> + name; }
 <span class="fn">greet</span>(<span class="num">42</span>);  <span class="cm">// ❌ Error: Argument of type 'number' is not assignable to type 'string'</span></code></pre>
 
     <h3>TypeScript patterns used in this project</h3>
-    <pre><code><span class="cm">// 1. Interface — describing the shape of an object</span>
+    <pre><code><span class="cm">// 1. Interface - describing the shape of an object</span>
 <span class="kw">interface</span> <span class="ty">Message</span> {
   who: <span class="str">"user"</span> | <span class="str">"bot"</span>;  <span class="cm">← union type: only these two strings are valid</span>
   text: <span class="ty">string</span>;
   loading?: <span class="ty">boolean</span>;    <span class="cm">← ? means optional</span>
 }
 
-<span class="cm">// 2. Generic types — useState needs to know its type</span>
+<span class="cm">// 2. Generic types - useState needs to know its type</span>
 <span class="kw">const</span> [messages, setMessages] = <span class="fn">useState</span>&lt;<span class="ty">Message</span>[]&gt;([]);
 <span class="cm">//                                        ↑ array of Message objects</span>
 
-<span class="cm">// 3. Props types — what a component accepts</span>
+<span class="cm">// 3. Props types - what a component accepts</span>
 <span class="kw">export default function</span> <span class="fn">AIWidget</span>({ projectContext }: { projectContext?: <span class="ty">string</span> }) {
 <span class="cm">//                                    ↑ optional string prop</span>
 
@@ -814,8 +814,8 @@ app/
        7 · LAYOUT.TSX
   ───────────────────────────────────────────────────────────── -->
   <section id="s7">
-    <h2>7 · <code>layout.tsx</code> — the root shell <span class="tag">Your Files</span></h2>
-    <p class="section-intro"><code>layout.tsx</code> wraps every page on the site. It renders once per navigation — its state persists between page changes. Think of it as the permanent outer frame.</p>
+    <h2>7 · <code>layout.tsx</code> - the root shell <span class="tag">Your Files</span></h2>
+    <p class="section-intro"><code>layout.tsx</code> wraps every page on the site. It renders once per navigation - its state persists between page changes. Think of it as the permanent outer frame.</p>
 
     <div class="file-badge">📄 app/layout.tsx</div>
 
@@ -824,16 +824,16 @@ app/
 <span class="kw">import</span> <span class="str">"./globals.css"</span>;   <span class="cm">← imported once here, applies to everything</span>
 
 <span class="cm">// next/font downloads the font subset at BUILD TIME
-// and self-hosts it — zero layout shift, no Google CDN request at runtime</span>
+// and self-hosts it - zero layout shift, no Google CDN request at runtime</span>
 <span class="kw">const</span> interTight = <span class="fn">Inter_Tight</span>({
   subsets: [<span class="str">"latin"</span>],
   weight:  [<span class="str">"400"</span>, <span class="str">"500"</span>, <span class="str">"600"</span>, <span class="str">"700"</span>, <span class="str">"800"</span>],
   variable: <span class="str">"--font-inter-tight"</span>,  <span class="cm">← exposed as a CSS variable</span>
 });
 
-<span class="cm">// SEO metadata — shows in browser tab + search results</span>
+<span class="cm">// SEO metadata - shows in browser tab + search results</span>
 <span class="kw">export const</span> metadata: <span class="ty">Metadata</span> = {
-  title:       <span class="str">"Mohamed Idris — Senior React Developer"</span>,
+  title:       <span class="str">"Mohamed Idris - Senior React Developer"</span>,
   description: <span class="str">"..."</span>,
 };
 
@@ -851,7 +851,7 @@ app/
             var t = localStorage.getItem('v4-theme');
             if(t) document.documentElement.setAttribute('data-theme', t);
           })();`</span>
-          <span class="cm">// ↑ runs INSTANTLY before first paint — prevents theme flash</span>
+          <span class="cm">// ↑ runs INSTANTLY before first paint - prevents theme flash</span>
         }}/&gt;
       &lt;/<span class="fn">head</span>&gt;
       &lt;<span class="fn">body</span>&gt;{children}&lt;/<span class="fn">body</span>&gt;   <span class="cm">← page.tsx renders here</span>
@@ -861,7 +861,7 @@ app/
 
     <div class="info-box key">
       <strong>Why suppressHydrationWarning?</strong>
-      The server renders <code>data-theme="light"</code>. But the browser's inline script immediately changes it to "dark" if the user prefers dark mode. React would normally warn "server and client HTML don't match." <code>suppressHydrationWarning</code> tells React to ignore this mismatch on the <code>&lt;html&gt;</code> element — because we intentionally changed it.
+      The server renders <code>data-theme="light"</code>. But the browser's inline script immediately changes it to "dark" if the user prefers dark mode. React would normally warn "server and client HTML don't match." <code>suppressHydrationWarning</code> tells React to ignore this mismatch on the <code>&lt;html&gt;</code> element - because we intentionally changed it.
     </div>
   </section>
 
@@ -869,12 +869,12 @@ app/
        8 · PAGE.TSX
   ───────────────────────────────────────────────────────────── -->
   <section id="s8">
-    <h2>8 · <code>page.tsx</code> — the home page <span class="tag">Your Files</span></h2>
-    <p class="section-intro"><code>page.tsx</code> is the "/" route. It's a Server Component that simply imports and arranges all section components. It has no logic of its own — just composition.</p>
+    <h2>8 · <code>page.tsx</code> - the home page <span class="tag">Your Files</span></h2>
+    <p class="section-intro"><code>page.tsx</code> is the "/" route. It's a Server Component that simply imports and arranges all section components. It has no logic of its own - just composition.</p>
 
     <div class="file-badge">📄 app/page.tsx</div>
 
-    <pre><code><span class="cm">// No "use client" — this is a Server Component</span>
+    <pre><code><span class="cm">// No "use client" - this is a Server Component</span>
 <span class="kw">import</span> Nav        <span class="kw">from</span> <span class="str">"./components/Nav"</span>;
 <span class="kw">import</span> Hero       <span class="kw">from</span> <span class="str">"./components/Hero"</span>;
 <span class="kw">import</span> AnimInit   <span class="kw">from</span> <span class="str">"./components/AnimInit"</span>;
@@ -899,20 +899,20 @@ app/
   );
 }</code></pre>
 
-    <p>Notice there's no data fetching, no state, no effects — <code>page.tsx</code> is just the page skeleton. Each section component fetches its own data from <code>content.ts</code>.</p>
+    <p>Notice there's no data fetching, no state, no effects - <code>page.tsx</code> is just the page skeleton. Each section component fetches its own data from <code>content.ts</code>.</p>
   </section>
 
   <!-- ─────────────────────────────────────────────────────────
        9 · CONTENT.TS
   ───────────────────────────────────────────────────────────── -->
   <section id="s9">
-    <h2>9 · <code>content.ts</code> — single source of truth <span class="tag">Your Files</span></h2>
+    <h2>9 · <code>content.ts</code> - single source of truth <span class="tag">Your Files</span></h2>
     <p class="section-intro">Instead of hunting through 10 component files to update your name or add a project, <strong>everything is in one place</strong>. This is a common pattern for content-heavy sites.</p>
 
     <div class="file-badge">📄 app/content.ts</div>
 
     <pre><code><span class="cm">// This file is the ONLY place you need to edit to customise the portfolio.</span>
-<span class="cm">// All components import from here — they never contain raw text.</span>
+<span class="cm">// All components import from here - they never contain raw text.</span>
 
 <span class="kw">export const</span> SITE = {
   name:          <span class="str">"Mohamed Idris"</span>,
@@ -926,7 +926,7 @@ app/
 &lt;<span class="fn">a</span> href={`mailto:${SITE.email}`}&gt;{SITE.email}&lt;/<span class="fn">a</span>&gt;</code></pre>
 
     <h3>The <code>**bold**</code> convention</h3>
-    <p>Long strings in <code>ABOUT.paragraphs</code> and <code>EXPERIENCE[].bullets</code> use <code>**double asterisks**</code> to mark bold text — just like Markdown.</p>
+    <p>Long strings in <code>ABOUT.paragraphs</code> and <code>EXPERIENCE[].bullets</code> use <code>**double asterisks**</code> to mark bold text - just like Markdown.</p>
     <pre><code><span class="cm">// In content.ts:</span>
 <span class="str">"I build **scalable, production-grade** web applications…"</span>
 
@@ -951,14 +951,14 @@ app/
 
     <h3>Nav.tsx <span class="pill client">client</span></h3>
     <div class="file-badge">📄 app/components/Nav.tsx</div>
-    <p>Manages two pieces of state: <code>isDark</code> (theme) and <code>menuOpen</code> (mobile hamburger). The theme toggle writes to <code>localStorage</code> and sets <code>data-theme</code> on <code>&lt;html&gt;</code> directly — the CSS custom properties react instantly.</p>
+    <p>Manages two pieces of state: <code>isDark</code> (theme) and <code>menuOpen</code> (mobile hamburger). The theme toggle writes to <code>localStorage</code> and sets <code>data-theme</code> on <code>&lt;html&gt;</code> directly - the CSS custom properties react instantly.</p>
     <pre><code><span class="kw">function</span> <span class="fn">toggleTheme</span>() {
   <span class="kw">const</span> next = isDark ? <span class="str">"light"</span> : <span class="str">"dark"</span>;
   document.documentElement.<span class="fn">setAttribute</span>(<span class="str">"data-theme"</span>, next);  <span class="cm">← all CSS vars switch</span>
   localStorage.<span class="fn">setItem</span>(<span class="str">"v4-theme"</span>, next);                     <span class="cm">← persists across visits</span>
   <span class="fn">setIsDark</span>(!isDark);                                           <span class="cm">← re-renders icon</span>
 }</code></pre>
-    <p>The <strong>mobile menu CSS specificity fix</strong>: <code>.mobile-menu a</code> has specificity <code>0,1,1</code> which overrode <code>.mobile-cta</code> at <code>0,1,0</code>. Fixed with <code>.mobile-menu .mobile-cta</code> — two class selectors = <code>0,2,0</code>.</p>
+    <p>The <strong>mobile menu CSS specificity fix</strong>: <code>.mobile-menu a</code> has specificity <code>0,1,1</code> which overrode <code>.mobile-cta</code> at <code>0,1,0</code>. Fixed with <code>.mobile-menu .mobile-cta</code> - two class selectors = <code>0,2,0</code>.</p>
 
     <h3>Hero.tsx <span class="pill server">server</span></h3>
     <div class="file-badge">📄 app/components/Hero.tsx</div>
@@ -992,8 +992,8 @@ app/
 
     <h3>Projects.tsx <span class="pill client">client</span></h3>
     <div class="file-badge">📄 app/components/Projects.tsx</div>
-    <p>Tracks <code>openId</code> — the ID of the currently expanded project. When a project card is clicked, it toggles open/closed. A <code>useEffect</code> watches <code>openId</code> and auto-scrolls to the AI widget using a <strong>double requestAnimationFrame</strong>.</p>
-    <pre><code><span class="cm">// Double rAF trick — why?
+    <p>Tracks <code>openId</code> - the ID of the currently expanded project. When a project card is clicked, it toggles open/closed. A <code>useEffect</code> watches <code>openId</code> and auto-scrolls to the AI widget using a <strong>double requestAnimationFrame</strong>.</p>
+    <pre><code><span class="cm">// Double rAF trick - why?
 // rAF 1: React's state update has been committed to the DOM
 // rAF 2: The browser has painted the new layout (project detail panel is visible)
 // Then scrollIntoView can measure the element's actual position</span>
@@ -1007,14 +1007,14 @@ app/
     <h3>AIWidget.tsx <span class="pill client">client</span></h3>
     <div class="file-badge">📄 app/components/AIWidget.tsx</div>
     <p>The interactive chat component. Used twice: once in <code>Hero.tsx</code> (no <code>projectContext</code> prop), and once per expanded project in <code>Projects.tsx</code> (passes <code>projectContext</code> so the AI knows which project is being discussed).</p>
-    <p>All instances share the same token budget via <code>localStorage</code> — usage in the hero widget counts against the same daily limit as usage in the project widget.</p>
+    <p>All instances share the same token budget via <code>localStorage</code> - usage in the hero widget counts against the same daily limit as usage in the project widget.</p>
   </section>
 
   <!-- ─────────────────────────────────────────────────────────
        11 · API ROUTE
   ───────────────────────────────────────────────────────────── -->
   <section id="s11">
-    <h2>11 · <code>api/ask/route.ts</code> — the AI endpoint <span class="tag">Your Files</span></h2>
+    <h2>11 · <code>api/ask/route.ts</code> - the AI endpoint <span class="tag">Your Files</span></h2>
     <p class="section-intro">This is a <strong>server-only</strong> file. It's a mini Express-like handler that receives a POST request, validates the request, checks rate limits, calls the Groq AI, and returns a JSON response.</p>
 
     <div class="file-badge">📄 app/api/ask/route.ts</div>
@@ -1071,10 +1071,10 @@ app/
       </li>
     </ul>
 
-    <pre><code><span class="cm">// The in-memory Map — lives as long as the server process</span>
+    <pre><code><span class="cm">// The in-memory Map - lives as long as the server process</span>
 <span class="kw">const</span> serverUsage = <span class="kw">new</span> Map&lt;<span class="ty">string</span>, { tokens: <span class="ty">number</span>; resetAt: <span class="ty">number</span> }&gt;();
 
-<span class="cm">// Reading files from disk (server-side only — never from a browser)</span>
+<span class="cm">// Reading files from disk (server-side only - never from a browser)</span>
 <span class="kw">function</span> <span class="fn">readData</span>(file: <span class="ty">string</span>): <span class="ty">string</span> {
   <span class="kw">try</span> { <span class="kw">return</span> <span class="fn">readFileSync</span>(<span class="fn">join</span>(<span class="fn">process.cwd</span>(), <span class="str">"data"</span>, file), <span class="str">"utf-8"</span>).<span class="fn">trim</span>(); }
   <span class="kw">catch</span> { <span class="kw">return</span> <span class="str">""</span>; }  <span class="cm">← fails silently if file missing</span>
@@ -1082,7 +1082,7 @@ app/
 
     <div class="info-box warn">
       <strong>In-memory Map resets on server restart</strong>
-      This is fine for a portfolio — it means rate limits reset whenever Vercel redeploys (which is rare). For a production app with real security requirements you'd use Redis or a database instead.
+      This is fine for a portfolio - it means rate limits reset whenever Vercel redeploys (which is rare). For a production app with real security requirements you'd use Redis or a database instead.
     </div>
   </section>
 
@@ -1101,7 +1101,7 @@ app/
   limit:      <span class="num">2000</span>,            <span class="cm">← from AI_TOKEN_LIMIT in content.ts</span>
   resetAt:    <span class="num">1748123456789</span>    <span class="cm">← Unix ms timestamp 24h from first use</span>
 }</code></pre>
-    <p><strong>Key design</strong>: all three <code>AIWidget</code> instances on the page call <code>readUsage()</code> and <code>addTokens()</code> which read/write the <em>same localStorage key</em> — so the 2000 token limit is shared, not per-widget.</p>
+    <p><strong>Key design</strong>: all three <code>AIWidget</code> instances on the page call <code>readUsage()</code> and <code>addTokens()</code> which read/write the <em>same localStorage key</em> - so the 2000 token limit is shared, not per-widget.</p>
 
     <h3>lib/renderBullet.tsx <span class="pill shared">shared</span></h3>
     <div class="file-badge">📄 app/lib/renderBullet.tsx</div>
@@ -1123,7 +1123,7 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
     <p class="section-intro">The AI feature spans four layers: browser UI, server route, rate-limit store, and external AI API. Here's the full picture.</p>
 
     <div class="arch">
-      <div class="arch-label">LAYER 1 — Browser</div>
+      <div class="arch-label">LAYER 1 - Browser</div>
       <div class="arch-row">
         <div class="arch-box accent-blue">
           <div class="ab-title">AIWidget.tsx</div>
@@ -1131,7 +1131,7 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
         </div>
         <div class="arch-box accent-blue" style="border-left:none">
           <div class="ab-title">lib/usage.ts</div>
-          <div class="ab-desc">localStorage "portfolio_ai_v1" — tracks tokensUsed, resets after 24h. Shared by ALL widget instances.</div>
+          <div class="ab-desc">localStorage "portfolio_ai_v1" - tracks tokensUsed, resets after 24h. Shared by ALL widget instances.</div>
         </div>
         <div class="arch-box accent-blue" style="border-left:none">
           <div class="ab-title">Usage meter UI</div>
@@ -1141,7 +1141,7 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
 
       <div class="arch-arrow">↓ POST /api/ask  {question, context, deviceId}</div>
 
-      <div class="arch-label">LAYER 2 — Next.js Server</div>
+      <div class="arch-label">LAYER 2 - Next.js Server</div>
       <div class="arch-row">
         <div class="arch-box accent-purple">
           <div class="ab-title">app/api/ask/route.ts</div>
@@ -1159,7 +1159,7 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
 
       <div class="arch-arrow">↓ POST to Groq API  {model, messages, max_tokens: 200}</div>
 
-      <div class="arch-label">LAYER 3 — Groq Cloud</div>
+      <div class="arch-label">LAYER 3 - Groq Cloud</div>
       <div class="arch-row">
         <div class="arch-box accent-orange">
           <div class="ab-title">LLaMA 3.3-70b-versatile</div>
@@ -1173,7 +1173,7 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
 
       <div class="arch-arrow">↑ {answer, tokensUsed, serverTokensUsed, tokenLimit}</div>
 
-      <div class="arch-label">LAYER 4 — Back to browser</div>
+      <div class="arch-label">LAYER 4 - Back to browser</div>
       <div class="arch-row">
         <div class="arch-box accent-green">
           <div class="ab-title">AIWidget receives response</div>
@@ -1187,7 +1187,7 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
        14 · TOKEN RATE LIMITING
   ───────────────────────────────────────────────────────────── -->
   <section id="s14">
-    <h2>14 · Token rate limiting — two-layer defence <span class="tag">System Design</span></h2>
+    <h2>14 · Token rate limiting - two-layer defence <span class="tag">System Design</span></h2>
     <p class="section-intro">A free Groq account has a daily token budget. To prevent any one visitor from exhausting it, there are two independent limits that must <em>both</em> pass.</p>
 
     <div class="token-flow">
@@ -1223,7 +1223,7 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
         <tr><td><strong>Runs on</strong></td><td>Browser</td><td>Node.js server</td></tr>
         <tr><td><strong>Key</strong></td><td>"portfolio_ai_v1" (same for all)</td><td>"deviceId:IP"</td></tr>
         <tr><td><strong>Purpose</strong></td><td>Shows usage meter, fast local check</td><td>Prevent abuse even if localStorage cleared</td></tr>
-        <tr><td><strong>Bypassable?</strong></td><td>Yes — clear localStorage</td><td>Harder — needs same IP</td></tr>
+        <tr><td><strong>Bypassable?</strong></td><td>Yes - clear localStorage</td><td>Harder - needs same IP</td></tr>
         <tr><td><strong>Resets</strong></td><td>After 24h (stored in resetAt)</td><td>After 24h (server-side resetAt)</td></tr>
         <tr><td><strong>Persists across</strong></td><td>Browser tabs on same device</td><td>All devices on same IP</td></tr>
       </tbody>
@@ -1231,7 +1231,7 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
 
     <div class="info-box tip">
       <strong>Change the token limit</strong>
-      Edit <code>AI_TOKEN_LIMIT</code> in <code>app/content.ts</code>. It's imported by both the client (<code>lib/usage.ts</code>) and the server (<code>api/ask/route.ts</code>) — change it once, takes effect everywhere.
+      Edit <code>AI_TOKEN_LIMIT</code> in <code>app/content.ts</code>. It's imported by both the client (<code>lib/usage.ts</code>) and the server (<code>api/ask/route.ts</code>) - change it once, takes effect everywhere.
     </div>
   </section>
 
@@ -1239,10 +1239,10 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
        15 · ANIMATIONS
   ───────────────────────────────────────────────────────────── -->
   <section id="s15">
-    <h2>15 · Animations — two systems <span class="tag">System Design</span></h2>
+    <h2>15 · Animations - two systems <span class="tag">System Design</span></h2>
 
-    <h3>System 1 — Hero entrance (CSS keyframes, runs once on page load)</h3>
-    <pre><code><span class="cm">/* globals.css — plays automatically when the element renders */</span>
+    <h3>System 1 - Hero entrance (CSS keyframes, runs once on page load)</h3>
+    <pre><code><span class="cm">/* globals.css - plays automatically when the element renders */</span>
 @keyframes fadeUp {
   <span class="kw">from</span> { opacity: <span class="num">0</span>; transform: translateY(<span class="num">14px</span>); }
   <span class="kw">to</span>   { opacity: <span class="num">1</span>; transform: translateY(<span class="num">0</span>); }
@@ -1254,8 +1254,8 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
 .hero-cta-row { animation: fadeUp <span class="num">0.5s</span> <span class="num">0.32s</span>  var(--ease) both; }
 <span class="cm">//                                 ↑ stagger: each element starts 0.1s later</span></code></pre>
 
-    <h3>System 2 — Scroll reveal (IntersectionObserver, triggers on scroll)</h3>
-    <pre><code><span class="cm">/* Base state — invisible, shifted down */</span>
+    <h3>System 2 - Scroll reveal (IntersectionObserver, triggers on scroll)</h3>
+    <pre><code><span class="cm">/* Base state - invisible, shifted down */</span>
 .reveal {
   opacity: <span class="num">0</span>;
   transform: translateY(<span class="num">18px</span>);
@@ -1268,7 +1268,7 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
   transform: translateY(<span class="num">0</span>);
 }
 
-<span class="cm">/* Delay variants — stagger siblings in a group */</span>
+<span class="cm">/* Delay variants - stagger siblings in a group */</span>
 .reveal-d1 { transition-delay: <span class="num">0.05s</span>; }
 .reveal-d2 { transition-delay: <span class="num">0.15s</span>; }
 .reveal-d3 { transition-delay: <span class="num">0.25s</span>; }
@@ -1276,7 +1276,7 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
 
     <div class="info-box key">
       <strong>Why two separate systems?</strong>
-      The hero plays immediately — the user should see it right away. Everything else should animate as the user <em>scrolls to it</em> — that's what makes the page feel alive as you explore it. Using keyframes for one and IntersectionObserver for the other keeps each system focused on its job.
+      The hero plays immediately - the user should see it right away. Everything else should animate as the user <em>scrolls to it</em> - that's what makes the page feel alive as you explore it. Using keyframes for one and IntersectionObserver for the other keeps each system focused on its job.
     </div>
   </section>
 
@@ -1296,7 +1296,7 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
       </tbody>
     </table>
 
-    <h3>CSS custom properties — the theming system</h3>
+    <h3>CSS custom properties - the theming system</h3>
     <pre><code><span class="cm">/* Two sets of variables, swapped by data-theme attribute on &lt;html&gt; */</span>
 
 [data-theme="light"] {
@@ -1311,12 +1311,12 @@ text.<span class="fn">split</span>(<span class="op">/</span>(\*\*[^*]+\*\*)<span
   --accent: #7272ff;    <span class="cm">← lighter blue (readable on dark)</span>
 }
 
-<span class="cm">/* Every component just uses the variable — never a hardcoded colour */</span>
+<span class="cm">/* Every component just uses the variable - never a hardcoded colour */</span>
 .hero { background: var(--bg); }
 h1    { color:      var(--ink); }
 a     { color:      var(--accent); }</code></pre>
 
-    <p>When <code>toggleTheme()</code> in <code>Nav.tsx</code> flips <code>data-theme</code>, <strong>every single CSS custom property updates simultaneously</strong> — the entire site repaints in one operation with zero JavaScript iteration.</p>
+    <p>When <code>toggleTheme()</code> in <code>Nav.tsx</code> flips <code>data-theme</code>, <strong>every single CSS custom property updates simultaneously</strong> - the entire site repaints in one operation with zero JavaScript iteration.</p>
   </section>
 
   <!-- ─────────────────────────────────────────────────────────
@@ -1324,7 +1324,7 @@ a     { color:      var(--accent); }</code></pre>
   ───────────────────────────────────────────────────────────── -->
   <section id="s17">
     <h2>17 · Environment variables <span class="tag">Deploy</span></h2>
-    <p class="section-intro">Environment variables let you store secret keys separately from your code — they never get committed to git.</p>
+    <p class="section-intro">Environment variables let you store secret keys separately from your code - they never get committed to git.</p>
 
     <div class="file-badge">📄 .env.local</div>
     <pre><code>GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxx</code></pre>
@@ -1332,22 +1332,22 @@ a     { color:      var(--accent); }</code></pre>
     <table>
       <thead><tr><th>Variable</th><th>Where set</th><th>Available in</th></tr></thead>
       <tbody>
-        <tr><td><code>GROQ_API_KEY</code></td><td><code>.env.local</code> (local dev), Vercel dashboard (production)</td><td>Server-only — <code>process.env.GROQ_API_KEY</code></td></tr>
+        <tr><td><code>GROQ_API_KEY</code></td><td><code>.env.local</code> (local dev), Vercel dashboard (production)</td><td>Server-only - <code>process.env.GROQ_API_KEY</code></td></tr>
       </tbody>
     </table>
 
     <div class="info-box warn">
       <strong>NEVER prefix with NEXT_PUBLIC_ unless intentional</strong>
-      Variables prefixed <code>NEXT_PUBLIC_</code> are bundled into the JavaScript that ships to the browser — anyone can read them in DevTools. <code>GROQ_API_KEY</code> must stay server-only (no prefix), so it never leaks.
+      Variables prefixed <code>NEXT_PUBLIC_</code> are bundled into the JavaScript that ships to the browser - anyone can read them in DevTools. <code>GROQ_API_KEY</code> must stay server-only (no prefix), so it never leaks.
     </div>
 
     <h3>How Next.js loads .env files</h3>
     <table>
       <thead><tr><th>File</th><th>When loaded</th><th>Committed to git?</th></tr></thead>
       <tbody>
-        <tr><td><code>.env.local</code></td><td>Local dev + build</td><td>No — in .gitignore</td></tr>
-        <tr><td><code>.env</code></td><td>All environments</td><td>Yes — for non-secret defaults</td></tr>
-        <tr><td><code>.env.production</code></td><td>Production build only</td><td>Yes — non-secret prod config</td></tr>
+        <tr><td><code>.env.local</code></td><td>Local dev + build</td><td>No - in .gitignore</td></tr>
+        <tr><td><code>.env</code></td><td>All environments</td><td>Yes - for non-secret defaults</td></tr>
+        <tr><td><code>.env.production</code></td><td>Production build only</td><td>Yes - non-secret prod config</td></tr>
       </tbody>
     </table>
   </section>
@@ -1369,9 +1369,9 @@ a     { color:      var(--accent); }</code></pre>
       </tbody>
     </table>
 
-    <h3>Deploying to Vercel (recommended — free)</h3>
+    <h3>Deploying to Vercel (recommended - free)</h3>
     <ul class="steps">
-      <li><span class="step-num">1</span><div class="step-body"><strong>Push code to GitHub</strong><p><code>git push origin main</code> — make sure <code>.env.local</code> is in <code>.gitignore</code>.</p></div></li>
+      <li><span class="step-num">1</span><div class="step-body"><strong>Push code to GitHub</strong><p><code>git push origin main</code> - make sure <code>.env.local</code> is in <code>.gitignore</code>.</p></div></li>
       <li><span class="step-num">2</span><div class="step-body"><strong>Import on vercel.com</strong><p>Connect your GitHub repo. Vercel auto-detects Next.js.</p></div></li>
       <li><span class="step-num">3</span><div class="step-body"><strong>Add environment variable</strong><p>In Vercel dashboard → Settings → Environment Variables → add <code>GROQ_API_KEY</code> with your real key.</p></div></li>
       <li><span class="step-num">4</span><div class="step-body"><strong>Deploy</strong><p>Every push to <code>main</code> auto-deploys. Vercel runs <code>npm run build</code> and hosts the result globally.</p></div></li>
@@ -1388,7 +1388,7 @@ a     { color:      var(--accent); }</code></pre>
   ───────────────────────────────────────────────────────────── -->
   <section id="s19">
     <h2>19 · How to customise the portfolio <span class="tag">Deploy</span></h2>
-    <p class="section-intro">The entire portfolio is designed to be customised by editing a handful of files — no component hunting required.</p>
+    <p class="section-intro">The entire portfolio is designed to be customised by editing a handful of files - no component hunting required.</p>
 
     <table>
       <thead><tr><th>What to change</th><th>Where</th></tr></thead>
@@ -1409,7 +1409,7 @@ a     { color:      var(--accent); }</code></pre>
     </table>
 
     <h3>Adding a new project</h3>
-    <pre><code><span class="cm">// app/content.ts — add to the PROJECTS array:</span>
+    <pre><code><span class="cm">// app/content.ts - add to the PROJECTS array:</span>
 {
   id:     <span class="str">"my-project"</span>,        <span class="cm">← unique ID string</span>
   num:    <span class="str">"06"</span>,               <span class="cm">← display number</span>
@@ -1423,7 +1423,7 @@ a     { color:      var(--accent); }</code></pre>
 
     <div class="info-box key">
       <strong>That's all it takes</strong>
-      The Projects component maps over the array dynamically — adding one entry here automatically adds a new card, expandable detail panel, and per-project AI widget with that project's context passed in.
+      The Projects component maps over the array dynamically - adding one entry here automatically adds a new card, expandable detail panel, and per-project AI widget with that project's context passed in.
     </div>
   </section>
 
