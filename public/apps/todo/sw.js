@@ -3,7 +3,7 @@
  * Same-origin assets: stale-while-revalidate (Vite assets are content-hashed).
  * Google Fonts: cache first.
  * Task data never passes through here — it lives encrypted in IndexedDB. */
-const VERSION = "itodoist-v4";
+const VERSION = "itodoist-v5";
 // The app can live under a sub-path (for example /apps/todo/), so derive paths from this file's location.
 const BASE = new URL("./", self.location).pathname;
 const SHELL = [BASE, BASE + "index.html", BASE + "manifest.webmanifest", BASE + "favicon.svg", BASE + "icons/icon-192.png", BASE + "icons/icon-512.png"];
@@ -112,6 +112,8 @@ self.addEventListener("push", (event) => {
       icon: BASE + "icons/icon-192.png",
       badge: BASE + "icons/icon-192.png",
       data: { taskId },
+      // Shown on Android and desktop; iOS ignores action buttons and shows the sheet on tap instead
+      actions: taskId ? [{ action: "1h", title: "In 1 hour" }, { action: "tomorrow", title: "Tomorrow" }] : [],
     });
   })());
 });
@@ -119,10 +121,19 @@ self.addEventListener("push", (event) => {
 // Tapping a notification brings the app forward (or opens it).
 self.addEventListener("notificationclick", (event) => {
   event.notification.close();
+  const taskId = event.notification.data && event.notification.data.taskId;
+  const act = event.action || "";
   event.waitUntil(
     self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((list) => {
-      for (const c of list) { if ("focus" in c) return c.focus(); }
-      return self.clients.openWindow(BASE);
+      for (const c of list) {
+        if ("focus" in c) {
+          if (taskId) c.postMessage({ type: "itodoist:notif", taskId, act });
+          // A snooze button needs no screen; only bring the app forward for a plain tap
+          return act ? undefined : c.focus();
+        }
+      }
+      const q = taskId ? "?task=" + encodeURIComponent(taskId) + (act ? "&act=" + encodeURIComponent(act) : "") : "";
+      return self.clients.openWindow(BASE + q);
     }),
   );
 });
